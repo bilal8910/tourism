@@ -1,1 +1,424 @@
-# tourism
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>السياحة في القصر الصغير | Tourisme Ksar Sghir | Ksar Sghir Tourism</title>
+<meta name="description" content="دليل سياحي شامل للقصر الصغير — شواطئ، طبيعة، ميناء، بليونش. Guide touristique de Ksar Sghir Maroc.">
+<meta name="keywords" content="سياحة القصر الصغير, ksar sghir tourisme, plage ksar sghir, belyounech, tanger med, maroc">
+<meta name="author" content="Bilal El Hichou">
+<meta property="og:title" content="السياحة في القصر الصغير | Ksar Sghir Tourism">
+<meta property="og:description" content="دليل سياحي شامل للقصر الصغير المغرب">
+<meta property="og:type" content="website">
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; }
+
+/* HEADER */
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+
+/* HERO */
+.hero { background:linear-gradient(160deg,#0d1b2a,#1a3a5c,#0d1b2a); padding:50px 20px 45px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.hero h1 { font-size:clamp(26px,6vw,48px); font-weight:900; margin-bottom:10px; }
+.hero h1 em { color:#00b4d8; font-style:normal; }
+.hero p { color:#90e0ef; font-size:14px; max-width:500px; margin:0 auto 15px; line-height:1.7; }
+.hero-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; padding:5px 16px; border-radius:20px; letter-spacing:2px; }
+
+/* STATS */
+.stats { display:flex; background:#16213e; border-bottom:1px solid rgba(0,180,216,0.2); }
+.stat { flex:1; text-align:center; padding:16px 10px; border-left:1px solid rgba(0,180,216,0.15); }
+.stat:last-child { border-left:none; }
+.stat-num { font-size:22px; font-weight:900; color:#00b4d8; }
+.stat-label { font-size:10px; color:#aaa; margin-top:3px; letter-spacing:1px; }
+
+/* SECTION */
+.section { max-width:1100px; margin:0 auto; padding:40px 20px; }
+.section-title { font-size:22px; font-weight:700; color:#fff; margin-bottom:25px; display:flex; align-items:center; gap:10px; }
+.section-title::before { content:''; width:4px; height:24px; background:#00b4d8; border-radius:2px; display:inline-block; flex-shrink:0; }
+.divider { height:1px; background:linear-gradient(90deg,transparent,rgba(0,180,216,0.3),transparent); }
+
+/* PLACES GRID */
+.places-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; }
+.place-card { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:14px; overflow:hidden; transition:all 0.3s; cursor:pointer; }
+.place-card:hover { border-color:#00b4d8; transform:translateY(-3px); box-shadow:0 8px 25px rgba(0,180,216,0.15); }
+.place-img { height:160px; display:flex; align-items:center; justify-content:center; font-size:55px; position:relative; }
+.place-img img { width:100%; height:100%; object-fit:cover; display:block; }
+.place-tag { position:absolute; top:10px; right:10px; background:#00b4d8; color:#fff; font-size:9px; font-weight:700; padding:3px 10px; border-radius:10px; letter-spacing:1px; }
+.place-body { padding:15px; }
+.place-name { font-size:15px; font-weight:700; color:#fff; margin-bottom:6px; }
+.place-desc { font-size:12px; color:#aaa; line-height:1.6; margin-bottom:12px; }
+.place-info { display:flex; gap:8px; flex-wrap:wrap; }
+.place-info span { background:rgba(0,180,216,0.08); border:1px solid rgba(0,180,216,0.15); color:#90e0ef; font-size:10px; padding:3px 10px; border-radius:10px; }
+
+/* INFO CARDS */
+.info-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+.info-card { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:14px; padding:20px; text-align:center; transition:all 0.3s; }
+.info-card:hover { border-color:#00b4d8; }
+.info-icon { font-size:36px; margin-bottom:12px; }
+.info-title { font-size:14px; font-weight:700; color:#fff; margin-bottom:8px; }
+.info-text { font-size:12px; color:#aaa; line-height:1.6; }
+
+/* MAP SECTION */
+.map-section { background:#0d1b2a; padding:40px 0; }
+.map-wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
+.map-container { border-radius:14px; overflow:hidden; border:1px solid rgba(0,180,216,0.2); margin-top:20px; }
+.map-container iframe { width:100%; height:350px; display:block; border:none; }
+
+/* WEATHER */
+.weather-section { background:#111827; padding:40px 0; }
+.weather-wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
+.weather-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:20px; }
+.weather-card { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:14px; padding:18px; text-align:center; }
+.weather-icon { font-size:32px; margin-bottom:8px; }
+.weather-month { font-size:13px; font-weight:700; color:#fff; margin-bottom:4px; }
+.weather-temp { font-size:20px; font-weight:900; color:#00b4d8; }
+.weather-desc { font-size:11px; color:#aaa; margin-top:4px; }
+
+/* CTA */
+.cta-section { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:50px 20px; text-align:center; border-top:1px solid rgba(0,180,216,0.2); }
+.cta-section h2 { font-size:26px; font-weight:700; color:#fff; margin-bottom:10px; }
+.cta-section p { color:#90e0ef; font-size:13px; margin-bottom:25px; }
+.cta-btns { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; font-family:'Tajawal',sans-serif; cursor:pointer; border:none; border-radius:25px; text-decoration:none; display:inline-block; transition:all 0.3s; }
+.btn-primary { background:#00b4d8; color:#fff; }
+.btn-primary:hover { background:#0096c7; transform:translateY(-2px); }
+.btn-wa { background:#25d366; color:#fff; }
+.btn-wa:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(37,211,102,0.4); }
+
+/* FOOTER */
+footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1px solid #16213e; }
+.footer-links { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
+.footer-links a { color:#555; text-decoration:none; font-size:12px; }
+.footer-links a:hover { color:#00b4d8; }
+.footer-copy { font-size:11px; color:#555; }
+.footer-copy span { color:#00b4d8; }
+
+/* BG COLORS */
+.bg1 { background:linear-gradient(135deg,#023e8a,#0096c7); }
+.bg2 { background:linear-gradient(135deg,#1b5e20,#4caf50); }
+.bg3 { background:linear-gradient(135deg,#4a148c,#880e4f); }
+.bg4 { background:linear-gradient(135deg,#bf360c,#ff6f00); }
+.bg5 { background:linear-gradient(135deg,#006064,#00acc1); }
+.bg6 { background:linear-gradient(135deg,#1a237e,#311b92); }
+
+/* MOBILE */
+@media(max-width:768px) {
+  .places-grid { grid-template-columns:1fr; }
+  .info-grid { grid-template-columns:repeat(2,1fr); }
+  .weather-grid { grid-template-columns:repeat(2,1fr); }
+  .lang-sw { display:none; }
+  .stats { flex-wrap:wrap; }
+  .stat { min-width:50%; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.ksarsghir.com" class="logo">
+    <span class="logo-ar" id="lname">السياحة</span>
+    <span class="logo-en">KSAR SGHIR TOURISM</span>
+  </a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+    <a href="https://www.ksarsghir.com" class="back" id="lback">← الرئيسية</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1 id="htitle">السياحة في <em>القصر الصغير</em></h1>
+  <p id="hdesc">اكتشف جمال المنطقة — شواطئ ساحرة، طبيعة خلابة، وتراث بحري أصيل على ضفاف مضيق جبل طارق</p>
+  <div class="hero-badge" id="hbadge">KSAR SGHIR • MAROC</div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">35km</div><div class="stat-label" id="s1">من طنجة</div></div>
+  <div class="stat"><div class="stat-num">6+</div><div class="stat-label" id="s2">مواقع سياحية</div></div>
+  <div class="stat"><div class="stat-num">12°</div><div class="stat-label" id="s3">أدنى حرارة</div></div>
+  <div class="stat"><div class="stat-num">300+</div><div class="stat-label" id="s4">يوم شمس</div></div>
+</div>
+
+<!-- PLACES -->
+<div class="section">
+  <div class="section-title" id="places-title">🗺️ أبرز المواقع السياحية</div>
+  <div class="places-grid">
+
+    <div class="place-card">
+      <div class="place-img bg1"><span>🏖️</span><span class="place-tag" id="t1">شاطئ</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="شاطئ القصر الصغير" data-fr="Plage de Ksar Sghir" data-en="Ksar Sghir Beach">شاطئ القصر الصغير</div>
+        <div class="place-desc" data-ar="شاطئ رملي هادئ يطل على مضيق جبل طارق بمياه صافية وأجواء طبيعية خلابة — مثالي للسباحة والاسترخاء" data-fr="Plage de sable calme donnant sur le détroit de Gibraltar avec des eaux claires et un cadre naturel magnifique" data-en="A peaceful sandy beach overlooking the Strait of Gibraltar with clear waters — perfect for swimming and relaxation">شاطئ رملي هادئ يطل على مضيق جبل طارق بمياه صافية وأجواء طبيعية خلابة — مثالي للسباحة والاسترخاء</div>
+        <div class="place-info">
+          <span id="free1">🆓 مجاني</span>
+          <span id="swim1">🏊 سباحة</span>
+          <span id="photo1">📸 تصوير</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img bg2"><span>🌺</span><span class="place-tag" id="t2">قرية</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="بليونش" data-fr="Belyounech" data-en="Belyounech">بليونش</div>
+        <div class="place-desc" data-ar="قرية ساحلية صغيرة بطبيعة خضراء نادرة — تقع عند أقصى نقطة شمال أفريقيا على الحدود مع إسبانيا" data-fr="Petit village côtier avec une nature verdoyante rare — situé au point le plus nord de l'Afrique à la frontière espagnole" data-en="A small coastal village with rare green nature — located at the northernmost point of Africa on the Spanish border">قرية ساحلية صغيرة بطبيعة خضراء نادرة — تقع عند أقصى نقطة شمال أفريقيا على الحدود مع إسبانيا</div>
+        <div class="place-info">
+          <span id="nature1">🌿 طبيعة</span>
+          <span id="hike1">🥾 مشي</span>
+          <span id="photo2">📸 تصوير</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img bg3"><span>⚓</span><span class="place-tag" id="t3">تراث</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="ميناء الصيد التقليدي" data-fr="Port de pêche traditionnel" data-en="Traditional Fishing Port">ميناء الصيد التقليدي</div>
+        <div class="place-desc" data-ar="ميناء بحري تقليدي يجسد التراث المغربي الأصيل — شاهد الصيادين يعودون بصيدهم كل فجر" data-fr="Port maritime traditionnel qui incarne le patrimoine marocain authentique — regardez les pêcheurs rentrer avec leur prise chaque aube" data-en="A traditional maritime port embodying authentic Moroccan heritage — watch fishermen return with their catch every dawn">ميناء بحري تقليدي يجسد التراث المغربي الأصيل — شاهد الصيادين يعودون بصيدهم كل فجر</div>
+        <div class="place-info">
+          <span id="heritage1">🏛️ تراث</span>
+          <span id="fish1">🐟 أسماك طازجة</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img bg4"><span>🚢</span><span class="place-tag" id="t4">ميناء</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="ميناء طنجة المتوسط" data-fr="Port Tanger Med" data-en="Tanger Med Port">ميناء طنجة المتوسط</div>
+        <div class="place-desc" data-ar="أكبر ميناء في أفريقيا وأحد أهم الموانئ في العالم — يقع على بعد كيلومترات قليلة من القصر الصغير" data-fr="Le plus grand port d'Afrique et l'un des ports les plus importants du monde — situé à quelques kilomètres de Ksar Sghir" data-en="The largest port in Africa and one of the most important ports in the world — located just a few kilometers from Ksar Sghir">أكبر ميناء في أفريقيا وأحد أهم الموانئ في العالم — يقع على بعد كيلومترات قليلة من القصر الصغير</div>
+        <div class="place-info">
+          <span id="visit1">👁️ مشاهدة</span>
+          <span id="photo3">📸 تصوير</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img bg5"><span>🌊</span><span class="place-tag" id="t5">طبيعة</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="واد اليان" data-fr="Oued El Liane" data-en="Oued El Liane">واد اليان</div>
+        <div class="place-desc" data-ar="منطقة طبيعية هادئة على ضفاف الوادي — مثالية للتأمل والتصوير الطبيعي بعيداً عن ضجيج المدينة" data-fr="Zone naturelle tranquille sur les rives de l'oued — idéale pour la méditation et la photographie naturelle loin du bruit de la ville" data-en="A peaceful natural area on the riverbanks — ideal for meditation and nature photography away from city noise">منطقة طبيعية هادئة على ضفاف الوادي — مثالية للتأمل والتصوير الطبيعي بعيداً عن ضجيج المدينة</div>
+        <div class="place-info">
+          <span id="relax1">😌 استرخاء</span>
+          <span id="nature2">🌿 طبيعة</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-img bg6"><span>🏰</span><span class="place-tag" id="t6">تاريخ</span></div>
+      <div class="place-body">
+        <div class="place-name" data-ar="الدالية" data-fr="La Dalia" data-en="La Dalia">الدالية</div>
+        <div class="place-desc" data-ar="منطقة ساحلية تاريخية تحتضن آثاراً عريقة وشواطئ بكر لم تطأها كثرة السياح — جوهرة مخفية" data-fr="Zone côtière historique abritant des vestiges anciens et des plages vierges peu fréquentées par les touristes — un joyau caché" data-en="A historic coastal area with ancient ruins and untouched beaches rarely visited by tourists — a hidden gem">منطقة ساحلية تاريخية تحتضن آثاراً عريقة وشواطئ بكر لم تطأها كثرة السياح — جوهرة مخفية</div>
+        <div class="place-info">
+          <span id="history1">🏛️ تاريخ</span>
+          <span id="beach1">🏖️ شاطئ بكر</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- INFO -->
+<div class="section">
+  <div class="section-title" id="info-title">ℹ️ معلومات مفيدة</div>
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon">🚗</div>
+      <div class="info-title" id="i1-title">كيف تصل</div>
+      <div class="info-text" id="i1-text">35 كم من طنجة عبر الطريق الساحلية N16 — 30 دقيقة بالسيارة</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🌡️</div>
+      <div class="info-title" id="i2-title">أفضل وقت للزيارة</div>
+      <div class="info-text" id="i2-text">من أبريل إلى أكتوبر — الطقس معتدل والبحر هادئ</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🏨</div>
+      <div class="info-title" id="i3-title">الإقامة</div>
+      <div class="info-text" id="i3-text">فنادق ومنازل للإيجار بأسعار معقولة — قريبة من الشاطئ</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">🍽️</div>
+      <div class="info-title" id="i4-title">المطبخ المحلي</div>
+      <div class="info-text" id="i4-text">أسماك طازجة من الميناء — أكلات بحرية مغربية أصيلة</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">📱</div>
+      <div class="info-title" id="i5-title">الاتصال</div>
+      <div class="info-text" id="i5-text">تغطية جيدة لشبكات Maroc Telecom وOrange وInwi</div>
+    </div>
+    <div class="info-card">
+      <div class="info-icon">💰</div>
+      <div class="info-title" id="i6-title">التكلفة</div>
+      <div class="info-text" id="i6-text">وجهة سياحية بأسعار معقولة مقارنة بطنجة</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- MAP -->
+<div class="map-section">
+  <div class="map-wrap">
+    <div class="section-title" id="map-title">📍 الموقع على الخريطة</div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12789.123456789!2d-5.5625!3d35.8486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b42a1234567890%3A0xabcdef1234567890!2sKsar%20Sghir%2C%20Morocco!5e0!3m2!1sar!2sma!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- WEATHER -->
+<div class="weather-section">
+  <div class="weather-wrap">
+    <div class="section-title" id="weather-title">🌤️ الطقس على مدار السنة</div>
+    <div class="weather-grid">
+      <div class="weather-card"><div class="weather-icon">❄️</div><div class="weather-month" id="w1">شتاء</div><div class="weather-temp">12-18°</div><div class="weather-desc" id="wd1">ممطر وبارد</div></div>
+      <div class="weather-card"><div class="weather-icon">🌸</div><div class="weather-month" id="w2">ربيع</div><div class="weather-temp">16-22°</div><div class="weather-desc" id="wd2">معتدل وجميل</div></div>
+      <div class="weather-card"><div class="weather-icon">☀️</div><div class="weather-month" id="w3">صيف</div><div class="weather-temp">24-30°</div><div class="weather-desc" id="wd3">حار ومشمس</div></div>
+      <div class="weather-card"><div class="weather-icon">🍂</div><div class="weather-month" id="w4">خريف</div><div class="weather-temp">18-24°</div><div class="weather-desc" id="wd4">لطيف ومعتدل</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2 id="cta-title">📸 هل تريد صور المنطقة؟</h2>
+  <p id="cta-desc">بعدسة بلال الهيشو — صور احترافية للقصر الصغير وما حولها</p>
+  <div class="cta-btns">
+    <a href="https://gallery.ksarsghir.com" class="btn btn-primary" id="cta-gallery">🖼️ معرض الصور</a>
+    <a href="https://wa.me/212708053745?text=أريد%20الاستفسار%20عن%20السياحة" class="btn btn-wa" id="cta-wa">📱 تواصل معنا</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.ksarsghir.com">الرئيسية</a>
+    <a href="https://gallery.ksarsghir.com">المعرض</a>
+    <a href="https://store.ksarsghir.com">المتجر</a>
+    <a href="https://blog.ksarsghir.com">المدونة</a>
+    <a href="https://wa.me/212708053745">تواصل</a>
+  </div>
+  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+</footer>
+
+<script>
+var L = {
+  ar: { dir:'rtl',
+    lname:'السياحة', lback:'← الرئيسية',
+    htitle:'السياحة في <em>القصر الصغير</em>',
+    hdesc:'اكتشف جمال المنطقة — شواطئ ساحرة، طبيعة خلابة، وتراث بحري أصيل على ضفاف مضيق جبل طارق',
+    hbadge:'KSAR SGHIR • MAROC',
+    s1:'من طنجة', s2:'مواقع سياحية', s3:'أدنى حرارة', s4:'يوم شمس',
+    'places-title':'🗺️ أبرز المواقع السياحية',
+    t1:'شاطئ', t2:'قرية', t3:'تراث', t4:'ميناء', t5:'طبيعة', t6:'تاريخ',
+    'info-title':'ℹ️ معلومات مفيدة',
+    'i1-title':'كيف تصل', 'i1-text':'35 كم من طنجة عبر الطريق الساحلية N16 — 30 دقيقة بالسيارة',
+    'i2-title':'أفضل وقت للزيارة', 'i2-text':'من أبريل إلى أكتوبر — الطقس معتدل والبحر هادئ',
+    'i3-title':'الإقامة', 'i3-text':'فنادق ومنازل للإيجار بأسعار معقولة — قريبة من الشاطئ',
+    'i4-title':'المطبخ المحلي', 'i4-text':'أسماك طازجة من الميناء — أكلات بحرية مغربية أصيلة',
+    'i5-title':'الاتصال', 'i5-text':'تغطية جيدة لشبكات Maroc Telecom وOrange وInwi',
+    'i6-title':'التكلفة', 'i6-text':'وجهة سياحية بأسعار معقولة مقارنة بطنجة',
+    'map-title':'📍 الموقع على الخريطة',
+    'weather-title':'🌤️ الطقس على مدار السنة',
+    w1:'شتاء', wd1:'ممطر وبارد', w2:'ربيع', wd2:'معتدل وجميل',
+    w3:'صيف', wd3:'حار ومشمس', w4:'خريف', wd4:'لطيف ومعتدل',
+    'cta-title':'📸 هل تريد صور المنطقة؟',
+    'cta-desc':'بعدسة بلال الهيشو — صور احترافية للقصر الصغير وما حولها',
+    'cta-gallery':'🖼️ معرض الصور', 'cta-wa':'📱 تواصل معنا'
+  },
+  fr: { dir:'ltr',
+    lname:'Tourisme', lback:'← Accueil',
+    htitle:'Tourisme à <em>Ksar Sghir</em>',
+    hdesc:"Découvrez la beauté de la région — plages enchanteresses, nature magnifique et patrimoine maritime authentique sur les rives du détroit de Gibraltar",
+    hbadge:'KSAR SGHIR • MAROC',
+    s1:'de Tanger', s2:'sites touristiques', s3:'temp. minimum', s4:'jours de soleil',
+    'places-title':'🗺️ Principaux sites touristiques',
+    t1:'Plage', t2:'Village', t3:'Patrimoine', t4:'Port', t5:'Nature', t6:'Histoire',
+    'info-title':'ℹ️ Informations utiles',
+    'i1-title':'Comment y aller', 'i1-text':'35 km de Tanger via la route côtière N16 — 30 minutes en voiture',
+    'i2-title':'Meilleure période', 'i2-text':"D'avril à octobre — météo agréable et mer calme",
+    'i3-title':'Hébergement', 'i3-text':'Hôtels et maisons à louer à prix raisonnables — proches de la plage',
+    'i4-title':'Cuisine locale', 'i4-text':'Poissons frais du port — spécialités marocaines authentiques',
+    'i5-title':'Connexion', 'i5-text':'Bonne couverture réseau Maroc Telecom, Orange et Inwi',
+    'i6-title':'Budget', 'i6-text':'Destination touristique à prix raisonnables comparé à Tanger',
+    'map-title':'📍 Localisation sur la carte',
+    'weather-title':'🌤️ Météo tout au long de l\'année',
+    w1:'Hiver', wd1:'Pluvieux et frais', w2:'Printemps', wd2:'Agréable et beau',
+    w3:'Été', wd3:'Chaud et ensoleillé', w4:'Automne', wd4:'Doux et agréable',
+    'cta-title':'📸 Voulez-vous des photos de la région?',
+    'cta-desc':'Par Bilal El Hichou — photos professionnelles de Ksar Sghir',
+    'cta-gallery':'🖼️ Galerie photos', 'cta-wa':'📱 Contactez-nous'
+  },
+  en: { dir:'ltr',
+    lname:'Tourism', lback:'← Home',
+    htitle:'Tourism in <em>Ksar Sghir</em>',
+    hdesc:'Discover the beauty of the region — enchanting beaches, stunning nature, and authentic maritime heritage on the shores of the Strait of Gibraltar',
+    hbadge:'KSAR SGHIR • MOROCCO',
+    s1:'from Tangier', s2:'tourist sites', s3:'min temperature', s4:'sunny days',
+    'places-title':'🗺️ Main Tourist Sites',
+    t1:'Beach', t2:'Village', t3:'Heritage', t4:'Port', t5:'Nature', t6:'History',
+    'info-title':'ℹ️ Useful Information',
+    'i1-title':'How to get there', 'i1-text':'35 km from Tangier via coastal road N16 — 30 minutes by car',
+    'i2-title':'Best time to visit', 'i2-text':'April to October — pleasant weather and calm sea',
+    'i3-title':'Accommodation', 'i3-text':'Hotels and rental houses at reasonable prices — close to the beach',
+    'i4-title':'Local cuisine', 'i4-text':'Fresh fish from the port — authentic Moroccan seafood specialties',
+    'i5-title':'Connectivity', 'i5-text':'Good network coverage from Maroc Telecom, Orange and Inwi',
+    'i6-title':'Budget', 'i6-text':'Tourist destination at reasonable prices compared to Tangier',
+    'map-title':'📍 Location on map',
+    'weather-title':'🌤️ Weather throughout the year',
+    w1:'Winter', wd1:'Rainy and cool', w2:'Spring', wd2:'Pleasant and beautiful',
+    w3:'Summer', wd3:'Hot and sunny', w4:'Autumn', wd4:'Mild and pleasant',
+    'cta-title':'📸 Want photos of the region?',
+    'cta-desc':'By Bilal El Hichou — professional photos of Ksar Sghir',
+    'cta-gallery':'🖼️ Photo Gallery', 'cta-wa':'📱 Contact us'
+  }
+};
+
+function setL(lang) {
+  var t = L[lang];
+  document.documentElement.setAttribute('dir', t.dir);
+  document.body.setAttribute('dir', t.dir);
+  Object.keys(t).forEach(function(id) {
+    if (id === 'dir') return;
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = t[id];
+  });
+  // Update place names and descriptions
+  document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+  document.querySelectorAll('.lb').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  });
+  try { localStorage.setItem('tl', lang); } catch(e) {}
+}
+
+(function() {
+  var s = 'ar';
+  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  setL(s);
+})();
+</script>
+
+</body>
+</html>
