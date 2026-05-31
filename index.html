@@ -67,15 +67,6 @@ header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; displa
 .info-title { font-size:14px; font-weight:700; color:#fff; margin-bottom:8px; }
 .info-text { font-size:12px; color:#aaa; line-height:1.6; }
 
-/* LINKS SECTION */
-.links-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:15px; }
-.link-item { display:flex; align-items:center; background:#16213e; border:1px solid rgba(0,180,216,0.1); padding:15px 20px; border-radius:12px; text-decoration:none; color:#fff; transition:all 0.3s; }
-.link-item:hover { border-color:#00b4d8; background:rgba(0,180,216,0.05); transform:translateY(-2px); }
-.link-icon { font-size:24px; margin-inline-end:15px; }
-.link-details { display:flex; flex-direction:column; }
-.link-name { font-size:14px; font-weight:700; color:#00b4d8; margin-bottom:2px; }
-.link-sub { font-size:11px; color:#aaa; }
-
 /* MAP SECTION */
 .map-section { background:#0d1b2a; padding:40px 0; }
 .map-wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
@@ -123,7 +114,6 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
 @media(max-width:768px) {
   .places-grid { grid-template-columns:1fr; }
   .info-grid { grid-template-columns:repeat(2,1fr); }
-  .links-grid { grid-template-columns:1fr; }
   .weather-grid { grid-template-columns:repeat(2,1fr); }
   .lang-sw { display:flex; }
   .stats { flex-wrap:wrap; }
@@ -165,10 +155,10 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
 
 <!-- PLACES -->
 <div class="section">
-  <div class="section-title" id="places-title">🗺️ أبرز الموا مواقع السياحية</div>
+  <div class="section-title" id="places-title">🗺️ أبرز المواقع السياحية</div>
   <div class="places-grid">
 
-    <div class="place-card" onclick="location.href='https://blog.ksarsghir.com/plage.html'" style="cursor:pointer;">
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/plage.html'" style="cursor:pointer;">
       <div class="place-img bg1"><span>🏖️</span><span class="place-tag" id="t1">شاطئ</span></div>
       <div class="place-body">
         <div class="place-name" data-ar="شاطئ القصر الصغير" data-fr="Plage de Ksar Sghir" data-en="Ksar Sghir Beach">شاطئ القصر الصغير</div>
@@ -181,7 +171,7 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       </div>
     </div>
 
-    <div class="place-card" onclick="location.href='https://blog.ksarsghir.com/belyounech.html'" style="cursor:pointer;">
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/belyounech.html'" style="cursor:pointer;">
       <div class="place-img bg2"><span>🌺</span><span class="place-tag" id="t2">قرية</span></div>
       <div class="place-body">
         <div class="place-name" data-ar="بليونش" data-fr="Belyounech" data-en="Belyounech">بليونش</div>
@@ -194,7 +184,7 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       </div>
     </div>
 
-    <div class="place-card" onclick="location.href='https://blog.ksarsghir.com/port.html'" style="cursor:pointer;">
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/port.html'" style="cursor:pointer;">
       <div class="place-img bg3"><span>⚓</span><span class="place-tag" id="t3">تراث</span></div>
       <div class="place-body">
         <div class="place-name" data-ar="ميناء الصيد التقليدي" data-fr="Port de pêche traditionnel" data-en="Traditional Fishing Port">ميناء الصيد التقليدي</div>
@@ -206,7 +196,7 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       </div>
     </div>
 
-    <div class="place-card" onclick="location.href='https://blog.ksarsghir.com/tangermed.html'" style="cursor:pointer;">
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/tangermed.html'" style="cursor:pointer;">
       <div class="place-img bg4"><span>🚢</span><span class="place-tag" id="t4">ميناء</span></div>
       <div class="place-body">
         <div class="place-name" data-ar="ميناء طنجة المتوسط" data-fr="Port Tanger Med" data-en="Tanger Med Port">ميناء طنجة المتوسط</div>
@@ -218,7 +208,7 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       </div>
     </div>
 
-    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com'" style="cursor:pointer;">
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/ouedelmarsa.html'" style="cursor:pointer;">
       <div class="place-img bg5"><span>🌊</span><span class="place-tag" id="t5">طبيعة</span></div>
       <div class="place-body">
         <div class="place-name" data-ar="واد اليان" data-fr="Oued El Liane" data-en="Oued El Liane">واد اليان</div>
@@ -230,11 +220,11 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       </div>
     </div>
 
-    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com'" style="cursor:pointer;">
-      <div class="place-img bg6"><span>🏰</span><span class="place-tag" id="t6">تاريخ</span></div>
+    <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/dalia.html'" style="cursor:pointer;">
+      <div class="place-img bg6"><span>🏖️</span><span class="place-tag" id="t6">شاطئ</span></div>
       <div class="place-body">
-        <div class="place-name" data-ar="الدالية" data-fr="La Dalia" data-en="La Dalia">الدالية</div>
-        <div class="place-desc" data-ar="منطقة ساحلية تاريخية تحتضن آثاراً عريقة وشواطئ بكر لم تطأها كثرة السياح — جوهرة مخفية" data-fr="Zone côtière historique abritant des vestiges anciens et des plages vierges peu fréquentées par les touristes — un joyau caché" data-en="A historic coastal area with ancient ruins and untouched beaches rarely visited by tourists — a hidden gem">منطقة ساحلية تاريخية تحتضن آثاراً عريقة وشواطئ بكر لم تطأها كثرة السياح — جوهرة مخفية</div>
+        <div class="place-name" data-ar="شاطئ الدالية" data-fr="Plage Dalia" data-en="Dalia Beach">شاطئ الدالية</div>
+        <div class="place-desc" data-ar="لؤلؤة الشمال — مياه كريستالية، إطلالة على جبل طارق وإسبانيا، مشاهدة السفن العملاقة وغابة طبيعية ساحرة" data-fr="Perle du Nord — eaux cristallines, vue sur Gibraltar et l'Espagne, spectacle des géants des mers et forêt naturelle" data-en="Pearl of the North — crystal waters, view of Gibraltar and Spain, giant ships spectacle and enchanting natural forest rarely visited by tourists — a hidden gem">منطقة ساحلية تاريخية تحتضن آثاراً عريقة وشواطئ بكر لم تطأها كثرة السياح — جوهرة مخفية</div>
         <div class="place-info">
           <span id="history1">🏛️ تاريخ</span>
           <span id="beach1">🏖️ شاطئ بكر</span>
@@ -243,6 +233,35 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
     </div>
 
   </div>
+
+  <!-- القصر الصغير -->
+  <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/ksarsghir.html'" style="cursor:pointer;">
+    <div class="place-img" style="background:linear-gradient(135deg,#1a237e,#283593)"><span>🏰</span><span class="place-tag" id="t7">تاريخ</span></div>
+    <div class="place-body">
+      <div class="place-name" data-ar="القصر الصغير — المدينة والتاريخ" data-fr="Ksar Sghir — Ville et Histoire" data-en="Ksar Sghir — City and History">القصر الصغير — المدينة والتاريخ</div>
+      <div class="place-desc" data-ar="مدينة تاريخية عريقة على مضيق جبل طارق — نقطة عبور بين أفريقيا وأوروبا منذ آلاف السنين" data-fr="Ville historique millénaire sur le détroit de Gibraltar — carrefour entre l'Afrique et l'Europe" data-en="Historic city on the Strait of Gibraltar — crossroads between Africa and Europe for thousands of years">مدينة تاريخية عريقة على مضيق جبل طارق — نقطة عبور بين أفريقيا وأوروبا منذ آلاف السنين</div>
+      <div class="place-info">
+        <span id="pi7a">🏛️ تراث</span>
+        <span id="pi7b">🌊 بحر</span>
+        <span id="pi7c">📸 تصوير</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- سيدي قنقوش -->
+  <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/sidikankouch.html'" style="cursor:pointer;">
+    <div class="place-img" style="background:linear-gradient(135deg,#4a148c,#6a1b9a)"><span>🕌</span><span class="place-tag" id="t8">زيارة</span></div>
+    <div class="place-body">
+      <div class="place-name" data-ar="سيدي قنقوش" data-fr="Sidi Kankouch" data-en="Sidi Kankouch">سيدي قنقوش</div>
+      <div class="place-desc" data-ar="موقع ديني وطبيعي هادئ — إطلالة خلابة على البحر والمنطقة المحيطة" data-fr="Site religieux et naturel paisible — vue imprenable sur la mer et la région" data-en="Peaceful religious and natural site — breathtaking view over the sea and surrounding area">موقع ديني وطبيعي هادئ — إطلالة خلابة على البحر والمنطقة المحيطة</div>
+      <div class="place-info">
+        <span id="pi8a">🕌 ديني</span>
+        <span id="pi8b">🌿 طبيعة</span>
+        <span id="pi8c">📸 تصوير</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="divider"></div>
@@ -282,36 +301,35 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       <div class="info-text" id="i6-text">وجهة سياحية بأسعار معقولة مقارنة بطنجة</div>
     </div>
   </div>
-</div>
 
-<div class="divider"></div>
-
-<!-- TOURISM LINKS SECTION (القسم الجديد المضاف) -->
-<div class="section">
-  <div class="section-title" id="links-title">🔗 روابط سياحية هامة</div>
-  <div class="links-grid">
-    <a href="https://blog.ksarsghir.com" class="link-item">
-      <div class="link-icon">📝</div>
-      <div class="link-details">
-        <span class="link-name" id="ln1-title">مدونة القصر الصغير</span>
-        <span class="link-sub" id="ln1-sub">مقالات ونصائح تهم المسافرين</span>
+  <!-- القصر الصغير -->
+  <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/ksarsghir.html'" style="cursor:pointer;">
+    <div class="place-img" style="background:linear-gradient(135deg,#1a237e,#283593)"><span>🏰</span><span class="place-tag" id="t7">تاريخ</span></div>
+    <div class="place-body">
+      <div class="place-name" data-ar="القصر الصغير — المدينة والتاريخ" data-fr="Ksar Sghir — Ville et Histoire" data-en="Ksar Sghir — City and History">القصر الصغير — المدينة والتاريخ</div>
+      <div class="place-desc" data-ar="مدينة تاريخية عريقة على مضيق جبل طارق — نقطة عبور بين أفريقيا وأوروبا منذ آلاف السنين" data-fr="Ville historique millénaire sur le détroit de Gibraltar — carrefour entre l'Afrique et l'Europe" data-en="Historic city on the Strait of Gibraltar — crossroads between Africa and Europe for thousands of years">مدينة تاريخية عريقة على مضيق جبل طارق — نقطة عبور بين أفريقيا وأوروبا منذ آلاف السنين</div>
+      <div class="place-info">
+        <span id="pi7a">🏛️ تراث</span>
+        <span id="pi7b">🌊 بحر</span>
+        <span id="pi7c">📸 تصوير</span>
       </div>
-    </a>
-    <a href="https://gallery.ksarsghir.com" class="link-item">
-      <div class="link-icon">📸</div>
-      <div class="link-details">
-        <span class="link-name" id="ln2-title">المعرض السياحي الرقمي</span>
-        <span class="link-sub" id="ln2-sub">ألبوم صور بجودة عالية للمنطقة</span>
-      </div>
-    </a>
-    <a href="https://www.visitmorocco.com" target="_blank" class="link-item">
-      <div class="link-icon">🇲🇦</div>
-      <div class="link-details">
-        <span class="link-name" id="ln3-title">المكتب الوطني للسياحة</span>
-        <span class="link-sub" id="ln3-sub">الدليل الرسمي للسياحة المغربية</span>
-      </div>
-    </a>
+    </div>
   </div>
+
+  <!-- سيدي قنقوش -->
+  <div class="place-card" onclick="location.href='https://tourism.ksarsghir.com/sidikankouch.html'" style="cursor:pointer;">
+    <div class="place-img" style="background:linear-gradient(135deg,#4a148c,#6a1b9a)"><span>🕌</span><span class="place-tag" id="t8">زيارة</span></div>
+    <div class="place-body">
+      <div class="place-name" data-ar="سيدي قنقوش" data-fr="Sidi Kankouch" data-en="Sidi Kankouch">سيدي قنقوش</div>
+      <div class="place-desc" data-ar="موقع ديني وطبيعي هادئ — إطلالة خلابة على البحر والمنطقة المحيطة" data-fr="Site religieux et naturel paisible — vue imprenable sur la mer et la région" data-en="Peaceful religious and natural site — breathtaking view over the sea and surrounding area">موقع ديني وطبيعي هادئ — إطلالة خلابة على البحر والمنطقة المحيطة</div>
+      <div class="place-info">
+        <span id="pi8a">🕌 ديني</span>
+        <span id="pi8b">🌿 طبيعة</span>
+        <span id="pi8c">📸 تصوير</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="divider"></div>
@@ -354,7 +372,7 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
     <a href="https://www.ksarsghir.com">الرئيسية</a>
     <a href="https://gallery.ksarsghir.com">المعرض</a>
     <a href="https://store.ksarsghir.com">المتجر</a>
-    <a href="https://blog.ksarsghir.com">المدونة</a>
+    <a href="https://tourism.ksarsghir.com">المدونة</a>
     <a href="https://wa.me/212708053745">تواصل</a>
   </div>
   <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
@@ -378,10 +396,6 @@ var L = {
     'i4-title':'المطبخ المحلي', 'i4-text':'أسماك طازجة من الميناء — أكلات بحرية مغربية أصيلة',
     'i5-title':'الاتصال', 'i5-text':'تغطية جيدة لشبكات Maroc Telecom وOrange وInwi',
     'i6-title':'التكلفة', 'i6-text':'وجهة سياحية بأسعار معقولة مقارنة بطنجة',
-    'links-title':'🔗 روابط سياحية هامة',
-    'ln1-title':'مدونة القصر الصغير', 'ln1-sub':'مقالات ونصائح تهم المسافرين',
-    'ln2-title':'المعرض السياحي الرقمي', 'ln2-sub':'ألبوم صور بجودة عالية للمنطقة',
-    'ln3-title':'المكتب الوطني للسياحة', 'ln3-sub':'الدليل الرسمي للسياحة المغربية',
     'map-title':'📍 الموقع على الخريطة',
     'weather-title':'🌤️ الطقس على مدار السنة',
     w1:'شتاء', wd1:'ممطر وبارد', w2:'ربيع', wd2:'معتدل وجميل',
@@ -406,10 +420,6 @@ var L = {
     'i4-title':'Cuisine locale', 'i4-text':'Poissons frais du port — spécialités marocaines authentiques',
     'i5-title':'Connexion', 'i5-text':'Bonne couverture réseau Maroc Telecom, Orange et Inwi',
     'i6-title':'Budget', 'i6-text':'Destination touristique à prix raisonnables comparé à Tanger',
-    'links-title':'🔗 Liens Touristiques Utiles',
-    'ln1-title':'Blog de Ksar Sghir', 'ln1-sub':'Articles et conseils pour les voyageurs',
-    'ln2-title':'Galerie Touristique Numérique', 'ln2-sub':'Album photos haute résolution de la région',
-    'ln3-title':'Office National du Tourisme', 'ln3-sub':'Le guide officiel du tourisme marocain',
     'map-title':'📍 Localisation sur la carte',
     'weather-title':'🌤️ Météo tout au long de l\'année',
     w1:'Hiver', wd1:'Pluvieux et frais', w2:'Printemps', wd2:'Agréable et beau',
@@ -434,10 +444,6 @@ var L = {
     'i4-title':'Local cuisine', 'i4-text':'Fresh fish from the port — authentic Moroccan seafood specialties',
     'i5-title':'Connectivity', 'i5-text':'Good network coverage from Maroc Telecom, Orange and Inwi',
     'i6-title':'Budget', 'i6-text':'Tourist destination at reasonable prices compared to Tangier',
-    'links-title':'🔗 Useful Tourist Links',
-    'ln1-title':'Ksar Sghir Blog', 'ln1-sub':'Articles and travel tips for visitors',
-    'ln2-title':'Digital Tourism Gallery', 'ln2-sub':'High-quality photo album of the region',
-    'ln3-title':'National Tourist Office', 'ln3-sub':'Official guide for Moroccan tourism',
     'map-title':'📍 Location on map',
     'weather-title':'🌤️ Weather throughout the year',
     w1:'Winter', wd1:'Rainy and cool', w2:'Spring', wd2:'Pleasant and beautiful',
