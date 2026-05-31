@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="meta-title">ميناء طنجة المتوسط - معلم هندسي وعالمي | Tanger Med Guide</title>
+<meta name="description" content="دليل سياحي ومعلوماتي حول ميناء طنجة المتوسط: اكتشف أضخم مركب مينائي في إفريقيا والبحر الأبيض المتوسط ونقاط المشاهدة البانورامية.">
+<meta name="keywords" content="ميناء طنجة المتوسط, Tanger Med, أكبر ميناء في إفريقيا, مضيق جبل طارق, سياحة طنجة, هندسة مغربية">
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
+
+/* HEADER */
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+
+/* ARTICLE HERO */
+.article-hero { background:linear-gradient(180deg, rgba(2, 62, 138, 0.4), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.article-hero h1 { font-size:clamp(26px, 4.5vw, 38px); font-weight:900; margin-bottom:15px; color:#fff; }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+
+/* CONTAINER */
+.container { max-width:800px; margin: 40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:22px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:#ccc; font-size:15.5px; margin-bottom:15px; text-align:justify; }
+
+/* QUICK INFO BOX */
+.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:35px; }
+.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14.5px; color:#aaa; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.info-box li:last-child { margin-bottom:0; }
+
+/* NOTE BOX */
+.note-box { background:rgba(255,183,3,0.05); border-left:4px solid #ffb703; border-right:4px solid transparent; padding:15px; border-radius:6px; margin:30px 0; color:#e5a900; font-size:14.5px; }
+html[dir="rtl"] .note-box { border-right:4px solid #ffb703; border-left:4px solid transparent; }
+
+/* TAGS */
+.tags-container { margin:40px 0 20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); }
+.tags-title { font-size:14px; color:#666; margin-bottom:10px; font-weight:700; }
+.tags-list { display:flex; flex-wrap:wrap; gap:8px; }
+.tag-item { background:#16213e; color:#00b4d8; font-size:12px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid rgba(0,180,216,0.15); transition:0.3s; }
+.tag-item:hover { background:#00b4d8; color:#fff; }
+
+/* CTA BOX */
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:50px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
+.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; border:none; cursor:pointer; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,180,216,0.3); }
+
+/* FOOTER */
+footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:80px; }
+.footer-copy { font-size:11px; color:#555; }
+.footer-copy span { color:#00b4d8; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://tourism.ksarsghir.com" class="logo">
+    <span class="logo-ar" id="lname">السياحة</span>
+    <span class="logo-en">KSAR SGHIR TOURISM</span>
+  </a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+    <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
+  </div>
+</header>
+
+<div class="article-hero">
+  <span class="article-badge" id="p-badge">معلم عالمي • TANGER MED • MEGAPROJECT</span>
+  <h1 id="p-title">ميناء طنجة المتوسط: العملاق الاقتصادي وفخر الهندسة المغربية</h1>
+</div>
+
+<div class="container">
+  
+  <!-- نظرة عامة -->
+  <div class="content-section">
+    <h2 id="sec1-title">نظرة عامة</h2>
+    <p id="sec1-text">يعد ميناء طنجة المتوسط أحد أضخم المشاريع الهندسية والبنيوية في تاريخ المغرب الحديث، والمنصة المينائية الأولى في البحر الأبيض المتوسط والقارة الإفريقية. يقع هذا العملاق الاقتصادي على مقربة من القصر الصغير في موقع استراتيجي فريد يربط بين كبريات الطرق التجارية العالمية. إلى جانب قيمته التجارية والصناعية الهائلة، يشكل الميناء معلماً معمارياً حديثاً يثير فضول وإعجاب الزوار والسياح الراغبين في استكشاف ملامح المغرب المتطور.</p>
+  </div>
+
+  <!-- صندوق معلومات الزائر -->
+  <div class="info-box">
+    <div class="info-box-title" id="box-title">📊 حقائق وأرقام مدهشة</div>
+    <ul>
+      <li id="b1">📍 الموقع: على بعد حوالي 12 كم شرق القصر الصغير (مباشرة على مضيق جبل طارق).</li>
+      <li id="b2">🏆 التصنيف المينائي: الميناء الأكبر والأنشط في إفريقيا وحوض البحر الأبيض المتوسط.</li>
+      <li id="b3">🚗 محطة المسافرين: مجهزة بأحدث التقنيات لاستقبال أفراد الجالية والزوار القادمين من أوروبا.</li>
+      <li id="b4">📸 نقطة الجذب: منصات المشاهدة العلوية المطلة على رصيف الحاويات العملاقة.</li>
+    </ul>
+  </div>
+
+  <!-- التجربة السياحية ونقاط البانوراما -->
+  <div class="content-section">
+    <h2 id="sec2-title">التجربة السياحية: تأمل عظمة الهندسة</h2>
+    <p id="sec2-text">على الرغم من أن طنجة المتوسط هو منطقة لوجستية وصناعية خاضعة لمراقبة دقيقة، إلا أن تجربة المرور بمحاذاته عبر الطريق الساحلية تعتبر تجربة مذهلة بحد ذاتها. توجد مناطق مرتفعة مخصصة ومطلة على المركب المينائي، تتيح للسياح وعشاق التصوير التوقف لالتقاط صور بانورامية استثنائية تظهر رافعات الحاويات الضخمة وهي تتحرك بدقة متناهية، وحركة السفن التجارية والبواخر العملاقة التي تمخر عباب المضيق في مشهد حضاري مهيب.</p>
+  </div>
+
+  <!-- الملاحظة التنبيهية -->
+  <div class="note-box" id="p-note">
+    ⚠️ <strong>ملاحظة أمنية هامة للزوار:</strong> يُمنع تماماً التصوير بالعدسات الاحترافية أو استخدام الطائرات المسيرة (Drones) داخل أو بمحيط الأسوار الأمنية المباشرة للميناء بدون ترخيص رسمي. يرجى الاكتفاء بالتصوير من النقط البانورامية المفتوحة للعموم على طول الطريق الساحلية الخارجية.
+  </div>
+
+  <!-- البوابة والمستقبل -->
+  <div class="content-section">
+    <h2 id="sec3-title">بوابة العبور ومحطة المسافرين الحديثة</h2>
+    <p id="sec3-text">يمثل الميناء للملايين من المسافرين والسياح الانطباع الأول والوجه المشرق للمملكة المغربية عند عبورهم البحر من أوروبا. تضم محطة المسافرين مرافق خدماتية بمعايير عالمية، تشمل مساحات خضراء، مطاعم، مقاهي، ووكالات صرافة، مما يضمن تجربة عبور مريحة وسلسة تليق بزوار المغرب ومواطنيه بالخارج.</p>
+  </div>
+
+  <!-- صندوق الكلمات الدلالية -->
+  <div class="tags-container">
+    <div class="tags-title" id="p-tags-title">🏷️ كلمات دلالية:</div>
+    <div class="tags-list" id="p-tags-list">
+      <a href="#" class="tag-item">ميناء طنجة المتوسط</a>
+      <a href="#" class="tag-item">Tanger Med</a>
+      <a href="#" class="tag-item">مشاريع المغرب الكبرى</a>
+      <a href="#" class="tag-item">مضيق جبل طارق</a>
+    </div>
+  </div>
+
+  <!-- دعوة للتفاعل والاكتشاف -->
+  <div class="cta-box">
+    <h3 id="cta-title">شاهد ضخامة طنجة المتوسط من الأعلى!</h3>
+    <p id="cta-desc">تفضل بزيارة المعرض الرقمي السياحي لمشاهدة ألبوم صور احترافي يوثق هذا المعلم الهندسي العالمي ليلاً ونهاراً.</p>
+    <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح معرض الصور</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+</footer>
+
+<script>
+var L = {
+  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي', 'p-badge':'معلم عالمي • TANGER MED • MEGAPROJECT', 'p-title':'ميناء طنجة المتوسط: العملاق الاقتصادي وفخر الهندسة المغربية', 'sec1-title':'نظرة عامة', 'sec1-text':'يعد ميناء طنجة المتوسط أحد أضخم المشاريع الهندسية والبنيوية في تاريخ المغرب الحديث، والمنصة المينائية الأولى في البحر الأبيض المتوسط والقارة الإفريقية. يقع هذا العملاق الاقتصادي على مقربة من القصر الصغير في موقع استراتيجي فريد يربط بين كبريات الطرق التجارية العالمية. إلى جانب قيمته التجارية والصناعية الهائلة، يشكل الميناء معلماً معمارياً حديثاً يثير فضول وإعجاب الزوار والسياح الراغبين في استكشاف ملامح المغرب المتطور.', 'box-title':'📊 حقائق وأرقام مدهشة', 'b1':'📍 الموقع: على بعد حوالي 12 كم شرق القصر الصغير (مباشرة على مضيق جبل طارق).', 'b2':'🏆 التصنيف المينائي: الميناء الأكبر والأنشط في إفريقيا وحوض البحر الأبيض المتوسط.', 'b3':'🚗 محطة المسافرين: مجهزة بأحدث التقنيات لاستقبال أفراد الجالية والزوار القادمين من أوروبا.', 'b4':'📸 النقطة الجذابة: منصات المشاهدة العلوية المطلة على رصيف الحاويات العملاقة.', 'sec2-title':'التجربة السياحية: تأمل عظمة الهندسة', 'sec2-text':'على الرغم من أن طنجة المتوسط هو منطقة لوجستية وصناعية خاضعة لمراقبة دقيقة، إلا أن تجربة المرور بمحاذاته عبر الطريق الساحلية تعتبر تجربة مذهلة بحد ذاتها. توجد مناطق مرتفعة مخصصة ومطلة على المركب المينائي، تتيح للسياح وعشاق التصوير التوقف لالتقاط صور بانورامية استثنائية تظهر رافعات الحاويات الضخمة وهي تتحرك بدقة متناهية، وحركة السفن التجارية والبواخر العملاقة التي تمخر عباب المضيق في مشهد حضاري مهيب.', 'p-note':'⚠️ <strong>ملاحظة أمنية هامة للزوار:</strong> يُمنع تماماً التصوير بالعدسات الاحترافية أو استخدام الطائرات المسيرة (Drones) داخل أو بمحيط الأسوار الأمنية المباشرة للميناء بدون ترخيص رسمي. يرجى الاكتفاء بالتصوير من النقط البانورامية المفتوحة للعموم على طول الطريق الساحلية الخارجية.', 'sec3-title':'بوابة العبور ومحطة المسافرين الحديثة', 'sec3-text':'يمثل الميناء للملايين من المسافرين والسياح الانطباع الأول والوجه المشرق للمملكة المغربية عند عبورهم البحر من أوروبا. تضم محطة المسافرين مرافق خدماتية بمعايير عالمية، تشمل مساحات خضراء، مطاعم، مقاهي، ووكالات صرافة، مما يضمن تجربة عبور مريحة وسلسة تليق بزوار المغرب ومواطنيه بالخارج.', 'p-tags-title':'🏷️ كلمات دلالية:', 'p-tags-list':'<a href="#" class="tag-item">ميناء طنجة المتوسط</a><a href="#" class="tag-item">Tanger Med</a><a href="#" class="tag-item">مشاريع المغرب الكبرى</a><a href="#" class="tag-item">مضيق جبل طارق</a>', 'cta-title':'شاهد ضخامة طنجة المتوسط من الأعلى！', 'cta-desc':'تفضل بزيارة المعرض الرقمي السياحي لمشاهدة ألبوم صور احترافي يوثق هذا المعلم الهندسي العالمي ليلاً ونهاراً.', 'cta-btn':'🖼️ تصفح معرض الصور' },
+  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique', 'p-badge':'TANGER MED • MEGAPROJECT • معلم عالمي', 'p-title':'Tanger Med : Le géant économique et fierté de l’ingénierie marocaine', 'sec1-title':'Aperçu', 'sec1-text':"Le complexe portuaire Tanger Med est l'un des plus grands projets d'infrastructure de l'histoire moderne du Maroc, et la première plateforme portuaire en Méditerranée et en Afrique. Situé à proximité de Ksar Sghir, il relie les plus grandes routes maritimes mondiales.", 'box-title':'📊 Faits et Chiffres Impressionnants', 'b1':'📍 Lieu: À environ 12 km à l’est de Ksar Sghir (sur le détroit de Gibraltar).', 'b2':'🏆 Classement: Plus grand port d’Afrique et du bassin méditerranéen.', 'b3':'🚗 Terminal Passagers: Équipé des dernières technologies pour accueillir les voyageurs d’Europe.', 'b4':'📸 Point d’intérêt: Plateformes panoramiques surplombant les quais des conteneurs.', 'sec2-title':'L’Expérience Touristique : Admirer le génie industriel', 'sec2-text':"Bien que Tanger Med soit une zone logistique hautement sécurisée, le longer via la route côtière offre un spectacle grandiose. Des points de vue en hauteur permettent aux touristes d'admirer les portiques géants et les mouvements des méga-navires.", 'p-note':"⚠️ <strong>Note de sécurité importante:</strong> Il est strictement interdit de photographier avec des objectifs professionnels ou d'utiliser des drones à l'intérieur du périmètre de sécurité sans autorisation officielle. Utilisez uniquement les points panoramiques publics.", 'sec3-title':'Passerelle internationale moderne', 'sec3-text':"Pour des millions de voyageurs, ce port est la première vitrine moderne du Maroc. Le terminal passagers propose des services de classe mondiale (espaces verts, restaurants, cafés) pour garantir un transit agréable.", 'p-tags-title':'🏷️ Mots-clés:', 'p-tags-list':'<a href="#" class="tag-item">Tanger Med</a><a href="#" class="tag-item">Port Maroc</a><a href="#" class="tag-item">Mégaprojets Maroc</a><a href="#" class="tag-item">Détroit de Gibraltar</a>', 'cta-title':'Découvrez l’immensité de Tanger Med !', 'cta-desc':'Visitez la galerie numérique pour admirer un album photo professionnel de ce chef-d’œuvre industriel.', 'cta-btn':'🖼️ Voir la Galerie' },
+  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide', 'p-badge':'TANGER MED • MEGAPROJECT • معلم عالمي', 'p-title':'Tanger Med: The Economic Giant & Pride of Moroccan Engineering', 'sec1-title':'Overview', 'sec1-text':'The Tanger Med port complex is one of the largest engineering and infrastructure mega-projects in modern Moroccan history, standing as the leading port platform in both the Mediterranean and Africa. Located near Ksar Sghir, it connects major global trade routes.', 'box-title':'📊 Amazing Facts & Figures', 'b1':'📍 Location: About 12 km east of Ksar Sghir (Directly on the Strait of Gibraltar).', 'b2':'🏆 Ranking: The largest and busiest port in Africa and the Mediterranean basin.', 'b3':'🚗 Passenger Terminal: State-of-the-art terminal welcoming travelers coming from Europe.', 'b4':'📸 Viewpoint: Elevated viewing platforms overlooking the massive container docks.', 'sec2-title':'The Tourist Experience: Behold Engineering Greatness', 'sec2-text':'Although Tanger Med is a highly secured logistics area, driving past it along the coastal road is a magnificent experience. There are designated high-altitude points overlooking the port complex, allowing tourists to take stunning panoramic photos of giant container cranes.', 'p-note':'⚠️ <strong>Important Security Notice:</strong> Professional photography and the use of drones inside or around the direct security perimeter of the port are strictly prohibited without official permits. Please restrict filming to public viewpoints outside.', 'sec3-title':'A Modern Gateway to the Kingdom', 'sec3-text':'For millions of travelers, the port provides the first impression of a modern Morocco. The passenger terminal features world-class amenities, including green spaces, restaurants, cafés, and exchange offices.', 'p-tags-title':'🏷️ Tags:', 'p-tags-list':'<a href="#" class="tag-item">Tanger Med Port</a><a href="#" class="tag-item">Morocco Mega-projects</a><a href="#" class="tag-item">Strait of Gibraltar</a><a href="#" class="tag-item">Tangier Infrastructure</a>', 'cta-title':'See Tanger Med from above!', 'cta-desc':'Visit the digital tourism gallery to view a professional photo album showcasing this world-class engineering marvel.', 'cta-btn':'🖼️ Browse Photo Gallery' }
+};
+
+function setL(lang) {
+  var t = L[lang];
+  document.documentElement.setAttribute('dir', t.dir);
+  document.body.setAttribute('dir', t.dir);
+  Object.keys(t).forEach(function(id) {
+    if (id === 'dir') return;
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = t[id];
+  });
+  document.querySelectorAll('.lb').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  });
+  try { localStorage.setItem('tl', lang); } catch(e) {}
+}
+
+(function() {
+  var s = 'ar';
+  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  setL(s);
+})();
+</script>
+
+</body>
+</html>
