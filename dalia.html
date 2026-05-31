@@ -3,180 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="meta-title">شاطئ الدالية - سحر الرمال البيضاء والمياه الفيروزية | Dalia Beach Guide</title>
-<meta name="description" content="دليل سياحي لشاطئ الدالية بالقرب من القصر الصغير: اكتشف أحد أجمل شواطئ شمال المغرب، الأنشطة الصيفية، ومعلومات تهم الزوار.">
-<meta name="keywords" content="شاطئ الدالية, Dalia Beach, القصر الصغير, شواطئ طنجة, سياحة شمال المغرب, البحر الأبيض المتوسط">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<title>شاطئ الدالية - جوهرة الشمال المغربي</title>
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap' rel='stylesheet'/>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
-
-/* HEADER */
-header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
-.logo { text-decoration:none; }
-.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
-.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
-.hright { display:flex; align-items:center; gap:8px; }
-.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
-.lang-sw { display:flex; gap:4px; }
-.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
-.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
-
-/* ARTICLE HERO */
-.article-hero { background:linear-gradient(180deg, rgba(0, 180, 216, 0.25), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
-.article-hero h1 { font-size:clamp(26px, 4.5vw, 38px); font-weight:900; margin-bottom:15px; color:#fff; }
-.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
-
-/* CONTAINER */
-.container { max-width:800px; margin: 40px auto; padding:0 20px; }
-.content-section { margin-bottom:35px; }
-.content-section h2 { font-size:22px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
-.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
-.content-section p { color:#ccc; font-size:15.5px; margin-bottom:15px; text-align:justify; }
-
-/* QUICK INFO BOX */
-.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:35px; }
-.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
-.info-box ul { list-style:none; }
-.info-box li { font-size:14.5px; color:#aaa; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
-.info-box li:last-child { margin-bottom:0; }
-
-/* NOTE BOX */
-.note-box { background:rgba(0,180,216,0.05); border-left:4px solid #00b4d8; border-right:4px solid transparent; padding:15px; border-radius:6px; margin:30px 0; color:#90e0ef; font-size:14.5px; }
-html[dir="rtl"] .note-box { border-right:4px solid #00b4d8; border-left:4px solid transparent; }
-
-/* TAGS */
-.tags-container { margin:40px 0 20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); }
-.tags-title { font-size:14px; color:#666; margin-bottom:10px; font-weight:700; }
-.tags-list { display:flex; flex-wrap:wrap; gap:8px; }
-.tag-item { background:#16213e; color:#00b4d8; font-size:12px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid rgba(0,180,216,0.15); transition:0.3s; }
-.tag-item:hover { background:#00b4d8; color:#fff; }
-
-/* CTA BOX */
-.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:50px; border:1px solid rgba(0,180,216,0.2); }
-.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
-.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
-.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; border:none; cursor:pointer; }
-.btn:hover { background:#0096c7; transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,180,216,0.3); }
-
-/* FOOTER */
-footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:80px; }
-.footer-copy { font-size:11px; color:#555; }
-.footer-copy span { color:#00b4d8; }
+    body { font-family: 'Tajawal', sans-serif; background-color: #f8f9fa; line-height: 1.8; color: #333; margin: 0; }
+    .container { max-width: 900px; margin: auto; padding: 20px; background: #fff; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+    h1 { color: #0077b6; border-right: 5px solid #00b4d8; padding-right: 15px; }
+    h2 { color: #023e8a; margin-top: 30px; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+    .feature-card { background: #f0f7f9; padding: 20px; border-radius: 10px; text-align: center; border: 1px solid #d1e9ef; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+    th { background: #0077b6; color: #fff; }
+    .tip-box { background: #fff3bf; padding: 20px; border-radius: 10px; border-right: 5px solid #fcc419; }
 </style>
 </head>
 <body>
 
-<header>
-  <a href="https://tourism.ksarsghir.com" class="logo">
-    <span class="logo-ar" id="lname">السياحة</span>
-    <span class="logo-en">KSAR SGHIR TOURISM</span>
-  </a>
-  <div class="hright">
-    <div class="lang-sw">
-      <button class="lb on" onclick="setL('ar')">AR</button>
-      <button class="lb" onclick="setL('fr')">FR</button>
-      <button class="lb" onclick="setL('en')">EN</button>
-    </div>
-    <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
-  </div>
-</header>
-
-<div class="article-hero">
-  <span class="article-badge" id="p-badge">طبيعة ساحرة • DALIA BEACH • الجوهرة الفيروزية</span>
-  <h1 id="p-title">شاطئ الدالية: ملتقى الطبيعة البكر والرمال البيضاء الساحرة</h1>
-</div>
-
 <div class="container">
-  
-  <!-- نظرة عامة -->
-  <div class="content-section">
-    <h2 id="sec1-title">سحر المكان وإطلالة المضيق</h2>
-    <p id="sec1-text">يعتبر شاطئ الدالية واحداً من أروع وأجمل الوجهات الشاطئية في المملكة المغربية، ويقع في جيب ساحلي ساحر تابع لإقليم الفحص أنجرة، على بعد مسافة قصيرة من ميناء طنجة المتوسط والقصر الصغير. يتميز هذا الشاطئ الفريد بخلفيته الجبلية الخضراء الأخاذة، ورماله الناعمة الشديدة البياض، ومياهه الفيروزية الشفافة والدافئة التي تشبه إلى حد كبير شواطئ جزر الكاريبي، مما يجعله قبلة مفضلة للعائلات وعشاق الاستجمام والهدوء.</p>
-  </div>
+    <h1>شاطئ الدالية: حيث تعانق الطبيعة الأفق</h1>
+    <p>هل تبحث عن وجهة شاطئية تجمع بين روعة الطبيعة العذراء، وهدوء الغابات الخضراء، وإطلالة ساحرة على قارة أخرى؟ إذا كان جوابك نعم، فإن شاطئ الدالية هو وجهتك القادمة.</p>
 
-  <!-- صندوق معلومات الزائر -->
-  <div class="info-box">
-    <div class="info-box-title" id="box-title">💡 دليل الزائر والمعلومات الأساسية</div>
-    <ul>
-      <li id="b1">📍 الموقع: يقع شرق القصر الصغير ويبعد حوالي 15 دقيقة بالسيارة عبر الطريق الساحلية.</li>
-      <li id="b2">🏖️ جودة الشاطئ: حائز على شارة "اللواء الأزرق" الدولية بفضل نظافته الفائقة وجودة مياهه.</li>
-      <li id="b3">🏊 الأنشطة: السباحة الآمنة للأطفال، ركوب الدراجات المائية (Jet-Ski)، والتخييم المنظم في المحيط.</li>
-      <li id="b4">🚢 مشهد استثنائي: رؤية البواخر الكبيرة وسفن الشحن العملاقة تعبر مضيق جبل طارق بوضوح.</li>
-    </ul>
-  </div>
-
-  <!-- الأنشطة والتجربة الصيفية -->
-  <div class="content-section">
-    <h2 id="sec2-title">الأنشطة المتاحة وتجربة الاستجمام</h2>
-    <p id="sec2-text">بفضل هدوء أمواجه وتدرج عمق مياهه، يوفر شاطئ الدالية بيئة سباحة آمنة ومثالية جداً للعائلات التي تصطحب أطفالاً. يضم الشاطئ خلال فصل الصيف مجموعة واسعة من الخدمات والأنشطة الترفيهية، بما في ذلك كراء المظلات الشمسية، ركوب قوارب الكاياك، والألعاب المائية التفاعلية. كما تنتشر على طول الشاطئ مقاهٍ ومطاعم محلية تقدم وجبات السمك الطازج المشوي على الطريقة الشمالية التقليدية لإكمال متعة التجربة.</p>
-  </div>
-
-  <!-- صندوق الملاحظة التوجيهية -->
-  <div class="note-box" id="p-note">
-    ℹ️ <strong>نصيحة ذكية للزوار:</strong> يحظى شاطئ الدالية بشعبية جارفة وإقبال كبير جداً خلال عطل نهاية الأسبوع في شهري يوليو وأغسطس. لتأمين مكان مريح وموقف لسيارتك بكل سهولة، يُنصح دائماً بالوصول إلى الشاطئ في الساعات الأولى من الصباح.
-  </div>
-
-  <!-- شاطئ للجميع والمبادرات الإنسانية -->
-  <div class="content-section">
-    <h2 id="sec3-title">مبادرة "شاطئ شامل" للجميع</h2>
-    <p id="sec3-text">ما يميز شاطئ الدالية أيضاً ويجعله نموذجاً يحتذى به، هو تجهيزه بمسارات وولوجيات خاصة تتيح للأشخاص في وضعية إعاقة وحركية محدودة الوصول مباشرة إلى مياه البحر، بالإضافة إلى توفير كراسي برمائية مخصصة لهم بمساعدة أطقم مدربة مجاناً. تعكس هذه البنية التحتية الإنسانية والحديثة مدى الاهتمام الذي تحظى به هذه الجوهرة لضمان متعة الصيف لجميع فئات المجتمع دون استثناء.</p>
-  </div>
-
-  <!-- صندوق الكلمات الدلالية -->
-  <div class="tags-container">
-    <div class="tags-title" id="p-tags-title">🏷️ كلمات دلالية:</div>
-    <div class="tags-list" id="p-tags-list">
-      <a href="#" class="tag-item">شاطئ الدالية</a>
-      <a href="#" class="tag-item">Playa Dalia</a>
-      <a href="#" class="tag-item">شواطئ شمال المغرب</a>
-      <a href="#" class="tag-item">مضيق جبل طارق</a>
-      <a href="#" class="tag-item">سياحة الفحص أنجرة</a>
+    <h2>✨ مميزات شاطئ الدالية</h2>
+    <div class="features">
+        <div class="feature-card">🚢 <b>مشاهدة السفن</b><br>مراقبة أكبر سفن الشحن العابرة للمضيق.</div>
+        <div class="feature-card">🇪🇸 <b>إطلالة أوروبية</b><br>رؤية السواحل الإسبانية بالعين المجردة.</div>
+        <div class="feature-card">🌊 <b>مياه فيروزية</b><br>نقاء عالي ورمال ذهبية للسباحة.</div>
+        <div class="feature-card">⛵ <b>مدرسة الشراع</b><br>تعلم فنون الإبحار للشباب والأطفال.</div>
     </div>
-  </div>
 
-  <!-- دعوة للتفاعل والاكتشاف -->
-  <div class="cta-box">
-    <h3 id="cta-title">اكتشف روعة شاطئ الدالية بالصور!</h3>
-    <p id="cta-desc">تصفح ألبوم الصور الحصري لشاطئ الدالية لتشاهد نقاء مياهه الفيروزية وجمال طبيعته المحيطة قبل زيارتك.</p>
-    <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح ألبوم الدالية</a>
-  </div>
+    <h2>🌲 سحر الطبيعة: الغابة والميناء</h2>
+    <p><b>1. غابة الدالية الساحرة:</b> ملاذ لعشاق التخييم والمشي (Hiking) وسط الهواء النقي وإطلالة بانورامية.</p>
+    <p><b>2. ميناء الصيد التقليدي:</b> تجربة مشاهدة القوارب الزرقاء المحملة بالأسماك الطازجة من مياه المضيق.</p>
 
+    <h2>🚗 دليل المواصلات</h2>
+    <table>
+        <tr><th>نقطة الانطلاق</th><th>الوسيلة</th><th>تفاصيل الرحلة</th></tr>
+        <tr><td>طنجة (وسط المدينة)</td><td>حافلات النقل (Public Bus)</td><td>خيار اقتصادي ومباشر.</td></tr>
+        <tr><td>طنجة (كاستيا/سيدي ادريس)</td><td>التاكسي الكبير</td><td>رحلات منتظمة نحو الشاطئ.</td></tr>
+        <tr><td>مدينة الفنيدق</td><td>التاكسي الكبير</td><td>وصول مباشر لمحيط الشاطئ.</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <h3>💡 نصائح لزيارة مثالية:</h3>
+        <ul>
+            <li>🌅 <b>الوقت:</b> الصباح الباكر هو الأفضل للاستمتاع بهدوء الغابة.</li>
+            <li>📸 <b>التصوير:</b> لا تنسَ منظاراً (Zoom) لالتقاط تفاصيل السواحل والسفن.</li>
+            <li>🍽️ <b>الطعام:</b> استمتع بالأسماك الطازجة في المطاعم المحلية قرب الميناء.</li>
+        </ul>
+    </div>
 </div>
-
-<footer>
-  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
-</footer>
-
-<script>
-var L = {
-  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي', 'p-badge':'طبيعة ساحرة • DALIA BEACH • الجوهرة الفيروزية', 'p-title':'شاطئ الدالية: ملتقى الطبيعة البكر والرمال البيضاء الساحرة', 'sec1-title':'سحر المكان وإطلالة المضيق', 'sec1-text':'يعتبر شاطئ الدالية واحداً من أروع وأجمل الوجهات الشاطئية في المملكة المغربية، ويقع في جيب ساحلي ساحر تابع لإقليم الفحص أنجرة، على بعد مسافة قصيرة من ميناء طنجة المتوسط والقصر الصغير. يتميز هذا الشاطئ الفريد بخلفيته الجبلية الخضراء الأخاذة، ورماله الناعمة الشديدة البياض، ومياهه الفيروزية الشفافة والدافئة التي تشبه إلى حد كبير شواطئ جزر الكاريبي، مما يجعله قبلة مفضلة للعائلات وعشاق الاستجمام والهدوء.', 'box-title':'💡 دليل الزائر والمعلومات الأساسية', 'b1':'📍 الموقع: يقع شرق القصر الصغير ويبعد حوالي 15 دقيقة بالسيارة عبر الطريق الساحلية.', 'b2':'🏖️ جودة الشاطئ: حائز على شارة "اللواء الأزرق" الدولية بفضل نظافته الفائقة وجودة مياهه.', 'b3':'🏊 الأنشطة: السباحة الآمنة للأطفال، ركوب الدراجات المائية (Jet-Ski)، والتخييم المنظم في المحيط.', 'b4':'🚢 مشهد استثنائي: رؤية البواخر الكبيرة وسفن الشحن العملاقة تعبر مضيق جبل طارق بوضوح.', 'sec2-title':'الأنشطة المتاحة وتجربة الاستجمام', 'sec2-text':'بفضل هدوء أمواجه وتدرج عمق مياهه، يوفر شاطئ الدالية بيئة سباحة آمنة ومثالية جداً للعائلات التي تصطحب أطفالاً. يضم الشاطئ خلال فصل الصيف مجموعة واسعة من الخدمات والأنشطة الترفيهية، بما في ذلك كراء المظلات الشمسية، ركوب قوارب الكاياك، والألعاب المائية التفاعلية. كما تنتشر على طول الشاطئ مقاهٍ ومطاعم محلية تقدم وجبات السمك الطازج المشوي على الطريقة الشمالية التقليدية لإكمال متعة التجربة.', 'p-note':'ℹ️ <strong>نصيحة ذكية للزوار:</strong> يحظى شاطئ الدالية بشعبية جارفة وإقبال كبير جداً خلال عطل نهاية الأسبوع في شهري يوليو وأغسطس. لتأمين مكان مريح وموقف لسيارتك بكل سهولة، يُنصح دائماً بالوصول إلى الشاطئ في الساعات الأولى من الصباح.', 'sec3-title':'مبادرة "شاطئ شامل" للجميع', 'sec3-text':'ما يميز شاطئ الدالية أيضاً ويجعله نموذجاً يحتذى به، هو تجهيزه بمسارات وولوجيات خاصة تتيح للأشخاص في وضعية إعاقة وحركية محدودة الوصول مباشرة إلى مياه البحر، بالإضافة إلى توفير كراسي برمائية مخصصة لهم بمساعدة أطقم مدربة مجاناً. تعكس هذه البنية التحتية الإنسانية والحديثة مدى الاهتمام الذي تحظى به هذه الجوهرة لضمان متعة الصيف لجميع فئات المجتمع دون استثناء.', 'p-tags-title':'🏷️ كلمات دلالية:', 'p-tags-list':'<a href="#" class="tag-item">شاطئ الدالية</a><a href="#" class="tag-item">Playa Dalia</a><a href="#" class="tag-item">شواطئ شمال المغرب</a><a href="#" class="tag-item">مضيق جبل طارق</a><a href="#" class="tag-item">سياحة الفحص أنجرة</a>', 'cta-title':'اكتشف روعة شاطئ الدالية بالصور！', 'cta-desc':'تصفح ألبوم الصور الحصري لشاطئ الدالية لتشاهد نقاء مياهه الفيروزية وجمال طبيعته المحيطة قبل زيارتك.', 'cta-btn':'🖼️ تصفح ألبوم الدالية' },
-  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique', 'p-badge':'DALIA BEACH • TURQUOISE PARADISE • طبيعة ساحرة', 'p-title':'Plage Dalia : Le paradis de sable blanc et d’eaux turquoises', 'sec1-title':'La magie du lieu et vue sur le détroit', 'sec1-text':"La plage de Dalia est considérée comme l'une des destinations balnéaires les plus magnifiques du Royaume du Maroc. Située dans la province de Fahs-Anjra, à une courte distance de Ksar Sghir, elle se distingue par son sable fin ultra-blanc et ses eaux cristallines qui rappellent les Caraïbes.", 'box-title':'💡 Guide du Visiteur & Infos Pratiques', 'b1':'📍 Lieu: À l’est de Ksar Sghir, environ 15 minutes en voiture via la route côtière.', 'b2':'🏖️ Qualité: Labellisée "Pavillon Bleu" international pour sa propreté exemplaire.', 'b3':'🏊 Activités: Baignade familiale sécurisée, Jet-Ski, et sports nautiques.', 'b4':'🚢 Vue unique: Observation panoramique des grands navires traversant le détroit de Gibraltar.', 'sec2-title':'Activités et Expérience Estivale', 'sec2-text':"Grâce à ses eaux calmes et peu profondes, Dalia est idéale pour les familles avec enfants. Pendant l'été, la plage propose des locations de parasols, des promenades en kayak et de la restauration locale servant d'excellents poissons frais grillés.", 'p-note':"ℹ️ <strong>Conseil malin :</strong> La plage de Dalia connaît une très forte affluence les week-ends de juillet et août. Pour trouver une bonne place et vous garer facilement, il est fortement conseillé d'arriver tôt le matin.", 'sec3-title':'Une plage inclusive pour tous', 'sec3-text':"Dalia se distingue également par ses aménagements exemplaires pour les personnes à mobilité réduite, offrant des rampes d'accès spéciales et des fauteuils amphibies gratuits encadrés par des professionnels, garantissant l'accès à la mer pour tous.", 'p-tags-title':'🏷️ Mots-clés:', 'p-tags-list':'<a href="#" class="tag-item">Plage Dalia</a><a href="#" class="tag-item">Dalia Beach</a><a href="#" class="tag-item">Plages du Maroc</a><a href="#" class="tag-item">Détroit de Gibraltar</a>', 'cta-title':'Découvrez la beauté de Dalia en images !', 'cta-desc':'Explorez l’album photo exclusif de la plage de Dalia pour admirer la clarté de ses eaux avant votre visite.', 'cta-btn':'🖼️ Voir l’Album Dalia' },
-  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide', 'p-badge':'DALIA BEACH • TURQUOISE PARADISE • طبيعة ساحرة', 'p-title':'Dalia Beach: Where Pristine White Sands Meet Turquoise Waters', 'sec1-title':'The Magic of Dalia & Strait Views', 'sec1-text':'Dalia Beach is widely regarded as one of the most stunning coastal destinations in Morocco. Located in the Fahs-Anjra province near Ksar Sghir, this unique beach features powdery white sand and warm, crystal-clear turquoise waters resembling the Caribbean sea.', 'box-title':'💡 Visitor Guide & Essential Info', 'b1':'📍 Location: East of Ksar Sghir, about a 15-minute scenic drive along the coast.', 'b2':'🏖️ Eco-Label: Awarded the international "Blue Flag" for pristine cleanliness and water safety.', 'b3':'🏊 Activities: Safe swimming for kids, jet-ski rentals, kayaking, and coastal relaxation.', 'b4':'🚢 Unique Sight: Clearly watch massive cargo ships navigating the historic Strait of Gibraltar.', 'sec2-title':'Summer Activities & Leisure Experience', 'sec2-text':'With its calm waves and gradual depth, Dalia offers a safe environment for family vacations. During the summer season, the beach is fully serviced with umbrella rentals, water sports equipment, and local seaside restaurants serving traditional grilled fresh fish.', 'p-note':'ℹ️ <strong>Smart Visitor Tip:</strong> Dalia Beach gets highly crowded during summer weekends in July and August. To secure a great spot on the sand and convenient parking, always plan to arrive during the early morning hours.', 'sec3-title':'An Inclusive Beach Experience', 'sec3-text':'What makes Dalia truly exceptional is its commitment to inclusivity. It is equipped with dedicated access ramps and specialized amphibious wheelchairs, allowing people with limited mobility and disabilities to enjoy the sea safely and free of charge.', 'p-tags-title':'🏷️ Tags:', 'p-tags-list':'<a href="#" class="tag-item">Dalia Beach</a><a href="#" class="tag-item">Playa Dalia</a><a href="#" class="tag-item">Morocco Beaches</a><a href="#" class="tag-item">Strait of Gibraltar</a>', 'cta-title':'Explore the splendor of Dalia Beach!', 'cta-desc':'Browse through our exclusive photo gallery to experience the crystal-clear beauty of Dalia Beach before you arrive.', 'cta-btn':'🖼️ Browse Dalia Gallery' }
-};
-
-function setL(lang) {
-  var t = L[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
-  Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
-    var el = document.getElementById(id);
-    if (el) el.innerHTML = t[id];
-  });
-  document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
-  });
-  try { localStorage.setItem('tl', lang); } catch(e) {}
-}
-
-(function() {
-  var s = 'ar';
-  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
-  setL(s);
-})();
-</script>
 
 </body>
 </html>
