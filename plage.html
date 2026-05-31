@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="meta-title">شاطئ القصر الصغير - دليل سياحي شامل | Plage Ksar Sghir</title>
+<meta name="description" content="دليل سياحي شامل لشاطئ القصر الصغير: الأنشطة، كيفية الوصول، ونصائح للمسافرين لزيارة جوهرة المتوسط في شمال المغرب.">
+<meta name="keywords" content="شاطئ القصر الصغير, السياحة في القصر الصغير, plage ksar sghir, ksar sghir beach, شواطئ طنجة, مضيق جبل طارق">
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
+
+/* HEADER */
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+
+/* ARTICLE HERO */
+.article-hero { background:linear-gradient(180deg, rgba(2, 62, 138, 0.4), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.article-hero h1 { font-size:clamp(26px, 4.5vw, 38px); font-weight:900; margin-bottom:15px; color:#fff; }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+
+/* CONTAINER */
+.container { max-width:800px; margin: 40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:22px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:#ccc; font-size:15.5px; margin-bottom:15px; text-align:justify; }
+
+/* QUICK INFO BOX */
+.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:35px; }
+.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14.5px; color:#aaa; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+.info-box li:last-child { margin-bottom:0; }
+
+/* CTA BOX */
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:50px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
+.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; border:none; cursor:pointer; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,180,216,0.3); }
+
+/* FOOTER */
+footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:80px; }
+.footer-copy { font-size:11px; color:#555; }
+.footer-copy span { color:#00b4d8; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://tourism.ksarsghir.com" class="logo">
+    <span class="logo-ar" id="lname">السياحة</span>
+    <span class="logo-en">KSAR SGHIR TOURISM</span>
+  </a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+    <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
+  </div>
+</header>
+
+<div class="article-hero">
+  <span class="article-badge" id="p-badge">شاطئ • PLAGE • BEACH</span>
+  <h1 id="p-title">شاطئ القصر الصغير: دليل سياحي شامل لزيارة جوهرة المتوسط</h1>
+</div>
+
+<div class="container">
+  
+  <div class="content-section">
+    <h2 id="sec1-title">نظرة عامة</h2>
+    <p id="sec1-text">يعتبر شاطئ القصر الصغير أحد أجمل الوجهات الشاطئية الهادئة الممتدة على واجهة البحر الأبيض المتوسط في شمال المغرب. يتميز الشاطئ بموقعه الجغرافي والاستراتيجي الاستثنائي المطل مباشرة على مضيق جبل طارق، حيث تلوح قارة أوروبا وجبال الساحل الإسباني في الأفق بالعين المجردة خلال الأيام الصافية. يجمع هذا المكان الساحر بين هدوء الطبيعة البحرية، الرمال الذهبية الناعمة، والمياه النقية، مما يجعله ملاذاً ممتازاً للراغبين في الاستجمام.</p>
+  </div>
+
+  <div class="info-box">
+    <div class="info-box-title" id="box-title">📊 معلومات تهمك قبل الزيارة</div>
+    <ul>
+      <li id="b1">📍 الموقع: مركز القصر الصغير (على بعد 35 كم شرق مدينة طنجة عبر الطريق الساحلية).</li>
+      <li id="b2">💰 رسوم الدخول: مجاني تماماً ومفتوح للعموم على مدار الساعة.</li>
+      <li id="b3">🏊 الأنشطة: السباحة الآمنة، الاسترخاء، التقاط الصور البانورامية، والمشي الساحلي.</li>
+      <li id="b4">🚗 مواقف السيارات: متوفرة ومؤمنة بمحاذاة كورنيش الشاطئ.</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2 id="sec2-title">ماذا يمكنك أن تفعل هناك؟</h2>
+    <p id="sec2-text">يعد شاطئ القصر الصغير مكاناً مثالياً للعائلات ومحبي الهدوء الراغبين في الهروب من صخب وضوضاء المدن الكبرى. تتيح لك مياهه الصافية تجربة سباحة مميزة وآمنة بفضل أمواجه المعتدلة وحمايته الطبيعية. يمكن لعشاق المشي الاستمتاع بجولات ساحلية ساحرة عند وقت الغروب، بينما يمثل المكان جنة حقيقية لهواة ومحترفي التصوير الفوتوغرافي لتوثيق اللوحات الطبيعية وحركة السفن العابرة للمضيق.</p>
+  </div>
+
+  <div class="content-section">
+    <h2 id="sec3-title">نصائح وإرشادات للمسافرين</h2>
+    <p id="sec3-text">للحصول على تجربة سياحية متكاملة، نوصي بزيارة الشاطئ في الفترة الممتدة من أواخر الربيع وحتى نهاية فصل الصيف (بين شهري ماي وأكتوبر)، حيث تكون الأجواء مشمسة ومياه البحر دافئة ومثالية للسباحة. بعد الانتهاء من يومك، لا تفوت فرصة زيارة مطاعم السمك التقليدية القريبة المحيطة بميناء الصيد، لتناول وجبة غداء مغربية أصيلة من الأسماك الطازجة المصطادة في نفس اليوم.</p>
+  </div>
+
+  <div class="cta-box">
+    <h3 id="cta-title">هل ترغب في رؤية المزيد؟</h3>
+    <p id="cta-desc">تفضل بزيارة المعرض الرقمي السياحي لمشاهدة ألبوم كامل من الصور الاحترافية لشواطئ ومعالم القصر الصغير.</p>
+    <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح معرض الصور</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+</footer>
+
+<script>
+var L = {
+  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي', 'p-badge':'شاطئ • PLAGE • BEACH', 'p-title':'شاطئ القصر الصغير: دليل سياحي شامل لزيارة جوهرة المتوسط', 'sec1-title':'نظرة عامة', 'sec1-text':'يعتبر شاطئ القصر الصغير أحد أجمل الوجهات الشاطئية الهادئة الممتدة على واجهة البحر الأبيض المتوسط في شمال المغرب. يتميز الشاطئ بموقعه الجغرافي والاستراتيجي الاستثنائي المطل مباشرة على مضيق جبل طارق، حيث تلوح قارة أوروبا وجبال الساحل الإسباني في الأفق بالعين المجردة خلال الأيام الصافية. يجمع هذا المكان الساحر بين هدوء الطبيعة البحرية، الرمال الذهبية الناعمة، والمياه النقية، مما يجعله ملاذاً ممتازاً للراغبين في الاستجمام.', 'box-title':'📊 معلومات تهمك قبل الزيارة', 'b1':'📍 الموقع: مركز القصر الصغير (على بعد 35 كم شرق مدينة طنجة عبر الطريق الساحلية).', 'b2':'💰 رسوم الدخول: مجاني تماماً ومفتوح للعموم على مدار الساعة.', 'b3':'🏊 الأنشطة: السباحة الآمنة، الاسترخاء، التقاط الصور البانورامية، والمشي الساحلي.', 'b4':'🚗 مواقف السيارات: متوفرة ومؤمنة بمحاذاة كورنيش الشاطئ.', 'sec2-title':'ماذا يمكنك أن تفعل هناك؟', 'sec2-text':'يعد شاطئ القصر الصغير مكاناً مثالياً للعائلات ومحبي الهدوء الراغبين في الهروب من صخب وضوضاء المدن الكبرى. تتيح لك مياهه الصافية تجربة سباحة مميزة وآمنة بفضل أمواجه المعتدلة وحمايته الطبيعية. يمكن لعشاق المشي الاستمتاع بجولات ساحلية ساحرة عند وقت الغروب، بينما يمثل المكان جنة حقيقية لهواة ومحترفي التصوير الفوتوغرافي لتوثيق اللوحات الطبيعية وحركة السفن العابرة للمضيق.', 'sec3-title':'نصائح وإرشادات للمسافرين', 'sec3-text':'للحصول على تجربة سياحية متكاملة، نوصي بزيارة الشاطئ في الفترة الممتدة من أواخر الربيع وحتى نهاية فصل الصيف (بين شهري ماي وأكتوبر)، حيث تكون الأجواء مشمسة ومياه البحر دافئة ومثالية للسباحة. بعد الانتهاء من يومك, لا تفوت فرصة زيارة مطاعم السمك التقليدية القريبة المحيطة بميناء الصيد، لتناول وجبة غداء مغربية أصيلة من الأسماك الطازجة المصطادة في نفس اليوم.', 'cta-title':'هل ترغب في رؤية المزيد؟', 'cta-desc':'تفضل بزيارة المعرض الرقمي السياحي لمشاهدة ألبوم كامل من الصور الاحترافية لشواطئ ومعالم القصر الصغير.', 'cta-btn':'🖼️ تصفح معرض الصور' },
+  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique', 'p-badge':'PLAGE • BEACH • شاطئ', 'p-title':'Plage de Ksar Sghir : Guide Touristique Complet de la Perle du Détroit', 'sec1-title':'Aperçu', 'sec1-text':"La plage de Ksar Sghir est l'une des plus belles destinations balnéaires calmes de la côte méditerranéenne au nord du Maroc. Elle se distingue par sa situation géographique et stratégique exceptionnelle surplombant directement le détroit de Gibraltar, où le continent européen et les côtes espagnoles apparaissent à l'œil nu par temps clair. Ce lieu charmant mêle la sérénité de la nature marine, le sable doré et les eaux cristallines.", 'box-title':'📊 Infos utiles avant votre visite', 'b1':'📍 Localisation: Centre de Ksar Sghir (à environ 35 km de Tanger via la route côtière).', 'b2':'💰 Tarif: Entièrement gratuite et ouverte au public 24h/24.', 'b3':'🏊 Activités: Baignade sécurisée, détente, photographie panoramique, marche côtière.', 'b4':'🚗 Parking: Disponible et sécurisé le long de la corniche.', 'sec2-title':'Que pouvez-vous faire là-bas ?', 'sec2-text':"Cette plage est un refuge idéal pour les familles et les amoureux du calme qui souhaitent s'évader du bruit des grandes villes. Les eaux limpides vous garantissent une baignade agréable grâce aux vagues modérées. Les amateurs de marche apprécieront des balades magiques le long du rivage au coucher du soleil, tandis que le site est un vrai paradis pour les photographes.", 'sec3-title':'Conseils et recommandations pour les voyageurs', 'sec3-text':"Pour une expérience optimale, il est conseillé de visiter la plage entre la fin du printemps et la fin de l'été (de mai à octobre). Ne manquez pas de découvrir les restaurants de poissons traditionnels à proximité du port pour savourer un repas de poisson frais pêché le jour même.", 'cta-title':'Voulez-vous en voir plus ?', 'cta-desc':'Visitez la galerie numérique pour découvrir un album complet de photos professionnelles de Ksar Sghir.', 'cta-btn':'🖼️ Parcourir la Galerie' },
+  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide', 'p-badge':'BEACH • PLAGE • شاطئ', 'p-title':'Ksar Sghir Beach: Ultimate Travel Guide to the Mediterranean Gem', 'sec1-title':'Overview', 'sec1-text':'Ksar Sghir beach is one of the most beautiful peaceful coastal destinations along the Mediterranean shore in northern Morocco. The beach features an exceptional geographic location directly overlooking the Strait of Gibraltar, where the European continent and the Spanish coast can be seen with the naked eye on clear days. It creates a unique scenery of golden sand and crystal-clear waters.', 'box-title':'📊 Useful Information Before Your Visit', 'b1':'📍 Location: Center of Ksar Sghir (About 35 km away from Tangier via the coastal road).', 'b2':'💰 Admission: Completely free and open to the public 24/7.', 'b3':'🏊 Available Activities: Safe swimming, relaxation, panoramic photography, coastal walking.', 'b4':'🚗 Parking: Available and secured alongside the beach promenade.', 'sec2-title':'What can you do there?', 'sec2-text':'The beach is a perfect haven for families and peace-seekers wishing to escape the hustle of big cities. Its crystal-clear waters offer a refreshing and safe swimming experience thanks to moderate waves. Walking enthusiasts can enjoy magical coastal strolls at sunset, and it serves as an ideal spot for photography lovers to document ships passing through the strait.', 'sec3-title':'Tips and Guidelines for Travelers', 'sec3-text':'For a complete travel experience, it is highly recommended to visit the beach from late spring to the end of summer (between May and October). After relaxing, do not miss the chance to visit the traditional seafood restaurants near the fishing port to enjoy an authentic Moroccan lunch of fresh local fish.', 'cta-title':'Want to see more?', 'cta-desc':'Visit the digital tourism gallery to view a full album of professional photos showcasing Ksar Sghir beaches.', 'cta-btn':'🖼️ Browse Photo Gallery' }
+};
+
+function setL(lang) {
+  var t = L[lang];
+  document.documentElement.setAttribute('dir', t.dir);
+  document.body.setAttribute('dir', t.dir);
+  Object.keys(t).forEach(function(id) {
+    if (id === 'dir') return;
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = t[id];
+  });
+  document.querySelectorAll('.lb').forEach(function(b) {
+    b.classList.remove('on');
+    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  });
+  try { localStorage.setItem('tl', lang); } catch(e) {}
+}
+
+(function() {
+  var s = 'ar';
+  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  setL(s);
+})();
+</script>
+
+</body>
+</html>
