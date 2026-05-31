@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قرية واد المرسى: حيث يعانق الجبل زرقة المتوسط</title>
+<meta name="description" content="اكتشف سحر قرية واد المرسى قرب جبل موسى. دليلك السياحي الشامل للاستجمام في أحضان الطبيعة العذراء بين طنجة وتطوان.">
+<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
+header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+.logo { text-decoration:none; }
+.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
+.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.hright { display:flex; align-items:center; gap:8px; }
+.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
+.lang-sw { display:flex; gap:4px; }
+.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
+.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+.article-hero { background:linear-gradient(180deg, rgba(0,96,100,0.5), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.article-hero h1 { font-size:clamp(24px,4.5vw,36px); font-weight:900; color:#fff; margin-bottom:10px; }
+.container { max-width:800px; margin:40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:20px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:#ccc; font-size:15px; margin-bottom:15px; }
+.features { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin:20px 0; }
+.feature-card { background:#16213e; padding:20px; border-radius:12px; text-align:center; border:1px solid rgba(0,180,216,0.15); }
+.feature-card b { color:#00b4d8; display:block; margin-bottom:6px; font-size:14px; }
+.feature-card span { color:#aaa; font-size:12px; }
+.transport-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:13px; }
+.transport-table th { background:rgba(0,180,216,0.15); color:#00b4d8; padding:12px; text-align:right; border:1px solid rgba(0,180,216,0.2); }
+.transport-table td { padding:12px; border:1px solid rgba(255,255,255,0.08); color:#ccc; }
+.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid #00b4d8; padding:20px; border-radius:8px; margin:25px 0; }
+.tip-box h3 { color:#00b4d8; margin-bottom:15px; font-size:16px; }
+</style>
+</head>
+<body>
 
+<header>
+  <a href="#" class="logo"><span class="logo-ar">السياحة</span><span class="logo-en">KSAR SGHIR TOURISM</span></a>
+  <div class="hright">
+    <div class="lang-sw">
+      <button class="lb on" onclick="setL('ar')">AR</button>
+      <button class="lb" onclick="setL('fr')">FR</button>
+      <button class="lb" onclick="setL('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="article-hero">
+  <span class="article-badge" id="p-badge">واد المرسى • WAD EL MARSA</span>
+  <h1 id="p-title">واد المرسى: حيث يعانق الجبل زرقة المتوسط</h1>
+</div>
+
+<div class="container">
+  <div class="content-section">
+    <h2 id="sec0-title">نظرة عامة</h2>
+    <p id="sec0-text">تعد قرية واد المرسى جوهرة مخفية في شمال المغرب، حيث يمتزج الشموخ الجبلي لجبل موسى بصفاء مياه المتوسط. وجهة مثالية للباحثين عن الهدوء وسط طبيعة عذراء بعيداً عن صخب المدن.</p>
+  </div>
+
+  <div class="content-section">
+    <h2 id="sec1-title">✨ لماذا واد المرسى؟</h2>
+    <div class="features">
+      <div class="feature-card"><b id="f1b">طبيعة عذراء</b><span id="f1t">إطلالات بانورامية مذهلة تجمع بين البحر والجبل.</span></div>
+      <div class="feature-card"><b id="f2b">هدوء تام</b><span id="f2t">ملاذ بعيد عن الضجيج للاستجمام والاسترخاء.</span></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2 id="sec3-title">🚗 كيف تصل إلى هناك</h2>
+    <table class="transport-table">
+      <tr><th id="th1">الوسيلة</th><th id="th2">التفاصيل</th></tr>
+      <tr><td id="tr1c1">السيارة الخاصة</td><td id="tr1c2">عبر الطريق الساحلية طنجة-تطوان.</td></tr>
+      <tr><td id="tr2c1">النقل العمومي</td><td id="tr2c2">عبر الطاكسيات من طنجة أو القصر الصغير.</td></tr>
+    </table>
+  </div>
+
+  <div class="tip-box">
+    <h3 id="tip-title">💡 نصائح للزوار</h3>
+    <ul id="tip-list"><li>احمل معك كافة احتياجاتك الغذائية لكونها منطقة طبيعية.</li><li>حافظ على نظافة المكان لضمان استدامة جمال الطبيعة.</li></ul>
+  </div>
+</div>
+
+<script>
+var L = {
+  ar: { dir:'rtl', 'p-badge':'واد المرسى • WAD EL MARSA', 'p-title':'واد المرسى: حيث يعانق الجبل زرقة المتوسط', 'sec0-title':'نظرة عامة', 'sec0-text':'تعد قرية واد المرسى جوهرة مخفية في شمال المغرب، حيث يمتزج الشموخ الجبلي لجبل موسى بصفاء مياه المتوسط.', 'sec1-title':'✨ لماذا واد المرسى؟', 'f1b':'طبيعة عذراء', 'f1t':'إطلالات بانورامية مذهلة تجمع بين البحر والجبل.', 'f2b':'هدوء تام', 'f2t':'ملاذ بعيد عن الضجيج للاستجمام.', 'sec3-title':'🚗 كيف تصل إلى هناك', 'th1':'الوسيلة', 'th2':'التفاصيل', 'tr1c1':'السيارة الخاصة', 'tr1c2':'عبر الطريق الساحلية طنجة-تطوان.', 'tr2c1':'النقل العمومي', 'tr2c2':'عبر الطاكسيات من طنجة أو القصر الصغير.', 'tip-title':'💡 نصائح للزوار' },
+  fr: { dir:'ltr', 'p-badge':'Wad El Marsa • VAD EL MARSA', 'p-title':'Wad El Marsa: Là où la montagne embrasse la Méditerranée', 'sec0-title':'Aperçu', 'sec0-text':'Wad El Marsa est un joyau caché au nord du Maroc, où la montagne Jebel Moussa rencontre la pureté de la Méditerranée.', 'sec1-title':'✨ Pourquoi Wad El Marsa?', 'f1b':'Nature vierge', 'f1t':'Vues panoramiques époustouflantes.', 'f2b':'Calme absolu', 'f2t':'Un refuge loin du bruit.', 'sec3-title':'🚗 Comment y accéder', 'th1':'Moyen', 'th2':'Détails', 'tr1c1':'Voiture privée', 'tr1c2':'Via la route côtière Tanger-Tétouan.', 'tr2c1':'Transport public', 'tr2c2':'Taxis depuis Tanger ou Ksar Sghir.', 'tip-title':'💡 Conseils' },
+  en: { dir:'ltr', 'p-badge':'Wad El Marsa • WAD EL MARSA', 'p-title':'Wad El Marsa: Where the mountain meets the Mediterranean', 'sec0-title':'Overview', 'sec0-text':'Wad El Marsa is a hidden gem in Northern Morocco, where the grandeur of Jebel Moussa meets the clear Mediterranean waters.', 'sec1-title':'✨ Why Wad El Marsa?', 'f1b':'Pristine nature', 'f1t':'Stunning panoramic views.', 'f2b':'Total tranquility', 'f2t':'A perfect escape from the noise.', 'sec3-title':'🚗 How to get there', 'th1':'Method', 'th2':'Details', 'tr1c1':'Private car', 'tr1c2':'Via the coastal road Tangier-Tetouan.', 'tr2c1':'Public transport', 'tr2c2':'Taxis from Tangier or Ksar Sghir.', 'tip-title':'💡 Tips' }
+};
+function setL(lang) {
+  var t = L[lang]; document.documentElement.setAttribute('dir', t.dir);
+  Object.keys(t).forEach(function(id) { var el = document.getElementById(id); if (el) el.innerHTML = t[id]; });
+  document.querySelectorAll('.lb').forEach(function(b) { b.classList.remove('on'); if (b.innerText === lang.toUpperCase()) b.classList.add('on'); });
+}
+</script>
+</body>
+</html>
