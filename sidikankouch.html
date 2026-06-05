@@ -1,70 +1,111 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>شاطئ سيدي قنقوش: وجهتك المثالية للاستجمام في شمال المغرب | Plage Sidi Kankouch</title>
-<meta name="description" content="دليل شامل لشاطئ سيدي قنقوش في إقليم الفحص أنجرة — مياه فيروزية، هدوء، إطلالة جبلية، تخييم ومشي. وجهة مثالية للعائلات في شمال المغرب.">
-<meta name="keywords" content="شاطئ سيدي قنقوش, السياحة في شمال المغرب, شواطئ طنجة, سيدي قنقوش الفحص أنجرة, أجمل شواطئ المغرب, رحلات الشمال المغربي, التخييم في المغرب, plage sidi kankouch">
-<meta name="author" content="Bilal El Hichou">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<meta name="description" content="دليل شامل لشاطئ سيدي قنقوش في إقليم الفحص أنجرة — مياه فيروزية، هدوء، إطلالة جبلية، تخييم ومشي. وجهة مثالية للعائلات في شمال المغرب."/>
+<meta name="keywords" content="شاطئ سيدي قنقوش, السياحة في شمال المغرب, شواطئ طنجة, سيدي قنقوش الفحص أنجرة, أجمل شواطئ المغرب, plage sidi kankouch, ksar sghir"/>
+<meta name="author" content="Bilal El Hichou"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="شاطئ سيدي قنقوش — الفحص أنجرة | Plage Sidi Kankouch"/>
+<meta property="og:description" content="دليل شامل لشاطئ سيدي قنقوش — مياه فيروزية، هدوء وإطلالة جبلية رائعة"/>
+<meta property="og:url" content="https://tourism.ksarsghir.com/sidikankouch.html"/>
+<link rel="canonical" href="https://tourism.ksarsghir.com/sidikankouch.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
+:root { --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40; --text:#e0e0e0; --text2:#aaa; --text3:#666; --border:rgba(0,180,216,0.15); --accent:#00b4d8; }
+body.light { --bg:#f0f4f8; --bg2:#fff; --bg3:#e8edf5; --text:#1a1a2e; --text2:#555; --text3:#999; --border:rgba(0,180,216,0.2); }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
-header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+body { font-family:"Tajawal",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:background 0.3s,color 0.3s; }
+
+/* HEADER */
+header { background:var(--bg2); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:200; }
 .logo { text-decoration:none; }
-.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
-.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.logo-ar { font-size:18px; font-weight:900; color:var(--accent); display:block; }
+.logo-en { font-size:9px; color:var(--text3); letter-spacing:3px; display:block; }
 .hright { display:flex; align-items:center; gap:8px; }
-.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
-.lang-sw { display:flex; gap:4px; }
-.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
-.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
-.article-hero { background:linear-gradient(180deg, rgba(74,20,140,0.5), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
-.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.lang-sw { display:flex; gap:3px; }
+.lb { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.lb.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+.theme-btn { background:transparent; border:1px solid var(--border); color:var(--text2); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; }
+.back { color:var(--accent); text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid var(--border); border-radius:20px; }
+
+/* NAV */
+nav { background:var(--bg2); border-bottom:1px solid var(--border); padding:0 15px; display:flex; align-items:center; gap:2px; overflow-x:auto; scrollbar-width:none; position:sticky; top:60px; z-index:199; }
+nav::-webkit-scrollbar { display:none; }
+.nav-link { color:var(--text2); text-decoration:none; font-size:12px; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover, .nav-link.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+/* HERO */
+.article-hero { background:linear-gradient(180deg,rgba(74,20,140,0.5),var(--bg)); padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border); }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
 .article-hero h1 { font-size:clamp(24px,4.5vw,36px); font-weight:900; color:#fff; margin-bottom:10px; }
+
+/* CONTAINER */
 .container { max-width:800px; margin:40px auto; padding:0 20px; }
 .content-section { margin-bottom:35px; }
-.content-section h2 { font-size:20px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
-.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
-.content-section p { color:#ccc; font-size:15px; margin-bottom:15px; }
+.content-section h2 { font-size:20px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15px; margin-bottom:15px; }
+
 .features { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin:20px 0; }
-.feature-card { background:#16213e; padding:20px; border-radius:12px; text-align:center; border:1px solid rgba(0,180,216,0.15); transition:all 0.3s; }
-.feature-card:hover { border-color:#00b4d8; transform:translateY(-2px); }
+.feature-card { background:var(--bg2); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--border); transition:all 0.3s; }
+.feature-card:hover { border-color:var(--accent); transform:translateY(-2px); }
 .feature-card .icon { font-size:32px; margin-bottom:10px; }
-.feature-card b { color:#00b4d8; display:block; margin-bottom:6px; font-size:14px; }
-.feature-card span { color:#aaa; font-size:12px; }
+.feature-card b { color:var(--accent); display:block; margin-bottom:6px; font-size:14px; }
+.feature-card span { color:var(--text2); font-size:12px; }
+
 .activities-list { list-style:none; margin:15px 0; }
-.activities-list li { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:10px; padding:15px; margin-bottom:10px; color:#ccc; font-size:14px; display:flex; gap:12px; align-items:flex-start; transition:all 0.3s; }
-.activities-list li:hover { border-color:#00b4d8; }
-.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid #00b4d8; padding:20px; border-radius:8px; margin:25px 0; }
-.tip-box h3 { color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.activities-list li { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:15px; margin-bottom:10px; color:var(--text2); font-size:14px; display:flex; gap:12px; align-items:flex-start; transition:all 0.3s; }
+.activities-list li:hover { border-color:var(--accent); }
+
+.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid var(--accent); padding:20px; border-radius:8px; margin:25px 0; }
+html[dir="ltr"] .tip-box { border-left:4px solid var(--accent); border-right:none; }
+.tip-box h3 { color:var(--accent); margin-bottom:15px; font-size:16px; }
 .tip-box ul { list-style:none; padding:0; }
-.tip-box li { margin-bottom:12px; color:#ccc; font-size:14px; }
-.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:30px; }
-.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.tip-box li { margin-bottom:12px; color:var(--text2); font-size:14px; }
+
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:30px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
 .info-box ul { list-style:none; }
-.info-box li { font-size:14px; color:#aaa; margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
-.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); }
-.tags-title { font-size:13px; color:#666; margin-bottom:10px; font-weight:700; }
+.info-box li { font-size:14px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
+
+/* RELATED */
+.related-section { margin:35px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:16px; font-weight:700; color:var(--accent); margin-bottom:15px; }
+.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.related-card { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center; text-decoration:none; transition:all 0.2s; }
+.related-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.related-card .r-icon { font-size:24px; margin-bottom:6px; }
+.related-card .r-name { font-size:12px; color:var(--text); font-weight:600; }
+
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
 .tags-list { display:flex; flex-wrap:wrap; gap:8px; }
-.tag-item { background:#16213e; color:#00b4d8; font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid rgba(0,180,216,0.15); transition:0.3s; }
-.tag-item:hover { background:#00b4d8; color:#fff; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
+
 .cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
 .cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
 .cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
-.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
 .btn:hover { background:#0096c7; transform:translateY(-2px); }
-footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:60px; }
-.footer-links { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
-.footer-links a { color:#555; text-decoration:none; font-size:12px; }
-.footer-links a:hover { color:#00b4d8; }
-.footer-copy { font-size:11px; color:#555; }
-.footer-copy span { color:#00b4d8; }
+
+/* FOOTER */
+footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var(--border); margin-top:40px; }
+.footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:800px; margin:0 auto 15px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.footer-col a { display:block; color:var(--text3); text-decoration:none; font-size:12px; margin-bottom:6px; transition:color 0.2s; }
+.footer-col a:hover { color:var(--accent); }
+.footer-bottom { text-align:center; padding-top:15px; border-top:1px solid var(--border); font-size:11px; color:var(--text3); }
+.footer-bottom span { color:var(--accent); }
+
 @media(max-width:600px) {
   .features { grid-template-columns:1fr; }
-  .lang-sw { display:flex; }
-  .lb { font-size:10px; padding:3px 7px; }
+  .related-grid { grid-template-columns:1fr 1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
 }
 </style>
 </head>
@@ -81,9 +122,21 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <button class="lb" onclick="setL('fr')">FR</button>
       <button class="lb" onclick="setL('en')">EN</button>
     </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
     <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
   </div>
 </header>
+
+<nav>
+  <a href="https://www.ksarsghir.com" class="nav-link" id="n1">🏠 الرئيسية</a>
+  <a href="https://tourism.ksarsghir.com" class="nav-link active" id="n2">🗺️ السياحة</a>
+  <a href="https://gallery.ksarsghir.com" class="nav-link" id="n3">📸 المعرض</a>
+  <a href="https://blog.ksarsghir.com" class="nav-link" id="n4">✍️ المدونة</a>
+  <a href="https://store.ksarsghir.com" class="nav-link" id="n5">🛒 المتجر</a>
+  <a href="https://www.ksarsghir.com/advertise.html" class="nav-link" id="n6">📢 إعلن معنا</a>
+  <a href="https://meteo.ksarsghir.com" class="nav-link" id="n7">🌤️ الطقس</a>
+  <a href="https://salat.ksarsghir.com" class="nav-link" id="n8">🕌 الصلاة</a>
+</nav>
 
 <div class="article-hero">
   <span class="article-badge" id="p-badge">شاطئ • PLAGE • BEACH</span>
@@ -103,36 +156,52 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <div class="feature-card"><div class="icon">😌</div><b id="f1b">الهدوء والخصوصية</b><span id="f1t">بعيداً عن الشواطئ المزدحمة — أجواء هادئة تناسب الراحة النفسية والاسترخاء</span></div>
       <div class="feature-card"><div class="icon">🌊</div><b id="f2b">المياه الفيروزية</b><span id="f2t">مياه نقية وشفافة مثالية للسباحة والغطس في أجواء طبيعية رائعة</span></div>
       <div class="feature-card"><div class="icon">🏔️</div><b id="f3b">الإطلالة الجبلية</b><span id="f3t">تضاريس جبلية رائعة تمنحك إطلالة بانورامية لا تُنسى خاصة عند غروب الشمس</span></div>
-      <div class="feature-card"><div class="icon">📍</div><b id="f4b">الموقع الاستراتيجي</b><span id="f4t">يربط بين طنجة والمناطق الساحلية المجاورة — محطة أساسية في مسار رحلتك بالشمال</span></div>
+      <div class="feature-card"><div class="icon">📍</div><b id="f4b">الموقع الاستراتيجي</b><span id="f4t">يربط بين طنجة والمناطق الساحلية المجاورة — محطة أساسية في مسار رحلتك</span></div>
     </div>
   </div>
 
   <div class="content-section">
     <h2 id="sec3-title">🎯 الأنشطة السياحية في سيدي قنقوش</h2>
     <ul class="activities-list" id="activities-list">
-      <li><span>⛺</span><div><strong>التخييم</strong> — المنطقة مثالية لمحبي التخييم في الطبيعة مع احترام القوانين والبيئة.</div></li>
-      <li><span>🥾</span><div><strong>المشي لمسافات طويلة (Hiking)</strong> — استكشاف التلال المحيطة بالشاطئ يوفر تجربة رياضية وتصويرية فريدة.</div></li>
-      <li><span>🎣</span><div><strong>الصيد بالقصبة</strong> — وجهة مفضلة لهواة الصيد البحري بفضل غنى مياهه بالأسماك.</div></li>
-      <li><span>👨‍👩‍👧</span><div><strong>النزهات العائلية</strong> — المساحات المفتوحة تجعل منه مكاناً ممتازاً لنزهات الغداء العائلي في أحضان الطبيعة.</div></li>
+      <li><span>⛺</span><div><strong>التخييم</strong> — المنطقة مثالية لمحبي التخييم في الطبيعة</div></li>
+      <li><span>🥾</span><div><strong>المشي (Hiking)</strong> — استكشاف التلال المحيطة تجربة رياضية وتصويرية فريدة</div></li>
+      <li><span>🎣</span><div><strong>الصيد بالقصبة</strong> — وجهة مفضلة لهواة الصيد البحري</div></li>
+      <li><span>👨‍👩‍👧</span><div><strong>النزهات العائلية</strong> — مساحات مفتوحة لنزهات الغداء في الطبيعة</div></li>
     </ul>
   </div>
 
   <div class="tip-box">
-    <h3 id="tip-title">💡 نصائح هامة قبل زيارة الشاطئ</h3>
+    <h3 id="tip-title">💡 نصائح هامة قبل الزيارة</h3>
     <ul>
-      <li id="tip1">🎒 <strong>التجهيز المسبق:</strong> يفضل جلب مستلزماتك الأساسية (مظلة، طعام، وماء) — الخدمات قد تكون محدودة في بعض أوقات السنة</li>
-      <li id="tip2">📅 <strong>أفضل وقت للزيارة:</strong> أشهر الصيف (يونيو — سبتمبر) للسباحة، والربيع والخريف لعشاق الهدوء والمشي</li>
-      <li id="tip3">🌿 <strong>احترام البيئة:</strong> الحفاظ على نظافة الشاطئ وعدم ترك النفايات لضمان بقاء هذا المكان وجهة مميزة للجميع</li>
+      <li id="tip1">🎒 <strong>التجهيز المسبق:</strong> يفضل جلب مستلزماتك الأساسية — الخدمات قد تكون محدودة</li>
+      <li id="tip2">📅 <strong>أفضل وقت للزيارة:</strong> الصيف للسباحة — الربيع والخريف للمشي والهدوء</li>
+      <li id="tip3">🌿 <strong>احترام البيئة:</strong> الحفاظ على نظافة الشاطئ لضمان بقائه وجهة مميزة</li>
     </ul>
   </div>
 
   <div class="info-box">
     <div class="info-box-title" id="box-title">🚗 كيف تصل إلى شاطئ سيدي قنقوش؟</div>
     <ul>
-      <li id="b1">🛣️ يقع على الطريق الساحلية المتوسطية التي تربط بين طنجة والقصر الصغير</li>
-      <li id="b2">🚗 <strong>بالسيارة الخاصة:</strong> الطريق مجهزة وتوفر مناظر طبيعية مذهلة طوال الرحلة</li>
-      <li id="b3">🚕 <strong>بالنقل العمومي:</strong> سيارات الأجرة الكبيرة التي تربط طنجة بالمناطق المحيطة بالقصر الصغير</li>
+      <li id="b1">🛣️ على الطريق الساحلية المتوسطية بين طنجة والقصر الصغير</li>
+      <li id="b2">🚗 <strong>سيارة خاصة:</strong> طريق مجهزة مع مناظر طبيعية مذهلة</li>
+      <li id="b3">🚕 <strong>نقل عمومي:</strong> سيارات الأجرة الكبيرة من طنجة</li>
     </ul>
+  </div>
+
+  <!-- INTERNAL LINKS -->
+  <div class="related-section">
+    <div class="related-title" id="related-title">🗺️ اكتشف أيضاً</div>
+    <div class="related-grid">
+      <a href="https://tourism.ksarsghir.com/plage.html" class="related-card">
+        <div class="r-icon">🏖️</div><div class="r-name" id="r1">شاطئ القصر الصغير</div>
+      </a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" class="related-card">
+        <div class="r-icon">🌺</div><div class="r-name" id="r2">قرية بليونش</div>
+      </a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" class="related-card">
+        <div class="r-icon">🌊</div><div class="r-name" id="r3">شاطئ الدالية</div>
+      </a>
+    </div>
   </div>
 
   <div class="tags-container">
@@ -141,136 +210,180 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <a href="#" class="tag-item">شاطئ سيدي قنقوش</a>
       <a href="#" class="tag-item">السياحة في شمال المغرب</a>
       <a href="#" class="tag-item">شواطئ طنجة</a>
-      <a href="#" class="tag-item">سيدي قنقوش الفحص أنجرة</a>
-      <a href="#" class="tag-item">أجمل شواطئ المغرب</a>
-      <a href="#" class="tag-item">رحلات الشمال المغربي</a>
-      <a href="#" class="tag-item">التخييم في المغرب</a>
+      <a href="#" class="tag-item">الفحص أنجرة</a>
       <a href="#" class="tag-item">plage sidi kankouch</a>
     </div>
   </div>
 
   <div class="cta-box">
     <h3 id="cta-title">هل تريد مشاهدة سحر سيدي قنقوش بعدستنا؟</h3>
-    <p id="cta-desc">انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية للشاطئ والمنطقة المحيطة.</p>
+    <p id="cta-desc">انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية.</p>
     <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح معرض الصور</a>
   </div>
 
 </div>
 
 <footer>
-  <div class="footer-links">
-    <a href="https://tourism.ksarsghir.com">الدليل السياحي</a>
-    <a href="https://www.ksarsghir.com">الرئيسية</a>
-    <a href="https://gallery.ksarsghir.com">المعرض</a>
-    <a href="https://advertise.ksarsghir.com">إعلن معنا</a>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4 id="fc1">🗺️ المواقع السياحية</h4>
+      <a href="https://tourism.ksarsghir.com/plage.html" id="fl1">شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" id="fl2">قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/port.html" id="fl3">ميناء الصيد</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" id="fl4">شاطئ الدالية</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc2">🔗 المواقع</h4>
+      <a href="https://www.ksarsghir.com" id="fl5">الرئيسية</a>
+      <a href="https://gallery.ksarsghir.com" id="fl6">معرض الصور</a>
+      <a href="https://blog.ksarsghir.com" id="fl7">المدونة</a>
+      <a href="https://meteo.ksarsghir.com" id="fl8">الطقس والبحر</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc3">📄 معلومات</h4>
+      <a href="https://www.ksarsghir.com/about.html" id="fl9">من أنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="fl10">إعلن معنا</a>
+      <a href="https://www.ksarsghir.com/privacy.html" id="fl11">سياسة الخصوصية</a>
+      <a href="https://wa.me/212708053745" id="fl12">تواصل معنا</a>
+    </div>
   </div>
-  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+  <div class="footer-bottom">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
 </footer>
 
 <script>
 var L = {
-  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي',
-    'p-badge':'شاطئ • PLAGE • BEACH',
-    'p-title':'شاطئ سيدي قنقوش: وجهتك المثالية للاستجمام في شمال المغرب',
-    'sec1-title':'نظرة عامة',
-    'sec1-text':'إذا كنت تبحث عن ملاذ يجمع بين صفاء مياه البحر الأبيض المتوسط وهدوء الطبيعة البكر، فإن شاطئ سيدي قنقوش هو وجهتك القادمة. واحد من أجمل شواطئ إقليم الفحص أنجرة — نقطة جذب مفضلة للعائلات والباحثين عن الاسترخاء بعيداً عن صخب طنجة وتطوان.',
-    'sec2-title':'✨ لماذا يعتبر سيدي قنقوش وجهة مميزة؟',
-    'f1b':'الهدوء والخصوصية', 'f1t':'بعيداً عن الشواطئ المزدحمة — أجواء هادئة تناسب الراحة النفسية',
-    'f2b':'المياه الفيروزية', 'f2t':'مياه نقية وشفافة مثالية للسباحة والغطس',
-    'f3b':'الإطلالة الجبلية', 'f3t':'تضاريس جبلية رائعة وإطلالة بانورامية لا تُنسى عند الغروب',
-    'f4b':'الموقع الاستراتيجي', 'f4t':'يربط بين طنجة والمناطق الساحلية المجاورة',
-    'sec3-title':'🎯 الأنشطة السياحية',
-    'activities-list':'<li><span>⛺</span><div><strong>التخييم</strong> — مثالي لمحبي التخييم في الطبيعة</div></li><li><span>🥾</span><div><strong>المشي (Hiking)</strong> — تجربة رياضية وتصويرية فريدة في التلال المحيطة</div></li><li><span>🎣</span><div><strong>الصيد بالقصبة</strong> — وجهة مفضلة لهواة الصيد البحري</div></li><li><span>👨‍👩‍👧</span><div><strong>النزهات العائلية</strong> — مساحات مفتوحة لنزهات الغداء في الطبيعة</div></li>',
-    'tip-title':'💡 نصائح هامة',
-    'tip1':'🎒 <strong>التجهيز المسبق:</strong> جلب مستلزماتك الأساسية — الخدمات قد تكون محدودة',
-    'tip2':'📅 <strong>أفضل وقت:</strong> الصيف للسباحة — الربيع والخريف للمشي والهدوء',
-    'tip3':'🌿 <strong>احترام البيئة:</strong> الحفاظ على نظافة الشاطئ لضمان بقائه وجهة مميزة',
-    'box-title':'🚗 كيف تصل؟',
-    'b1':'🛣️ على الطريق الساحلية المتوسطية بين طنجة والقصر الصغير',
-    'b2':'🚗 <strong>سيارة خاصة:</strong> طريق مجهزة مع مناظر طبيعية مذهلة',
-    'b3':'🚕 <strong>نقل عمومي:</strong> سيارات الأجرة الكبيرة من طنجة',
-    'tags-title':'🏷️ كلمات دلالية:',
-    'tags-list':'<a href="#" class="tag-item">شاطئ سيدي قنقوش</a><a href="#" class="tag-item">السياحة في شمال المغرب</a><a href="#" class="tag-item">شواطئ طنجة</a><a href="#" class="tag-item">الفحص أنجرة</a><a href="#" class="tag-item">plage sidi kankouch</a>',
-    'cta-title':'هل تريد مشاهدة سحر سيدي قنقوش بعدستنا؟',
-    'cta-desc':'انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية للشاطئ.',
-    'cta-btn':'🖼️ تصفح معرض الصور'
+  ar: { dir:"rtl", lname:"السياحة", lback:"← الدليل السياحي",
+    n1:"🏠 الرئيسية", n2:"🗺️ السياحة", n3:"📸 المعرض", n4:"✍️ المدونة",
+    n5:"🛒 المتجر", n6:"📢 إعلن معنا", n7:"🌤️ الطقس", n8:"🕌 الصلاة",
+    "p-badge":"شاطئ • PLAGE • BEACH",
+    "p-title":"شاطئ سيدي قنقوش: وجهتك المثالية للاستجمام في شمال المغرب",
+    "sec1-title":"نظرة عامة",
+    "sec1-text":"إذا كنت تبحث عن ملاذ يجمع بين صفاء مياه البحر الأبيض المتوسط وهدوء الطبيعة البكر، فإن شاطئ سيدي قنقوش هو وجهتك القادمة. واحد من أجمل شواطئ إقليم الفحص أنجرة — نقطة جذب مفضلة للعائلات بعيداً عن صخب طنجة وتطوان.",
+    "sec2-title":"✨ لماذا يعتبر سيدي قنقوش وجهة مميزة؟",
+    f1b:"الهدوء والخصوصية", f1t:"بعيداً عن الشواطئ المزدحمة — أجواء هادئة للراحة النفسية",
+    f2b:"المياه الفيروزية", f2t:"مياه نقية وشفافة مثالية للسباحة والغطس",
+    f3b:"الإطلالة الجبلية", f3t:"تضاريس جبلية وإطلالة بانورامية عند الغروب",
+    f4b:"الموقع الاستراتيجي", f4t:"يربط بين طنجة والمناطق الساحلية المجاورة",
+    "sec3-title":"🎯 الأنشطة السياحية",
+    "activities-list":"<li><span>⛺</span><div><strong>التخييم</strong> — مثالي لمحبي التخييم في الطبيعة</div></li><li><span>🥾</span><div><strong>المشي (Hiking)</strong> — تجربة رياضية وتصويرية فريدة</div></li><li><span>🎣</span><div><strong>الصيد بالقصبة</strong> — وجهة مفضلة لهواة الصيد</div></li><li><span>👨‍👩‍👧</span><div><strong>النزهات العائلية</strong> — مساحات للغداء في الطبيعة</div></li>",
+    "tip-title":"💡 نصائح هامة",
+    tip1:"🎒 <strong>التجهيز المسبق:</strong> جلب مستلزماتك الأساسية — الخدمات قد تكون محدودة",
+    tip2:"📅 <strong>أفضل وقت:</strong> الصيف للسباحة — الربيع والخريف للمشي",
+    tip3:"🌿 <strong>احترام البيئة:</strong> الحفاظ على نظافة الشاطئ",
+    "box-title":"🚗 كيف تصل؟",
+    b1:"🛣️ على الطريق الساحلية المتوسطية بين طنجة والقصر الصغير",
+    b2:"🚗 <strong>سيارة خاصة:</strong> طريق مجهزة مع مناظر مذهلة",
+    b3:"🚕 <strong>نقل عمومي:</strong> سيارات الأجرة الكبيرة من طنجة",
+    "related-title":"🗺️ اكتشف أيضاً",
+    r1:"شاطئ القصر الصغير", r2:"قرية بليونش", r3:"شاطئ الدالية",
+    "tags-title":"🏷️ كلمات دلالية:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">شاطئ سيدي قنقوش</a><a href=\"#\" class=\"tag-item\">السياحة شمال المغرب</a><a href=\"#\" class=\"tag-item\">شواطئ طنجة</a><a href=\"#\" class=\"tag-item\">الفحص أنجرة</a><a href=\"#\" class=\"tag-item\">plage sidi kankouch</a>",
+    "cta-title":"هل تريد مشاهدة سحر سيدي قنقوش بعدستنا؟",
+    "cta-desc":"انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية.",
+    "cta-btn":"🖼️ تصفح معرض الصور",
+    fc1:"🗺️ المواقع السياحية", fc2:"🔗 المواقع", fc3:"📄 معلومات",
+    fl1:"شاطئ القصر الصغير", fl2:"قرية بليونش", fl3:"ميناء الصيد", fl4:"شاطئ الدالية",
+    fl5:"الرئيسية", fl6:"معرض الصور", fl7:"المدونة", fl8:"الطقس والبحر",
+    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا"
   },
-  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique',
-    'p-badge':'PLAGE • BEACH • شاطئ',
-    'p-title':'Plage Sidi Kankouch: Votre destination idéale au nord du Maroc',
-    'sec1-title':'Aperçu',
-    'sec1-text':"Si vous cherchez un refuge alliant la clarté des eaux méditerranéennes et la sérénité de la nature vierge, la plage de Sidi Kankouch est votre prochaine destination. L'une des plus belles plages de la province Fahs-Anjra — point d'attraction favori des familles loin de l'agitation de Tanger et Tétouan.",
-    'sec2-title':'✨ Pourquoi Sidi Kankouch est une destination unique?',
-    'f1b':'Calme et intimité', 'f1t':"Loin des plages bondées — atmosphère tranquille pour le repos",
-    'f2b':'Eaux turquoise', 'f2t':'Eaux pures et transparentes idéales pour la baignade et la plongée',
-    'f3b':'Vue sur les montagnes', 'f3t':'Paysage montagneux offrant une vue panoramique inoubliable au coucher du soleil',
-    'f4b':'Position stratégique', 'f4t':'Relie Tanger aux zones côtières voisines — étape essentielle dans votre circuit',
-    'sec3-title':'🎯 Activités touristiques',
-    'activities-list':'<li><span>⛺</span><div><strong>Camping</strong> — Zone idéale pour les amateurs de camping dans la nature</div></li><li><span>🥾</span><div><strong>Randonnée (Hiking)</strong> — Exploration des collines environnantes pour une expérience sportive unique</div></li><li><span>🎣</span><div><strong>Pêche</strong> — Destination favorite des amateurs de pêche en mer</div></li><li><span>👨‍👩‍👧</span><div><strong>Pique-nique familial</strong> — Espaces ouverts parfaits pour des déjeuners en famille dans la nature</div></li>',
-    'tip-title':'💡 Conseils importants',
-    'tip1':"🎒 <strong>Préparez-vous:</strong> Apportez vos fournitures essentielles — les services peuvent être limités",
-    'tip2':'📅 <strong>Meilleure période:</strong> Été pour la baignade — printemps et automne pour la randonnée',
-    'tip3':'🌿 <strong>Respect de l\'environnement:</strong> Gardez la plage propre pour préserver ce lieu magnifique',
-    'box-title':'🚗 Comment y accéder?',
-    'b1':'🛣️ Sur la route côtière méditerranéenne entre Tanger et Ksar Sghir',
-    'b2':'🚗 <strong>Voiture privée:</strong> Route bien équipée avec des paysages magnifiques',
-    'b3':'🚕 <strong>Transport public:</strong> Grands taxis depuis Tanger',
-    'tags-title':'🏷️ Mots-clés:',
-    'tags-list':'<a href="#" class="tag-item">Plage Sidi Kankouch</a><a href="#" class="tag-item">Tourisme nord Maroc</a><a href="#" class="tag-item">Plages Tanger</a><a href="#" class="tag-item">Fahs Anjra</a><a href="#" class="tag-item">plage sidi kankouch</a>',
-    'cta-title':'Voulez-vous voir Sidi Kankouch à travers notre objectif?',
-    'cta-desc':'Visitez la galerie numérique pour les plus belles photos professionnelles de la plage.',
-    'cta-btn':'🖼️ Voir la Galerie'
+  fr: { dir:"ltr", lname:"Tourisme", lback:"← Guide Touristique",
+    n1:"🏠 Accueil", n2:"🗺️ Tourisme", n3:"📸 Galerie", n4:"✍️ Blog",
+    n5:"🛒 Boutique", n6:"📢 Publicité", n7:"🌤️ Météo", n8:"🕌 Prière",
+    "p-badge":"PLAGE • BEACH • شاطئ",
+    "p-title":"Plage Sidi Kankouch: Votre destination idéale au nord du Maroc",
+    "sec1-title":"Aperçu",
+    "sec1-text":"Si vous cherchez un refuge alliant la clarté des eaux méditerranéennes et la sérénité de la nature vierge, la plage de Sidi Kankouch est votre prochaine destination. L'une des plus belles plages de la province Fahs-Anjra.",
+    "sec2-title":"✨ Pourquoi Sidi Kankouch est unique?",
+    f1b:"Calme et intimité", f1t:"Loin des plages bondées — atmosphère tranquille",
+    f2b:"Eaux turquoise", f2t:"Eaux pures idéales pour la baignade et la plongée",
+    f3b:"Vue sur les montagnes", f3t:"Paysage panoramique inoubliable au coucher du soleil",
+    f4b:"Position stratégique", f4t:"Relie Tanger aux zones côtières voisines",
+    "sec3-title":"🎯 Activités touristiques",
+    "activities-list":"<li><span>⛺</span><div><strong>Camping</strong> — Zone idéale pour le camping nature</div></li><li><span>🥾</span><div><strong>Randonnée</strong> — Exploration des collines environnantes</div></li><li><span>🎣</span><div><strong>Pêche</strong> — Destination favorite des pêcheurs</div></li><li><span>👨‍👩‍👧</span><div><strong>Pique-nique familial</strong> — Espaces ouverts en famille</div></li>",
+    "tip-title":"💡 Conseils importants",
+    tip1:"🎒 <strong>Préparez-vous:</strong> Apportez vos fournitures essentielles",
+    tip2:"📅 <strong>Meilleure période:</strong> Été pour la baignade — printemps pour la randonnée",
+    tip3:"🌿 <strong>Environnement:</strong> Gardez la plage propre",
+    "box-title":"🚗 Comment y accéder?",
+    b1:"🛣️ Route côtière méditerranéenne entre Tanger et Ksar Sghir",
+    b2:"🚗 <strong>Voiture privée:</strong> Route bien équipée avec beaux paysages",
+    b3:"🚕 <strong>Transport public:</strong> Grands taxis depuis Tanger",
+    "related-title":"🗺️ Découvrez aussi",
+    r1:"Plage Ksar Sghir", r2:"Belyounech", r3:"Plage Dalia",
+    "tags-title":"🏷️ Mots-clés:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">Plage Sidi Kankouch</a><a href=\"#\" class=\"tag-item\">Tourisme nord Maroc</a><a href=\"#\" class=\"tag-item\">Plages Tanger</a><a href=\"#\" class=\"tag-item\">Fahs Anjra</a>",
+    "cta-title":"Voir Sidi Kankouch à travers notre objectif?",
+    "cta-desc":"Visitez la galerie pour les plus belles photos professionnelles.",
+    "cta-btn":"🖼️ Voir la Galerie",
+    fc1:"🗺️ Sites touristiques", fc2:"🔗 Sites web", fc3:"📄 Informations",
+    fl1:"Plage Ksar Sghir", fl2:"Belyounech", fl3:"Port de pêche", fl4:"Plage Dalia",
+    fl5:"Accueil", fl6:"Galerie photos", fl7:"Blog", fl8:"Météo & Mer",
+    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact"
   },
-  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide',
-    'p-badge':'BEACH • PLAGE • شاطئ',
-    'p-title':'Sidi Kankouch Beach: Your Ideal Relaxation Destination in Northern Morocco',
-    'sec1-title':'Overview',
-    'sec1-text':"If you're looking for a refuge that combines the clarity of Mediterranean waters with the tranquility of pristine nature, Sidi Kankouch beach is your next destination. One of the most beautiful beaches in Fahs-Anjra province — a favorite attraction for families seeking relaxation away from the bustle of Tangier and Tetouan.",
-    'sec2-title':'✨ Why is Sidi Kankouch a unique destination?',
-    'f1b':'Calm and privacy', 'f1t':'Far from crowded beaches — peaceful atmosphere perfect for mental relaxation',
-    'f2b':'Turquoise waters', 'f2t':'Pure and transparent waters ideal for swimming and diving',
-    'f3b':'Mountain view', 'f3t':'Stunning mountain landscape offering an unforgettable panoramic view especially at sunset',
-    'f4b':'Strategic location', 'f4t':'Connects Tangier to neighboring coastal areas — essential stop on your northern tour',
-    'sec3-title':'🎯 Tourist Activities',
-    'activities-list':'<li><span>⛺</span><div><strong>Camping</strong> — Ideal area for nature camping enthusiasts</div></li><li><span>🥾</span><div><strong>Hiking</strong> — Exploring surrounding hills for a unique sports and photography experience</div></li><li><span>🎣</span><div><strong>Fishing</strong> — Favorite destination for sea fishing enthusiasts</div></li><li><span>👨‍👩‍👧</span><div><strong>Family picnic</strong> — Open spaces perfect for family lunch outings in nature</div></li>',
-    'tip-title':'💡 Important Tips',
-    'tip1':'🎒 <strong>Prepare ahead:</strong> Bring essential supplies — services may be limited',
-    'tip2':'📅 <strong>Best time:</strong> Summer for swimming — spring and autumn for hiking and tranquility',
-    'tip3':'🌿 <strong>Environmental respect:</strong> Keep the beach clean to preserve this wonderful place',
-    'box-title':'🚗 How to Get There?',
-    'b1':'🛣️ On the Mediterranean coastal road between Tangier and Ksar Sghir',
-    'b2':'🚗 <strong>Private car:</strong> Well-equipped road with stunning natural scenery',
-    'b3':'🚕 <strong>Public transport:</strong> Grand taxis from Tangier',
-    'tags-title':'🏷️ Tags:',
-    'tags-list':'<a href="#" class="tag-item">Sidi Kankouch Beach</a><a href="#" class="tag-item">North Morocco Tourism</a><a href="#" class="tag-item">Tangier Beaches</a><a href="#" class="tag-item">Fahs Anjra</a><a href="#" class="tag-item">plage sidi kankouch</a>',
-    'cta-title':"Want to see Sidi Kankouch through our lens?",
-    'cta-desc':'Visit the digital gallery for the finest professional photos of the beach.',
-    'cta-btn':'🖼️ Browse Photo Gallery'
+  en: { dir:"ltr", lname:"Tourism", lback:"← Tourist Guide",
+    n1:"🏠 Home", n2:"🗺️ Tourism", n3:"📸 Gallery", n4:"✍️ Blog",
+    n5:"🛒 Store", n6:"📢 Advertise", n7:"🌤️ Weather", n8:"🕌 Prayer",
+    "p-badge":"BEACH • PLAGE • شاطئ",
+    "p-title":"Sidi Kankouch Beach: Your Ideal Relaxation Destination in Northern Morocco",
+    "sec1-title":"Overview",
+    "sec1-text":"If you're looking for a refuge combining Mediterranean clarity and pristine nature tranquility, Sidi Kankouch beach is your next destination. One of the most beautiful beaches in Fahs-Anjra province.",
+    "sec2-title":"✨ Why is Sidi Kankouch unique?",
+    f1b:"Calm and privacy", f1t:"Far from crowded beaches — peaceful atmosphere",
+    f2b:"Turquoise waters", f2t:"Pure waters ideal for swimming and diving",
+    f3b:"Mountain view", f3t:"Stunning panoramic view especially at sunset",
+    f4b:"Strategic location", f4t:"Connects Tangier to neighboring coastal areas",
+    "sec3-title":"🎯 Tourist Activities",
+    "activities-list":"<li><span>⛺</span><div><strong>Camping</strong> — Ideal area for nature camping</div></li><li><span>🥾</span><div><strong>Hiking</strong> — Exploring surrounding hills</div></li><li><span>🎣</span><div><strong>Fishing</strong> — Favorite for sea fishing enthusiasts</div></li><li><span>👨‍👩‍👧</span><div><strong>Family picnic</strong> — Open spaces in nature</div></li>",
+    "tip-title":"💡 Important Tips",
+    tip1:"🎒 <strong>Prepare ahead:</strong> Bring essential supplies — services may be limited",
+    tip2:"📅 <strong>Best time:</strong> Summer for swimming — spring for hiking",
+    tip3:"🌿 <strong>Environment:</strong> Keep the beach clean",
+    "box-title":"🚗 How to Get There?",
+    b1:"🛣️ Mediterranean coastal road between Tangier and Ksar Sghir",
+    b2:"🚗 <strong>Private car:</strong> Well-equipped road with stunning scenery",
+    b3:"🚕 <strong>Public transport:</strong> Grand taxis from Tangier",
+    "related-title":"🗺️ Discover also",
+    r1:"Ksar Sghir Beach", r2:"Belyounech", r3:"Dalia Beach",
+    "tags-title":"🏷️ Tags:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">Sidi Kankouch Beach</a><a href=\"#\" class=\"tag-item\">North Morocco Tourism</a><a href=\"#\" class=\"tag-item\">Tangier Beaches</a><a href=\"#\" class=\"tag-item\">Fahs Anjra</a>",
+    "cta-title":"Want to see Sidi Kankouch through our lens?",
+    "cta-desc":"Visit the digital gallery for the finest professional photos.",
+    "cta-btn":"🖼️ Browse Photo Gallery",
+    fc1:"🗺️ Tourist Sites", fc2:"🔗 Sites", fc3:"📄 Information",
+    fl1:"Ksar Sghir Beach", fl2:"Belyounech", fl3:"Fishing Port", fl4:"Dalia Beach",
+    fl5:"Home", fl6:"Photo Gallery", fl7:"Blog", fl8:"Weather & Sea",
+    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact"
   }
 };
 
 function setL(lang) {
   var t = L[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
+  document.documentElement.setAttribute("dir", t.dir);
+  document.body.setAttribute("dir", t.dir);
   Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
+    if (id === "dir") return;
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
-  document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  document.querySelectorAll(".lb").forEach(function(b) {
+    b.classList.remove("on");
+    if (b.getAttribute("onclick") === "setL('"+lang+"')") b.classList.add("on");
   });
-  try { localStorage.setItem('tl', lang); } catch(e) {}
+  try { localStorage.setItem("tl", lang); } catch(e) {}
+}
+
+function toggleTheme() {
+  var isLight = document.body.classList.toggle("light");
+  document.getElementById("theme-btn").textContent = isLight ? "🌙" : "☀️";
+  try { localStorage.setItem("thr", isLight ? "light" : "dark"); } catch(e) {}
 }
 
 (function() {
-  var s = 'ar';
-  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  var s = "ar", t = "dark";
+  try { s = localStorage.getItem("tl")||"ar"; t = localStorage.getItem("thr")||"dark"; } catch(e) {}
+  if (t === "light") { document.body.classList.add("light"); document.getElementById("theme-btn").textContent = "🌙"; }
   setL(s);
 })();
 </script>
-
 </body>
 </html>
