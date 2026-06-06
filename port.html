@@ -1,70 +1,151 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="meta-title">ميناء الصيد التقليدي بالقصر الصغير - دليل الزائر | Port Ksar Sghir</title>
-<meta name="description" content="دليل سياحي شامل لميناء الصيد التقليدي بالقصر الصغير: اكتشف عراقة الصيد البحري، وتذوق أشهى الأسماك الطازجة مباشرة من المضيق.">
-<meta name="keywords" content="ميناء القصر الصغير, الصيد التقليدي, أسماك طازجة, مضيق جبل طارق, سياحة بحرية, شمال المغرب">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ميناء الصيد التقليدي بالقصر الصغير — دليل الزائر | Port Ksar Sghir</title>
+<meta name="description" content="دليل سياحي شامل لميناء الصيد التقليدي بالقصر الصغير: اكتشف عراقة الصيد البحري، وتذوق أشهى الأسماك الطازجة مباشرة من المضيق."/>
+<meta name="keywords" content="ميناء القصر الصغير, الصيد التقليدي, أسماك طازجة, مضيق جبل طارق, سياحة بحرية, port ksar sghir, peche traditionnelle maroc"/>
+<meta name="author" content="Bilal El Hichou"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="ميناء الصيد التقليدي بالقصر الصغير | Port Ksar Sghir"/>
+<meta property="og:description" content="دليل سياحي شامل لميناء الصيد التقليدي بالقصر الصغير"/>
+<meta property="og:url" content="https://tourism.ksarsghir.com/port.html"/>
+<link rel="canonical" href="https://tourism.ksarsghir.com/port.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
+:root { --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40; --text:#e0e0e0; --text2:#aaa; --text3:#666; --border:rgba(0,180,216,0.15); --accent:#00b4d8; }
+body.light { --bg:#f0f4f8; --bg2:#fff; --bg3:#e8edf5; --text:#1a1a2e; --text2:#555; --text3:#999; --border:rgba(0,180,216,0.2); }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
+body { font-family:"Tajawal",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:background 0.3s,color 0.3s; }
 
 /* HEADER */
-header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+header { background:var(--bg2); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:200; }
 .logo { text-decoration:none; }
-.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
-.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.logo-ar { font-size:18px; font-weight:900; color:var(--accent); display:block; }
+.logo-en { font-size:9px; color:var(--text3); letter-spacing:3px; display:block; }
 .hright { display:flex; align-items:center; gap:8px; }
-.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
-.lang-sw { display:flex; gap:4px; }
-.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
-.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
+.lang-sw { display:flex; gap:3px; }
+.lb { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.lb.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+.theme-btn { background:transparent; border:1px solid var(--border); color:var(--text2); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; }
+.back { color:var(--accent); text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid var(--border); border-radius:20px; }
 
-/* ARTICLE HERO */
-.article-hero { 
-  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(10,15,26,0.95)),
-  url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkqUCKpOBemhVIbmIZluQkSPkYzqEOWjdNSaUS-UbDZQe4gr4kdCJIhljzkxXYjGiqGNRHlhgJZKFK0JAdH8_bV8guWVjI9DKj5IdM4oJhzJWpTademtNST97CrfNVdegmdIzxBsEVpF0yMkFGFheNH2xKyEmM890Ugi4j21msm1HsI283YC_Kdis9qs/s2252/8589.jpg') center/cover no-repeat; padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
-.article-hero h1 { font-size:clamp(26px, 4.5vw, 38px); font-weight:900; margin-bottom:15px; color:#fff; }
-.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+/* NAV */
+nav { background:var(--bg2); border-bottom:1px solid var(--border); padding:0 15px; display:flex; align-items:center; gap:2px; overflow-x:auto; scrollbar-width:none; position:sticky; top:60px; z-index:199; }
+nav::-webkit-scrollbar { display:none; }
+.nav-link { color:var(--text2); text-decoration:none; font-size:12px; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover, .nav-link.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+/* HERO */
+.article-hero { background:linear-gradient(180deg,rgba(74,20,140,0.5),var(--bg)); padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border); }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.article-hero h1 { font-size:clamp(24px,4.5vw,36px); font-weight:900; color:#fff; margin-bottom:10px; }
 
 /* CONTAINER */
-.container { max-width:800px; margin: 40px auto; padding:0 20px; }
+.container { max-width:800px; margin:40px auto; padding:0 20px; }
 .content-section { margin-bottom:35px; }
-.content-section h2 { font-size:22px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
-.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
-.content-section p { color:#ccc; font-size:15.5px; margin-bottom:15px; text-align:justify; }
+.content-section h2 { font-size:20px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15px; margin-bottom:15px; }
 
-/* QUICK INFO BOX */
-.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:35px; }
-.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.features { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin:20px 0; }
+.feature-card { background:var(--bg2); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--border); transition:all 0.3s; }
+.feature-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.feature-card .icon { font-size:32px; margin-bottom:10px; }
+.feature-card b { color:var(--accent); display:block; margin-bottom:6px; font-size:14px; }
+.feature-card span { color:var(--text2); font-size:12px; }
+
+.activities-list { list-style:none; margin:15px 0; }
+.activities-list li { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:15px; margin-bottom:10px; color:var(--text2); font-size:14px; display:flex; gap:12px; align-items:flex-start; transition:all 0.3s; }
+.activities-list li:hover { border-color:var(--accent); }
+
+.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid var(--accent); padding:20px; border-radius:8px; margin:25px 0; }
+html[dir="ltr"] .tip-box { border-left:4px solid var(--accent); border-right:none; }
+.tip-box h3 { color:var(--accent); margin-bottom:15px; font-size:16px; }
+.tip-box ul { list-style:none; padding:0; }
+.tip-box li { margin-bottom:12px; color:var(--text2); font-size:14px; }
+
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:30px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
 .info-box ul { list-style:none; }
-.info-box li { font-size:14.5px; color:#aaa; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
-.info-box li:last-child { margin-bottom:0; }
+.info-box li { font-size:14px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
 
-/* NOTE BOX */
-.note-box { background:rgba(255,183,3,0.05); border-left:4px solid #ffb703; border-right:4px solid transparent; padding:15px; border-radius:6px; margin:30px 0; color:#e5a900; font-size:14.5px; }
-html[dir="rtl"] .note-box { border-right:4px solid #ffb703; border-left:4px solid transparent; }
+/* RELATED */
+.related-section { margin:35px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:16px; font-weight:700; color:var(--accent); margin-bottom:15px; }
+.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.related-card { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center; text-decoration:none; transition:all 0.2s; }
+.related-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.related-card .r-icon { font-size:24px; margin-bottom:6px; }
+.related-card .r-name { font-size:12px; color:var(--text); font-weight:600; }
 
-/* TAGS */
-.tags-container { margin:40px 0 20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); }
-.tags-title { font-size:14px; color:#666; margin-bottom:10px; font-weight:700; }
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
 .tags-list { display:flex; flex-wrap:wrap; gap:8px; }
-.tag-item { background:#16213e; color:#00b4d8; font-size:12px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid rgba(0,180,216,0.15); transition:0.3s; }
-.tag-item:hover { background:#00b4d8; color:#fff; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
 
-/* CTA BOX */
-.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:50px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
 .cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
 .cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
-.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; border:none; cursor:pointer; }
-.btn:hover { background:#0096c7; transform:translateY(-2px); box-shadow:0 5px 15px rgba(0,180,216,0.3); }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); }
 
 /* FOOTER */
-footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:80px; }
-.footer-copy { font-size:11px; color:#555; }
-.footer-copy span { color:#00b4d8; }
+footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var(--border); margin-top:40px; }
+.footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:800px; margin:0 auto 15px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.footer-col a { display:block; color:var(--text3); text-decoration:none; font-size:12px; margin-bottom:6px; transition:color 0.2s; }
+.footer-col a:hover { color:var(--accent); }
+.footer-bottom { text-align:center; padding-top:15px; border-top:1px solid var(--border); font-size:11px; color:var(--text3); }
+.footer-bottom span { color:var(--accent); }
+
+@media(max-width:600px) {
+  .features { grid-template-columns:1fr; }
+  .related-grid { grid-template-columns:1fr 1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+
+
+/* ARTICLE SPECIFIC */
+.article-hero {
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(10,15,26,0.95)),
+  url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkqUCKpOBemhVIbmIZluQkSPkYzqEOWjdNSaUS-UbDZQe4gr4kdCJIhljzkxXYjGiqGNRHlhgJZKFK0JAdH8_bV8guWVjI9DKj5IdM4oJhzJWpTademtNST97CrfNVdegmdIzxBsEVpF0yMkFGFheNH2xKyEmM890Ugi4j21msm1HsI283YC_Kdis9qs/s2252/8589.jpg') center/cover no-repeat;
+  padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border);
+}
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.article-hero h1 { font-size:clamp(26px,4.5vw,38px); font-weight:900; margin-bottom:15px; color:#fff; }
+.container { max-width:800px; margin:40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:22px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15.5px; margin-bottom:15px; text-align:justify; }
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:35px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14.5px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
+.note-box { background:rgba(255,183,3,0.05); border-right:4px solid #ffb703; padding:15px; border-radius:6px; margin:30px 0; color:#e5a900; font-size:14.5px; }
+html[dir="ltr"] .note-box { border-left:4px solid #ffb703; border-right:none; }
+.photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0; }
+.photo-grid img { width:100%; border-radius:12px; object-fit:cover; aspect-ratio:4/3; border:1px solid var(--border); }
+.related-section { margin:30px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:15px; font-weight:700; color:var(--accent); margin-bottom:12px; }
+.related-grid { display:flex; gap:10px; flex-wrap:wrap; }
+.related-link { background:var(--bg2); border:1px solid var(--border); color:var(--text2); text-decoration:none; padding:8px 14px; border-radius:10px; font-size:13px; transition:all 0.2s; }
+.related-link:hover { border-color:var(--accent); color:var(--accent); }
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
+.tags-list { display:flex; flex-wrap:wrap; gap:8px; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:12px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
+.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); }
+@media(max-width:600px) { .photo-grid { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr 1fr; } }
 </style>
 </head>
 <body>
@@ -80,9 +161,21 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <button class="lb" onclick="setL('fr')">FR</button>
       <button class="lb" onclick="setL('en')">EN</button>
     </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
     <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
   </div>
 </header>
+
+<nav>
+  <a href="https://www.ksarsghir.com" class="nav-link" id="n1">🏠 الرئيسية</a>
+  <a href="https://tourism.ksarsghir.com" class="nav-link active" id="n2">🗺️ السياحة</a>
+  <a href="https://gallery.ksarsghir.com" class="nav-link" id="n3">📸 المعرض</a>
+  <a href="https://blog.ksarsghir.com" class="nav-link" id="n4">✍️ المدونة</a>
+  <a href="https://store.ksarsghir.com" class="nav-link" id="n5">🛒 المتجر</a>
+  <a href="https://www.ksarsghir.com/advertise.html" class="nav-link" id="n6">📢 إعلن معنا</a>
+  <a href="https://meteo.ksarsghir.com" class="nav-link" id="n7">🌤️ الطقس</a>
+  <a href="https://salat.ksarsghir.com" class="nav-link" id="n8">🕌 الصلاة</a>
+</nav>
 
 <div class="article-hero">
   <span class="article-badge" id="p-badge">معلم بحري • PORT • TRADITION</span>
@@ -90,45 +183,50 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
 </div>
 
 <div class="container">
-  
-  <!-- نظرة عامة -->
+
   <div class="content-section">
     <h2 id="sec1-title">نظرة عامة</h2>
-    <p id="sec1-text">يمثل ميناء الصيد التقليدي بالقصر الصغير قلب البلدة النابض وشريانها الاقتصادي والثقافي العريق. يتميز هذا الميناء الصغير بنشاطه الحيوي وقواربه الخشبية الزرقاء التقليدية التي ترسم لوحة فنية ساحرة على ضفاف مضيق جبل طارق. إنه ليس مجرد مركز اقتصادي لأبناء المنطقة، بل وجهة سياحية مميزة تمنح الزوار فرصة نادرة للتعرف عن قرب على ثقافة الصيد البحري المغربية الأصيلة والاستمتاع بأجواء البحر الحقيقية.</p>
+    <p id="sec1-text">يمثل ميناء الصيد التقليدي بالقصر الصغير قلب البلدة النابض وشريانها الاقتصادي والثقافي العريق. يتميز هذا الميناء الصغير بنشاطه الحيوي وقواربه الخشبية الزرقاء التقليدية التي ترسم لوحة فنية ساحرة على ضفاف مضيق جبل طارق. إنه ليس مجرد مركز اقتصادي لأبناء المنطقة، بل وجهة سياحية مميزة تمنح الزوار فرصة نادرة للتعرف عن قرب على ثقافة الصيد البحري المغربية الأصيلة.</p>
   </div>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG4sq4rkBpEaRAZC9s4-IPVqKOQabk2ypwfncYz0Bu4Ca19aEV3SGoZjDHjKBlLz5Aiwq50s50wfAmUnwEAj4m4c7m7UB_nxV0d6bxTWUL6CHqNFPiduOBGbE85izPsJNTjUzcSYsO-fF5djU6lfYwYq5FC0DHKZ7mCEKxk-g6xKyVz89GYp25EyGXcmg/s320/8583.jpg" 
-     alt="ميناء الصيد التقليدي القصر الصغير" 
-     loading="lazy" 
-     style="width:100%;border-radius:12px;margin:15px 0;"/>
-  <!-- صندوق معلومات الزائر -->
+
+  <div class="photo-grid">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG4sq4rkBpEaRAZC9s4-IPVqKOQabk2ypwfncYz0Bu4Ca19aEV3SGoZjDHjKBlLz5Aiwq50s50wfAmUnwEAj4m4c7m7UB_nxV0d6bxTWUL6CHqNFPiduOBGbE85izPsJNTjUzcSYsO-fF5djU6lfYwYq5FC0DHKZ7mCEKxk-g6xKyVz89GYp25EyGXcmg/s2252/8583.jpg" alt="ميناء الصيد التقليدي القصر الصغير" loading="lazy"/>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwuvIHIlen87urliv78cCPnljM0CcdjztWHQhNpgoDMT_fs5jgSKmLdNwgx6yRwqmL4PuC5Uhyy90by5uU0QhE7zFuJeCKXb1F8X8vlzUM1dNL7nrsIS64_fQXtSf9Y1lJnQr9oDK5bJ-OP8H2GMOZHN80Wd4luIKuqy9acvCnRgOmxH84EIU6GUgZDhk/s2252/8587.jpg" alt="قوارب الصيد التقليدية القصر الصغير" loading="lazy"/>
+  </div>
+
   <div class="info-box">
     <div class="info-box-title" id="box-title">📊 معلومات وتفاصيل الزيارة</div>
     <ul>
-      <li id="b1">📍 الموقع: بمحاذاة مركز القصر الصغير (سهل الوصول إليه مشياً من الشاطئ الرئيسي).</li>
+      <li id="b1">📍 الموقع: بمحاذاة مركز القصر الصغير (سهل الوصول مشياً من الشاطئ الرئيسي).</li>
       <li id="b2">💰 رسوم الدخول: مجاني بالكامل ومفتوح طوال اليوم (يفضل الزيارة صباحاً).</li>
-      <li id="b3">🐟 أهم الميزات: شراء الأسماك الطازجة مباشرة من الصيادين، وتجربة المطاعم المحلية المحيطة.</li>
-      <li id="b4">📸 الأنشطة: التقاط صور توثيقية عفوية للحياة البحرية وعمليات تفريغ الشباك.</li>
+      <li id="b3">🐟 أهم الميزات: شراء الأسماك الطازجة مباشرة من الصيادين.</li>
+      <li id="b4">📸 الأنشطة: التقاط صور للحياة البحرية وعمليات تفريغ الشباك.</li>
     </ul>
   </div>
 
-  <!-- الأنشطة وتجربة الزائر -->
   <div class="content-section">
-    <h2 id="sec2-title">ماذا تعيش هناك؟ (تجربة سياحية حية)</h2>
-    <p id="sec2-text">أفضل وقت لزيارة الميناء هو في الصباح الباكر، حيث تعود قوارب الصيد محملة بأجود أنواع أسماك مضيق جبل طارق (كالسردين، الميرلا، والشرغو). يمكنك عيش تجربة فريدة بمتابعة "الدلالة" (مزاد بيع السمك العفوي)، أو التحدث إلى البحارة الطيبين الذين ورثوا هذه المهنة أباً عن جد. عقب ذلك، يمكنك التوجه مباشرة إلى المقاهي والمطاعم الشعبية المحيطة بالميناء لطهي وتناول سمكك الطازج على الفحم بلمسة مغرية لا تُقاوم.</p>
+    <h2 id="sec2-title">ماذا تعيش هناك؟</h2>
+    <p id="sec2-text">أفضل وقت لزيارة الميناء هو في الصباح الباكر، حيث تعود قوارب الصيد محملة بأجود أنواع أسماك مضيق جبل طارق (كالسردين، الميرلا، والشرغو). يمكنك متابعة "الدلالة" (مزاد بيع السمك العفوي)، أو التحدث إلى البحارة الطيبين الذين ورثوا هذه المهنة أباً عن جد. عقب ذلك، توجه إلى المطاعم الشعبية المحيطة لتناول سمكك الطازج على الفحم.</p>
   </div>
 
-  <!-- الملاحظة التنبيهية -->
   <div class="note-box" id="p-note">
-    ⚠️ <strong>تنبيه للزوار:</strong> الميناء منطقة عمل نشطة؛ لذا يرجى الانتباه أثناء السير بين شباك الصيد والقوارب، والحرص على عدم إعاقة حركة الصيادين أثناء نقل المنتوجات البحرية، وطلب الإذن بلطف قبل تصوير الأشخاص.
+    ⚠️ <strong>تنبيه للزوار:</strong> الميناء منطقة عمل نشطة — يرجى طلب الإذن قبل تصوير الأشخاص.
   </div>
 
-  <!-- نصائح وإرشادات -->
   <div class="content-section">
     <h2 id="sec3-title">نصائح لإنجاح زيارتك</h2>
-    <p id="sec3-text">احرص على ارتداء حذاء مريح ومقاوم للانزلاق لضمان جولة آمنة داخل رصيف الميناء. إذا كنت ترغب في شراء سمك طازج بأفضل الأسعار، توجه إلى هناك بين الساعة السابعة والتاسعة صباحاً. كما يعتبر وقت العصر مكاناً رائعاً للجلوس بمحاذاة الميناء لمراقبة حركة السفن التجارية الضخمة العابرة للمضيق في الأفق البعيد.</p>
+    <p id="sec3-text">احرص على ارتداء حذاء مريح ومقاوم للانزلاق. للشراء بأفضل الأسعار توجه بين 7:00 و9:00 صباحاً. وقت العصر مثالي لمراقبة السفن التجارية العابرة للمضيق.</p>
   </div>
 
-  <!-- صندوق الكلمات الدلالية -->
+  <div class="related-section">
+    <div class="related-title" id="related-title">🗺️ اكتشف أيضاً</div>
+    <div class="related-grid">
+      <a href="https://tourism.ksarsghir.com/tangermed.html" class="related-link" id="r1">🚢 ميناء طنجة المتوسط</a>
+      <a href="https://tourism.ksarsghir.com/plage.html" class="related-link" id="r2">🏖️ شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" class="related-link" id="r3">🌊 شاطئ الدالية</a>
+    </div>
+  </div>
+
   <div class="tags-container">
     <div class="tags-title" id="p-tags-title">🏷️ كلمات دلالية:</div>
     <div class="tags-list" id="p-tags-list">
@@ -139,48 +237,155 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
     </div>
   </div>
 
-  <!-- دعوة للتفاعل والاكتشاف -->
   <div class="cta-box">
     <h3 id="cta-title">اكتشف جمال الميناء بعدسات احترافية!</h3>
-    <p id="cta-desc">تفضل بزيارة المعرض الرقمي السياحي لمشاهدة لقطات وثائقية رائعة لحياة البحارة وقوارب الصيد التقليدية.</p>
+    <p id="cta-desc">تفضل بزيارة المعرض الرقمي لمشاهدة لقطات وثائقية رائعة لحياة البحارة.</p>
     <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح معرض الصور</a>
   </div>
 
 </div>
 
 <footer>
-  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4 id="fc1">🗺️ المواقع السياحية</h4>
+      <a href="https://tourism.ksarsghir.com/plage.html" id="fl1">شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" id="fl2">قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/port.html" id="fl3">ميناء الصيد</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" id="fl4">شاطئ الدالية</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc2">🔗 المواقع</h4>
+      <a href="https://www.ksarsghir.com" id="fl5">الرئيسية</a>
+      <a href="https://gallery.ksarsghir.com" id="fl6">معرض الصور</a>
+      <a href="https://blog.ksarsghir.com" id="fl7">المدونة</a>
+      <a href="https://meteo.ksarsghir.com" id="fl8">الطقس والبحر</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc3">📄 معلومات</h4>
+      <a href="https://www.ksarsghir.com/about.html" id="fl9">من أنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="fl10">إعلن معنا</a>
+      <a href="https://www.ksarsghir.com/privacy.html" id="fl11">سياسة الخصوصية</a>
+      <a href="https://wa.me/212708053745" id="fl12">تواصل معنا</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
 </footer>
 
 <script>
 var L = {
-  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي', 'p-badge':'معلم بحري • PORT • TRADITION', 'p-title':'ميناء الصيد التقليدي بالقصر الصغير: نبض الحياة وعراقة البحر', 'sec1-title':'نظرة عامة', 'sec1-text':'يمثل ميناء الصيد التقليدي بالقصر الصغير قلب البلدة النابض وشريانها الاقتصادي والثقافي العريق. يتميز هذا الميناء الصغير بنشاطه الحيوي وقواربه الخشبية الزرقاء التقليدية التي ترسم لوحة فنية ساحرة على ضفاف مضيق جبل طارق. إنه ليس مجرد مركز اقتصادي لأبناء المنطقة، بل وجهة سياحية مميزة تمنح الزوار فرصة نادرة للتعرف عن قرب على ثقافة الصيد البحري المغربية الأصيلة والاستمتاع بأجواء البحر الحقيقية.', 'box-title':'📊 معلومات وتفاصيل الزيارة', 'b1':'📍 الموقع: بمحاذاة مركز القصر الصغير (سهل الوصول إليه مشياً من الشاطئ الرئيسي).', 'b2':'💰 رسوم الدخول: مجاني بالكامل ومفتوح طوال اليوم (يفضل الزيارة صباحاً).', 'b3':'🐟 أهم الميزات: شراء الأسماك الطازجة مباشرة من الصيادين، وتجربة المطاعم المحلية المحيطة.', 'b4':'📸 الأنشطة: التقاط صور توثيقية عفوية للحياة البحرية وعمليات تفريغ الشباك.', 'sec2-title':'ماذا تعيش هناك؟ (تجربة سياحية حية)', 'sec2-text':'أفضل وقت لزيارة الميناء هو في الصباح الباكر، حيث تعود قوارب الصيد محملة بأجود أنواع أسماك مضيق جبل طارق (كالسردين، الميرلا، والشرغو). يمكنك عيش تجربة فريدة بمتابعة "الدلالة" (مزاد بيع السمك العفوي)، أو التحدث إلى البحارة الطيبين الذين ورثوا هذه المهنة أباً عن جد. عقب ذلك، يمكنك التوجه مباشرة إلى المقاهي والمطاعم الشعبية المحيطة بالميناء لطهي وتناول سمكك الطازج على الفحم بلمسة مغرية لا تُقاوم.', 'p-note':'⚠️ <strong>تنبيه للزوار:</strong> الميناء منطقة عمل نشطة؛ لذا يرجى الانتباه أثناء السير بين شباك الصيد والقوارب، والحرص على عدم إعاقة حركة الصيادين أثناء نقل المنتوجات البحرية، وطلب الإذن بلطف قبل تصوير الأشخاص.', 'sec3-title':'نصائح لإنجاح زيارتك', 'sec3-text':'احرص على ارتداء حذاء مريح ومقاوم للانزلاق لضمان جولة آمنة داخل رصيف الميناء. إذا كنت ترغب في شراء سمك طازج بأفضل الأسعار، توجه إلى هناك بين الساعة السابعة والتاسعة صباحاً. كما يعتبر وقت العصر مكاناً رائعاً للجلوس بمحاذاة الميناء لمراقبة حركة السفن التجارية الضخمة العابرة للمضيق في الأفق البعيد.', 'p-tags-title':'🏷️ كلمات دلالية:', 'p-tags-list':'<a href="#" class="tag-item">ميناء القصر الصغير</a><a href="#" class="tag-item">الصيد التقليدي بالمغرب</a><a href="#" class="tag-item">أسماك طازجة طنجة</a><a href="#" class="tag-item">مضيق جبل طارق سياحة</a>', 'cta-title':'اكتشف جمال الميناء بعدسات احترافية！', 'cta-desc':'تفضل بزيارة المعرض الرقمي السياحي لمشاهدة لقطات وثائقية رائعة لحياة البحارة وقوارب الصيد التقليدية.', 'cta-btn':'🖼️ تصفح معرض الصور' },
-  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique', 'p-badge':'PORT • TRADITION • معلم بحري', 'p-title':'Port de Pêche Traditionnel de Ksar Sghir', 'sec1-title':'Aperçu', 'sec1-text':"Le port de pêche traditionnel de Ksar Sghir est le cœur battant du village. Ce petit port se distingue par son activité animée et ses barques bleues en bois qui dessinent un tableau magnifique sur les rives du détroit de Gibraltar.", 'box-title':'📊 Détails de la Visite', 'b1':'📍 Lieu: Attenant au centre de Ksar Sghir (accessible à pied depuis la plage).', 'b2':'💰 Tarif: Entièrement gratuit (visite recommandée le matin).', 'b3':'🐟 Points forts: Achat de poisson frais directement des pêcheurs et restaurants locaux.', 'b4':'📸 Activités: Photographie documentaire de la vie maritime locale.', 'sec2-title':'Quelle expérience y vivre ?', 'sec2-text':"Le meilleur moment pour visiter est tôt le matin, lorsque les bateaux reviennent chargés de poissons frais (sardines, merlus, etc.). Vous pouvez suivre la criée traditionnelle ou déguster votre poisson grillé au charbon dans les restaurants populaires environnants.", 'p-note':"⚠️ <strong>Avis aux visiteurs:</strong> Le port est une zone de travail active. Veuillez faire attention en marchant parmi les filets et demander poliment l'autorisation avant de photographier les gens.", 'sec3-title':'Conseils pour réussir votre visite', 'sec3-text':"Portez des chaussures confortables et antidérapantes. Pour acheter du poisson frais au meilleur prix, allez-y entre 7h00 et 9h00 du matin. L'après-midi est idéal pour observer les grands navires traversant le détroit.", 'p-tags-title':'🏷️ Mots-clés:', 'p-tags-list':'<a href="#" class="tag-item">Port Ksar Sghir</a><a href="#" class="tag-item">Pêche traditionnelle</a><a href="#" class="tag-item">Poisson frais Tanger</a><a href="#" class="tag-item">Détroit de Gibraltar</a>', 'cta-title':'Découvrez la beauté du port !', 'cta-desc':"Visitez la galerie numérique pour voir des clichés documentaires magnifiques de la vie des marins.", 'cta-btn':'🖼️ Voir la Galerie' },
-  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide', 'p-badge':'PORT • TRADITION • معلم بحري', 'p-title':'Traditional Fishing Port of Ksar Sghir', 'sec1-title':'Overview', 'sec1-text':'The traditional fishing port of Ksar Sghir is the vibrant heart of the town. This small port features high vitality and its traditional blue wooden boats paint a charming artistic scene along the Strait of Gibraltar.', 'box-title':'📊 Visit Details & Info', 'b1':'📍 Location: Adjacent to Ksar Sghir center (Walking distance from the main beach).', 'b2':'💰 Admission: Completely free (Best visited in the morning).', 'b3':'🐟 Highlights: Buying fresh fish directly from fishermen and exploring local eateries.', 'b4':'📸 Activities: Taking candid documentary photos of maritime life.', 'sec2-title':'What can you experience there?', 'sec2-text':'The best time to visit the port is early in the morning when fishing boats return loaded with the finest fish from the Strait of Gibraltar. You can experience the local fish auction or head to nearby local restaurants to have your fresh catch grilled over charcoal.', 'p-note':'⚠️ <strong>Visitor Notice:</strong> The port is an active work zone; please be careful while walking between fishing nets and boats, and kindly ask for permission before taking close-up photos of locals.', 'sec3-title':'Tips for an Amazing Visit', 'sec3-text':'Make sure to wear comfortable, non-slip shoes. To buy fresh fish at the best prices, head there between 7:00 AM and 9:00 AM. Late afternoon is great for watching cargo ships crossing the strait.', 'p-tags-title':'🏷️ Tags:', 'p-tags-list':'<a href="#" class="tag-item">Ksar Sghir Port</a><a href="#" class="tag-item">Traditional Fishing</a><a href="#" class="tag-item">Fresh Fish Tangier</a><a href="#" class="tag-item">Strait of Gibraltar</a>', 'cta-title':'Discover the port through professional lenses!', 'cta-desc':'Visit the digital tourism gallery to view wonderful documentary shots of seafaring life.', 'cta-btn':'🖼️ Browse Photo Gallery' }
+  ar: { dir:"rtl", lname:"السياحة", lback:"← الدليل السياحي",
+    n1:"🏠 الرئيسية", n2:"🗺️ السياحة", n3:"📸 المعرض", n4:"✍️ المدونة",
+    n5:"🛒 المتجر", n6:"📢 إعلن معنا", n7:"🌤️ الطقس", n8:"🕌 الصلاة",
+    "p-badge":"معلم بحري • PORT • TRADITION",
+    "p-title":"ميناء الصيد التقليدي بالقصر الصغير: نبض الحياة وعراقة البحر",
+    "sec1-title":"نظرة عامة",
+    "sec1-text":"يمثل ميناء الصيد التقليدي بالقصر الصغير قلب البلدة النابض وشريانها الاقتصادي والثقافي العريق. يتميز هذا الميناء الصغير بنشاطه الحيوي وقواربه الخشبية الزرقاء التقليدية التي ترسم لوحة فنية ساحرة على ضفاف مضيق جبل طارق.",
+    "box-title":"📊 معلومات وتفاصيل الزيارة",
+    b1:"📍 الموقع: بمحاذاة مركز القصر الصغير.", b2:"💰 مجاني — يفضل الزيارة صباحاً.",
+    b3:"🐟 شراء الأسماك الطازجة مباشرة من الصيادين.", b4:"📸 تصوير الحياة البحرية.",
+    "sec2-title":"ماذا تعيش هناك؟",
+    "sec2-text":"أفضل وقت للزيارة هو الصباح الباكر حين تعود القوارب بالسردين والميرلا. تابع مزاد الدلالة أو تناول سمكك على الفحم في المطاعم المحيطة.",
+    "p-note":"⚠️ <strong>تنبيه:</strong> الميناء منطقة عمل نشطة — طلب الإذن قبل تصوير الأشخاص.",
+    "sec3-title":"نصائح للزيارة",
+    "sec3-text":"ارتدِ حذاءً مريحاً. للشراء بأفضل الأسعار توجه 7:00-9:00 صباحاً. العصر مثالي لمشاهدة سفن المضيق.",
+    "related-title":"🗺️ اكتشف أيضاً",
+    r1:"🚢 ميناء طنجة المتوسط", r2:"🏖️ شاطئ القصر الصغير", r3:"🌊 شاطئ الدالية",
+    "p-tags-title":"🏷️ كلمات دلالية:",
+    "p-tags-list":"<a href=\"#\" class=\"tag-item\">ميناء القصر الصغير</a><a href=\"#\" class=\"tag-item\">الصيد التقليدي بالمغرب</a><a href=\"#\" class=\"tag-item\">أسماك طازجة طنجة</a><a href=\"#\" class=\"tag-item\">مضيق جبل طارق</a>",
+    "cta-title":"اكتشف جمال الميناء بعدسات احترافية!",
+    "cta-desc":"تفضل بزيارة المعرض الرقمي لمشاهدة لقطات وثائقية رائعة.",
+    "cta-btn":"🖼️ تصفح معرض الصور",
+    fc1:"🗺️ المواقع السياحية", fc2:"🔗 المواقع", fc3:"📄 معلومات",
+    fl1:"شاطئ القصر الصغير", fl2:"قرية بليونش", fl3:"ميناء الصيد", fl4:"شاطئ الدالية",
+    fl5:"الرئيسية", fl6:"معرض الصور", fl7:"المدونة", fl8:"الطقس والبحر",
+    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا"
+  },
+  fr: { dir:"ltr", lname:"Tourisme", lback:"← Guide Touristique",
+    n1:"🏠 Accueil", n2:"🗺️ Tourisme", n3:"📸 Galerie", n4:"✍️ Blog",
+    n5:"🛒 Boutique", n6:"📢 Publicité", n7:"🌤️ Météo", n8:"🕌 Prière",
+    "p-badge":"PORT • TRADITION • معلم بحري",
+    "p-title":"Port de Pêche Traditionnel de Ksar Sghir",
+    "sec1-title":"Aperçu",
+    "sec1-text":"Le port de pêche traditionnel de Ksar Sghir est le cœur battant du village. Ses barques bleues en bois dessinent un tableau magnifique sur les rives du détroit de Gibraltar.",
+    "box-title":"📊 Détails de la Visite",
+    b1:"📍 Lieu: Centre de Ksar Sghir (accessible à pied depuis la plage).", b2:"💰 Gratuit — visite recommandée le matin.",
+    b3:"🐟 Achat de poisson frais directement des pêcheurs.", b4:"📸 Photographie documentaire de la vie maritime.",
+    "sec2-title":"Quelle expérience y vivre?",
+    "sec2-text":"Tôt le matin, les bateaux rentrent chargés de sardines et merlus. Suivez la criée traditionnelle ou dégustez votre poisson grillé au charbon dans les restaurants populaires.",
+    "p-note":"⚠️ <strong>Avis:</strong> Port actif — demandez l'autorisation avant de photographier les gens.",
+    "sec3-title":"Conseils pratiques",
+    "sec3-text":"Portez des chaussures antidérapantes. Pour les meilleurs prix, venez entre 7h et 9h. L'après-midi est idéal pour observer les navires du détroit.",
+    "related-title":"🗺️ Découvrez aussi",
+    r1:"🚢 Port Tanger Med", r2:"🏖️ Plage Ksar Sghir", r3:"🌊 Plage Dalia",
+    "p-tags-title":"🏷️ Mots-clés:",
+    "p-tags-list":"<a href=\"#\" class=\"tag-item\">Port Ksar Sghir</a><a href=\"#\" class=\"tag-item\">Pêche traditionnelle</a><a href=\"#\" class=\"tag-item\">Poisson frais Tanger</a><a href=\"#\" class=\"tag-item\">Détroit de Gibraltar</a>",
+    "cta-title":"Découvrez la beauté du port!",
+    "cta-desc":"Visitez la galerie pour voir des clichés de la vie des marins.",
+    "cta-btn":"🖼️ Voir la Galerie",
+    fc1:"🗺️ Sites touristiques", fc2:"🔗 Sites web", fc3:"📄 Informations",
+    fl1:"Plage Ksar Sghir", fl2:"Belyounech", fl3:"Port de pêche", fl4:"Plage Dalia",
+    fl5:"Accueil", fl6:"Galerie photos", fl7:"Blog", fl8:"Météo & Mer",
+    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact"
+  },
+  en: { dir:"ltr", lname:"Tourism", lback:"← Tourist Guide",
+    n1:"🏠 Home", n2:"🗺️ Tourism", n3:"📸 Gallery", n4:"✍️ Blog",
+    n5:"🛒 Store", n6:"📢 Advertise", n7:"🌤️ Weather", n8:"🕌 Prayer",
+    "p-badge":"PORT • TRADITION • معلم بحري",
+    "p-title":"Traditional Fishing Port of Ksar Sghir",
+    "sec1-title":"Overview",
+    "sec1-text":"The traditional fishing port of Ksar Sghir is the vibrant heart of the town. Its traditional blue wooden boats paint a charming scene along the Strait of Gibraltar.",
+    "box-title":"📊 Visit Details",
+    b1:"📍 Location: Adjacent to Ksar Sghir center (walking distance from the beach).", b2:"💰 Completely free — best visited in the morning.",
+    b3:"🐟 Buy fresh fish directly from fishermen.", b4:"📸 Documentary photography of maritime life.",
+    "sec2-title":"What can you experience there?",
+    "sec2-text":"Best time is early morning when boats return with sardines and fish from the Strait. Experience the traditional fish auction or have your fresh catch grilled at nearby restaurants.",
+    "p-note":"⚠️ <strong>Notice:</strong> Active work zone — ask permission before photographing people.",
+    "sec3-title":"Tips for your visit",
+    "sec3-text":"Wear non-slip shoes. For best prices go between 7-9 AM. Late afternoon is great for watching cargo ships cross the strait.",
+    "related-title":"🗺️ Discover also",
+    r1:"🚢 Tanger Med Port", r2:"🏖️ Ksar Sghir Beach", r3:"🌊 Dalia Beach",
+    "p-tags-title":"🏷️ Tags:",
+    "p-tags-list":"<a href=\"#\" class=\"tag-item\">Ksar Sghir Port</a><a href=\"#\" class=\"tag-item\">Traditional Fishing</a><a href=\"#\" class=\"tag-item\">Fresh Fish Tangier</a><a href=\"#\" class=\"tag-item\">Strait of Gibraltar</a>",
+    "cta-title":"Discover the port through professional lenses!",
+    "cta-desc":"Visit the gallery for wonderful documentary shots of seafaring life.",
+    "cta-btn":"🖼️ Browse Photo Gallery",
+    fc1:"🗺️ Tourist Sites", fc2:"🔗 Sites", fc3:"📄 Information",
+    fl1:"Ksar Sghir Beach", fl2:"Belyounech", fl3:"Fishing Port", fl4:"Dalia Beach",
+    fl5:"Home", fl6:"Photo Gallery", fl7:"Blog", fl8:"Weather & Sea",
+    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact"
+  }
 };
 
 function setL(lang) {
   var t = L[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
+  document.documentElement.setAttribute("dir", t.dir);
+  document.body.setAttribute("dir", t.dir);
   Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
+    if (id === "dir") return;
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
-  document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  document.querySelectorAll(".lb").forEach(function(b) {
+    b.classList.remove("on");
+    var oc = b.getAttribute("onclick")||"";
+    if (oc.indexOf(lang) > -1) b.classList.add("on");
   });
-  try { localStorage.setItem('tl', lang); } catch(e) {}
+  try { localStorage.setItem("tl", lang); } catch(e) {}
+}
+
+function toggleTheme() {
+  var isLight = document.body.classList.toggle("light");
+  document.getElementById("theme-btn").textContent = isLight ? "🌙" : "☀️";
+  try { localStorage.setItem("thr", isLight ? "light" : "dark"); } catch(e) {}
 }
 
 (function() {
-  var s = 'ar';
-  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  var s = "ar", t = "dark";
+  try { s = localStorage.getItem("tl")||"ar"; t = localStorage.getItem("thr")||"dark"; } catch(e) {}
+  if (t === "light") { document.body.classList.add("light"); document.getElementById("theme-btn").textContent = "🌙"; }
   setL(s);
 })();
 </script>
-
 </body>
 </html>
