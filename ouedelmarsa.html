@@ -1,75 +1,198 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>واد المرسى — حيث يعانق الجبل زرقة المتوسط | Oued El Marsa | Ksar Sghir Tourism</title>
-<meta name="description" content="دليل سياحي شامل لواد المرسى — جوهرة طبيعية مخفية في شمال المغرب. مناظر بانورامية، مياه صافية، جبل موسى وساحل إسبانيا.">
-<meta name="keywords" content="واد المرسى, oued el marsa, شمال المغرب, جبل موسى, القصر الصغير, الفحص أنجرة, سياحة المغرب">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>واد المرسى — جوهرة طبيعية في شمال المغرب | Oued El Marsa Ksar Sghir</title>
+<meta name="description" content="دليل سياحي شامل لواد المرسى — مناظر بانورامية، مياه صافية، جبل موسى. وجهة مثالية للهدوء في شمال المغرب."/>
+<meta name="keywords" content="واد المرسى, oued el marsa, شمال المغرب, جبل موسى, القصر الصغير, الفحص أنجرة"/>
+<meta name="author" content="Bilal El Hichou"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="واد المرسى — جوهرة طبيعية في شمال المغرب"/>
+<meta property="og:url" content="https://tourism.ksarsghir.com/ouedelmarsa.html"/>
+<link rel="canonical" href="https://tourism.ksarsghir.com/ouedelmarsa.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
+:root { --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40; --text:#e0e0e0; --text2:#aaa; --text3:#666; --border:rgba(0,180,216,0.15); --accent:#00b4d8; }
+body.light { --bg:#f0f4f8; --bg2:#fff; --bg3:#e8edf5; --text:#1a1a2e; --text2:#555; --text3:#999; --border:rgba(0,180,216,0.2); }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; line-height:1.8; }
-header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #00b4d8; position:sticky; top:0; z-index:100; }
+body { font-family:"Tajawal",sans-serif; background:var(--bg); color:var(--text); line-height:1.8; transition:background 0.3s,color 0.3s; }
+
+/* HEADER */
+header { background:var(--bg2); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:200; }
 .logo { text-decoration:none; }
-.logo-ar { font-size:18px; font-weight:900; color:#00b4d8; display:block; }
-.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.logo-ar { font-size:18px; font-weight:900; color:var(--accent); display:block; }
+.logo-en { font-size:9px; color:var(--text3); letter-spacing:3px; display:block; }
 .hright { display:flex; align-items:center; gap:8px; }
-.back { color:#00b4d8; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(0,180,216,0.3); border-radius:20px; }
-.lang-sw { display:flex; gap:4px; }
-.lb { background:transparent; border:1px solid rgba(0,180,216,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
-.lb.on { background:#00b4d8; color:#fff; border-color:#00b4d8; }
-.article-hero { background:linear-gradient(180deg, rgba(0,96,100,0.5), #0a0f1a); padding:80px 20px 40px; text-align:center; border-bottom:1px solid rgba(0,180,216,0.15); }
-.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid #00b4d8; color:#00b4d8; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.lang-sw { display:flex; gap:3px; }
+.lb { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.lb.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+.theme-btn { background:transparent; border:1px solid var(--border); color:var(--text2); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; }
+.back { color:var(--accent); text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid var(--border); border-radius:20px; }
+
+/* NAV */
+nav { background:var(--bg2); border-bottom:1px solid var(--border); padding:0 15px; display:flex; align-items:center; gap:2px; overflow-x:auto; scrollbar-width:none; position:sticky; top:60px; z-index:199; }
+nav::-webkit-scrollbar { display:none; }
+.nav-link { color:var(--text2); text-decoration:none; font-size:12px; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover, .nav-link.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+/* HERO */
+.article-hero { background:linear-gradient(180deg,rgba(74,20,140,0.5),var(--bg)); padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border); }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
 .article-hero h1 { font-size:clamp(24px,4.5vw,36px); font-weight:900; color:#fff; margin-bottom:10px; }
+
+/* CONTAINER */
 .container { max-width:800px; margin:40px auto; padding:0 20px; }
 .content-section { margin-bottom:35px; }
-.content-section h2 { font-size:20px; color:#fff; margin-bottom:15px; display:flex; align-items:center; gap:10px; }
-.content-section h2::before { content:''; width:4px; height:22px; background:#00b4d8; display:inline-block; border-radius:2px; flex-shrink:0; }
-.content-section p { color:#ccc; font-size:15px; margin-bottom:15px; }
+.content-section h2 { font-size:20px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15px; margin-bottom:15px; }
+
 .features { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin:20px 0; }
-.feature-card { background:#16213e; padding:20px; border-radius:12px; text-align:center; border:1px solid rgba(0,180,216,0.15); transition:all 0.3s; }
-.feature-card:hover { border-color:#00b4d8; transform:translateY(-2px); }
+.feature-card { background:var(--bg2); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--border); transition:all 0.3s; }
+.feature-card:hover { border-color:var(--accent); transform:translateY(-2px); }
 .feature-card .icon { font-size:32px; margin-bottom:10px; }
-.feature-card b { color:#00b4d8; display:block; margin-bottom:6px; font-size:14px; }
-.feature-card span { color:#aaa; font-size:12px; }
+.feature-card b { color:var(--accent); display:block; margin-bottom:6px; font-size:14px; }
+.feature-card span { color:var(--text2); font-size:12px; }
+
 .activities-list { list-style:none; margin:15px 0; }
-.activities-list li { background:#16213e; border:1px solid rgba(0,180,216,0.1); border-radius:10px; padding:15px; margin-bottom:10px; color:#ccc; font-size:14px; display:flex; gap:12px; align-items:flex-start; }
-.activities-list li:hover { border-color:#00b4d8; }
-.info-box { background:#16213e; border:1px solid rgba(0,180,216,0.2); border-radius:14px; padding:20px; margin-bottom:30px; }
-.info-box-title { font-weight:700; color:#00b4d8; margin-bottom:15px; font-size:16px; }
-.info-box ul { list-style:none; }
-.info-box li { font-size:14px; color:#aaa; margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
-.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid #00b4d8; padding:20px; border-radius:8px; margin:25px 0; }
-.tip-box h3 { color:#00b4d8; margin-bottom:15px; font-size:16px; }
+.activities-list li { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:15px; margin-bottom:10px; color:var(--text2); font-size:14px; display:flex; gap:12px; align-items:flex-start; transition:all 0.3s; }
+.activities-list li:hover { border-color:var(--accent); }
+
+.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid var(--accent); padding:20px; border-radius:8px; margin:25px 0; }
+html[dir="ltr"] .tip-box { border-left:4px solid var(--accent); border-right:none; }
+.tip-box h3 { color:var(--accent); margin-bottom:15px; font-size:16px; }
 .tip-box ul { list-style:none; padding:0; }
-.tip-box li { margin-bottom:12px; color:#ccc; font-size:14px; }
-.note-box { background:rgba(255,183,3,0.05); border-right:4px solid #ffb703; padding:15px; border-radius:6px; margin:25px 0; color:#e5a900; font-size:14px; }
-.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.05); }
-.tags-title { font-size:13px; color:#666; margin-bottom:10px; font-weight:700; }
+.tip-box li { margin-bottom:12px; color:var(--text2); font-size:14px; }
+
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:30px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
+
+/* RELATED */
+.related-section { margin:35px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:16px; font-weight:700; color:var(--accent); margin-bottom:15px; }
+.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.related-card { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:12px; text-align:center; text-decoration:none; transition:all 0.2s; }
+.related-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.related-card .r-icon { font-size:24px; margin-bottom:6px; }
+.related-card .r-name { font-size:12px; color:var(--text); font-weight:600; }
+
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
 .tags-list { display:flex; flex-wrap:wrap; gap:8px; }
-.tag-item { background:#16213e; color:#00b4d8; font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid rgba(0,180,216,0.15); transition:0.3s; }
-.tag-item:hover { background:#00b4d8; color:#fff; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
+
 .cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
 .cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
 .cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
-.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:#00b4d8; color:#fff; transition:0.3s; font-family:'Tajawal',sans-serif; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
 .btn:hover { background:#0096c7; transform:translateY(-2px); }
-footer { background:#060c14; padding:20px; text-align:center; border-top:1px solid #16213e; margin-top:60px; }
-.footer-links { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
-.footer-links a { color:#555; text-decoration:none; font-size:12px; }
-.footer-links a:hover { color:#00b4d8; }
-.footer-copy { font-size:11px; color:#555; }
-.footer-copy span { color:#00b4d8; }
+
+/* FOOTER */
+footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var(--border); margin-top:40px; }
+.footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:800px; margin:0 auto 15px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.footer-col a { display:block; color:var(--text3); text-decoration:none; font-size:12px; margin-bottom:6px; transition:color 0.2s; }
+.footer-col a:hover { color:var(--accent); }
+.footer-bottom { text-align:center; padding-top:15px; border-top:1px solid var(--border); font-size:11px; color:var(--text3); }
+.footer-bottom span { color:var(--accent); }
+
 @media(max-width:600px) {
   .features { grid-template-columns:1fr; }
-  .lang-sw { display:flex; }
-  .lb { font-size:10px; padding:3px 7px; }
+  .related-grid { grid-template-columns:1fr 1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
 }
+
+
+/* ARTICLE SPECIFIC */
+.article-hero {
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(10,15,26,0.95)),
+  url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhCkqUCKpOBemhVIbmIZluQkSPkYzqEOWjdNSaUS-UbDZQe4gr4kdCJIhljzkxXYjGiqGNRHlhgJZKFK0JAdH8_bV8guWVjI9DKj5IdM4oJhzJWpTademtNST97CrfNVdegmdIzxBsEVpF0yMkFGFheNH2xKyEmM890Ugi4j21msm1HsI283YC_Kdis9qs/s2252/8589.jpg') center/cover no-repeat;
+  padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border);
+}
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.article-hero h1 { font-size:clamp(26px,4.5vw,38px); font-weight:900; margin-bottom:15px; color:#fff; }
+.container { max-width:800px; margin:40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:22px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15.5px; margin-bottom:15px; text-align:justify; }
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:35px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14.5px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
+.note-box { background:rgba(255,183,3,0.05); border-right:4px solid #ffb703; padding:15px; border-radius:6px; margin:30px 0; color:#e5a900; font-size:14.5px; }
+html[dir="ltr"] .note-box { border-left:4px solid #ffb703; border-right:none; }
+.photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0; }
+.photo-grid img { width:100%; border-radius:12px; object-fit:cover; aspect-ratio:4/3; border:1px solid var(--border); }
+.related-section { margin:30px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:15px; font-weight:700; color:var(--accent); margin-bottom:12px; }
+.related-grid { display:flex; gap:10px; flex-wrap:wrap; }
+.related-link { background:var(--bg2); border:1px solid var(--border); color:var(--text2); text-decoration:none; padding:8px 14px; border-radius:10px; font-size:13px; transition:all 0.2s; }
+.related-link:hover { border-color:var(--accent); color:var(--accent); }
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
+.tags-list { display:flex; flex-wrap:wrap; gap:8px; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:12px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
+.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); }
+@media(max-width:600px) { .photo-grid { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr 1fr; } }
+
+.article-hero { background:linear-gradient(180deg,rgba(0,96,100,0.5),var(--bg)); padding:80px 20px 40px; text-align:center; border-bottom:1px solid var(--border); }
+.article-badge { display:inline-block; background:rgba(0,180,216,0.15); border:1px solid var(--accent); color:var(--accent); font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:15px; }
+.article-hero h1 { font-size:clamp(24px,4.5vw,36px); font-weight:900; color:#fff; margin-bottom:10px; }
+.container { max-width:800px; margin:40px auto; padding:0 20px; }
+.content-section { margin-bottom:35px; }
+.content-section h2 { font-size:20px; color:var(--text); margin-bottom:15px; display:flex; align-items:center; gap:10px; }
+.content-section h2::before { content:""; width:4px; height:22px; background:var(--accent); display:inline-block; border-radius:2px; flex-shrink:0; }
+.content-section p { color:var(--text2); font-size:15px; margin-bottom:15px; }
+.features { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; margin:20px 0; }
+.feature-card { background:var(--bg2); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--border); transition:all 0.3s; }
+.feature-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.feature-card .icon { font-size:32px; margin-bottom:10px; }
+.feature-card b { color:var(--accent); display:block; margin-bottom:6px; font-size:14px; }
+.feature-card span { color:var(--text2); font-size:12px; }
+.activities-list { list-style:none; margin:15px 0; }
+.activities-list li { background:var(--bg2); border:1px solid var(--border); border-radius:10px; padding:15px; margin-bottom:10px; color:var(--text2); font-size:14px; display:flex; gap:12px; align-items:flex-start; transition:all 0.3s; }
+.activities-list li:hover { border-color:var(--accent); }
+.info-box { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:20px; margin-bottom:30px; }
+.info-box-title { font-weight:700; color:var(--accent); margin-bottom:15px; font-size:16px; }
+.info-box ul { list-style:none; }
+.info-box li { font-size:14px; color:var(--text2); margin-bottom:10px; display:flex; align-items:flex-start; gap:8px; }
+.tip-box { background:rgba(0,180,216,0.06); border-right:4px solid var(--accent); padding:20px; border-radius:8px; margin:25px 0; }
+html[dir="ltr"] .tip-box { border-left:4px solid var(--accent); border-right:none; }
+.tip-box h3 { color:var(--accent); margin-bottom:15px; font-size:16px; }
+.tip-box ul { list-style:none; }
+.tip-box li { margin-bottom:12px; color:var(--text2); font-size:14px; }
+.note-box { background:rgba(255,183,3,0.05); border-right:4px solid #ffb703; padding:15px; border-radius:6px; margin:25px 0; color:#e5a900; font-size:14px; }
+html[dir="ltr"] .note-box { border-left:4px solid #ffb703; border-right:none; }
+.related-section { margin:30px 0; padding-top:20px; border-top:1px solid var(--border); }
+.related-title { font-size:15px; font-weight:700; color:var(--accent); margin-bottom:12px; }
+.related-grid { display:flex; gap:10px; flex-wrap:wrap; }
+.related-link { background:var(--bg2); border:1px solid var(--border); color:var(--text2); text-decoration:none; padding:8px 14px; border-radius:10px; font-size:13px; transition:all 0.2s; }
+.related-link:hover { border-color:var(--accent); color:var(--accent); }
+.tags-container { margin:35px 0 20px; padding-top:20px; border-top:1px solid var(--border); }
+.tags-title { font-size:13px; color:var(--text3); margin-bottom:10px; font-weight:700; }
+.tags-list { display:flex; flex-wrap:wrap; gap:8px; }
+.tag-item { background:var(--bg2); color:var(--accent); font-size:11px; padding:4px 12px; border-radius:15px; text-decoration:none; border:1px solid var(--border); transition:0.3s; }
+.tag-item:hover { background:var(--accent); color:#fff; }
+.cta-box { background:linear-gradient(135deg,#0d1b2a,#1a3a5c); padding:35px 20px; border-radius:14px; text-align:center; margin-top:40px; border:1px solid rgba(0,180,216,0.2); }
+.cta-box h3 { font-size:20px; font-weight:700; margin-bottom:10px; color:#fff; }
+.cta-box p { font-size:13px; color:#90e0ef; margin-bottom:22px; }
+.btn { padding:12px 28px; font-size:13px; font-weight:700; text-decoration:none; border-radius:25px; display:inline-block; background:var(--accent); color:#fff; transition:0.3s; font-family:"Tajawal",sans-serif; }
+.btn:hover { background:#0096c7; transform:translateY(-2px); }
+@media(max-width:600px){ .features{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr 1fr;} }
 </style>
 </head>
 <body>
-
 <header>
   <a href="https://tourism.ksarsghir.com" class="logo">
     <span class="logo-ar" id="lname">السياحة</span>
@@ -81,71 +204,81 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <button class="lb" onclick="setL('fr')">FR</button>
       <button class="lb" onclick="setL('en')">EN</button>
     </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
     <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
   </div>
 </header>
-
+<nav>
+  <a href="https://www.ksarsghir.com" class="nav-link" id="n1">🏠 الرئيسية</a>
+  <a href="https://tourism.ksarsghir.com" class="nav-link active" id="n2">🗺️ السياحة</a>
+  <a href="https://gallery.ksarsghir.com" class="nav-link" id="n3">📸 المعرض</a>
+  <a href="https://blog.ksarsghir.com" class="nav-link" id="n4">✍️ المدونة</a>
+  <a href="https://store.ksarsghir.com" class="nav-link" id="n5">🛒 المتجر</a>
+  <a href="https://www.ksarsghir.com/advertise.html" class="nav-link" id="n6">📢 إعلن معنا</a>
+  <a href="https://meteo.ksarsghir.com" class="nav-link" id="n7">🌤️ الطقس</a>
+  <a href="https://salat.ksarsghir.com" class="nav-link" id="n8">🕌 الصلاة</a>
+</nav>
 <div class="article-hero">
   <span class="article-badge" id="p-badge">طبيعة • NATURE • قرية ساحلية</span>
   <h1 id="p-title">واد المرسى: حيث يعانق الجبل زرقة المتوسط</h1>
 </div>
-
 <div class="container">
-
   <div class="content-section">
     <h2 id="sec1-title">نظرة عامة</h2>
-    <p id="sec1-text">تُعدّ قرية واد المرسى (التابعة لجماعة تغرامت، إقليم الفحص أنجرة) واحدة من أجمل الجواهر الطبيعية المخفية في شمال المغرب. هي ليست مجرد شاطئ، بل ملاذ للباحثين عن الهدوء وسط مناظر طبيعية عذراء، حيث يمتزج الشموخ الجبلي لجبل موسى بصفاء مياه البحر الأبيض المتوسط.</p>
+    <p id="sec1-text">تُعدّ قرية واد المرسى (التابعة لجماعة تغرامت، إقليم الفحص أنجرة) واحدة من أجمل الجواهر الطبيعية المخفية في شمال المغرب. ملاذ للباحثين عن الهدوء وسط مناظر طبيعية عذراء، حيث يمتزج الشموخ الجبلي لجبل موسى بصفاء مياه البحر الأبيض المتوسط.</p>
   </div>
-
   <div class="content-section">
     <h2 id="sec2-title">✨ لماذا تعتبر واد المرسى وجهة مميزة؟</h2>
     <div class="features">
-      <div class="feature-card"><div class="icon">🏔️</div><b id="f1b">طبيعة خلابة</b><span id="f1t">إطلالات بانورامية مذهلة — جبال تغطس في البحر مع رؤية الساحل الإسباني عبر مضيق جبل طارق</span></div>
-      <div class="feature-card"><div class="icon">😌</div><b id="f2b">الهدوء والاسترخاء</b><span id="f2t">بعيداً عن صخب المدن وضجيج المنتجعات — بيئة مثالية للاستجمام وإعادة الشحن</span></div>
-      <div class="feature-card"><div class="icon">🌊</div><b id="f3b">رمال نقية ومياه صافية</b><span id="f3t">شاطئ نظيف يجذب محبي السباحة والغطس والنشاطات البحرية الهادئة</span></div>
-      <div class="feature-card"><div class="icon">🦋</div><b id="f4b">تنوع بيولوجي</b><span id="f4t">منطقة غنية بالتنوع الطبيعي — وجهة مفضلة لعشاق الطبيعة والمناظر الجبلية</span></div>
+      <div class="feature-card"><div class="icon">🏔️</div><b id="f1b">طبيعة خلابة</b><span id="f1t">إطلالات بانورامية مذهلة مع رؤية الساحل الإسباني عبر المضيق</span></div>
+      <div class="feature-card"><div class="icon">😌</div><b id="f2b">الهدوء والاسترخاء</b><span id="f2t">بعيداً عن صخب المدن — بيئة مثالية للاستجمام</span></div>
+      <div class="feature-card"><div class="icon">🌊</div><b id="f3b">رمال نقية ومياه صافية</b><span id="f3t">شاطئ نظيف يجذب محبي السباحة والغطس</span></div>
+      <div class="feature-card"><div class="icon">🦋</div><b id="f4b">تنوع بيولوجي</b><span id="f4t">وجهة مفضلة لعشاق الطبيعة والمناظر الجبلية</span></div>
     </div>
   </div>
-
   <div class="content-section">
-    <h2 id="sec3-title">🎯 أنشطة مقترحة في واد المرسى</h2>
+    <h2 id="sec3-title">🎯 أنشطة مقترحة</h2>
     <ul class="activities-list" id="activities-list">
-      <li><span>🏊</span><div><strong>السباحة والغطس</strong> — بفضل مياهه الصافية، يعتبر الشاطئ مكاناً رائعاً للسباحة والغوص واستكشاف الأحياء البحرية.</div></li>
-      <li><span>🥾</span><div><strong>المشي والاستكشاف</strong> — المنطقة المحيطة مثالية لمحبي المشي لمسافات طويلة (Hiking) لاستكشاف التضاريس الجبلية القريبة من جبل موسى.</div></li>
-      <li><span>📸</span><div><strong>التصوير الفوتوغرافي</strong> — الطبيعة العذراء والتباين بين الجبل والبحر يوفر زوايا تصوير سينمائية استثنائية.</div></li>
-      <li><span>⛵</span><div><strong>جولة القوارب</strong> — توفر المنطقة فرصاً لركوب قوارب الصيادين التقليدية لاستكشاف الساحل من زاوية مختلفة.</div></li>
+      <li><span>🏊</span><div><strong>السباحة والغطس</strong> — مياه صافية رائعة لاستكشاف الأحياء البحرية</div></li>
+      <li><span>🥾</span><div><strong>المشي (Hiking)</strong> — مسارات جبلية قريبة من جبل موسى</div></li>
+      <li><span>📸</span><div><strong>التصوير الفوتوغرافي</strong> — زوايا سينمائية استثنائية بين الجبل والبحر</div></li>
+      <li><span>⛵</span><div><strong>جولة القوارب</strong> — اكتشف الساحل من قوارب الصيادين التقليدية</div></li>
     </ul>
   </div>
-
   <div class="info-box">
     <div class="info-box-title" id="box-title">📍 الموقع الجغرافي</div>
     <ul>
-      <li id="b1">🗺️ تابعة لجماعة تغرامت، إقليم الفحص أنجرة — شمال المغرب</li>
-      <li id="b2">📏 على بعد حوالي 55 كم شرق مدينة طنجة</li>
-      <li id="b3">📏 على بعد حوالي 50 كم شمال مدينة تطوان</li>
-      <li id="b4">🔗 قريبة جداً من بليونش وشاطئ الدالية — ضمن مسار "مثلث الشمال" الساحر</li>
+      <li id="b1">🗺️ تابعة لجماعة تغرامت، إقليم الفحص أنجرة</li>
+      <li id="b2">📏 حوالي 55 كم شرق طنجة</li>
+      <li id="b3">📏 حوالي 50 كم شمال تطوان</li>
+      <li id="b4">🔗 قريبة من <a href="https://tourism.ksarsghir.com/belyounech.html" style="color:var(--accent)">بليونش</a> و<a href="https://tourism.ksarsghir.com/dalia.html" style="color:var(--accent)">الدالية</a> — ضمن مسار "مثلث الشمال"</li>
     </ul>
   </div>
-
   <div class="content-section">
     <h2 id="sec4-title">🚗 كيفية الوصول</h2>
-    <p id="sec4-p1"><strong>🚗 السيارة الخاصة:</strong> هي الوسيلة الأسهل للوصول — الطريق الساحلية توفر مناظر خلابة وتصلك مباشرة عبر الطرق الإقليمية الرابطة بين طنجة وتطوان مروراً بالقصر الصغير.</p>
-    <p id="sec4-p2"><strong>🚕 النقل العمومي:</strong> يتطلب الاعتماد على سيارات الأجرة الكبيرة من طنجة أو تطوان باتجاه القرى المجاورة (القصر الصغير أو بليونش) مع التنسيق المسبق للوصول إلى قلب القرية.</p>
+    <p id="sec4-p1"><strong>🚗 السيارة الخاصة:</strong> الأسهل — الطريق الساحلية مع مناظر خلابة عبر <a href="https://tourism.ksarsghir.com/plage.html" style="color:var(--accent)">القصر الصغير</a>.</p>
+    <p id="sec4-p2"><strong>🚕 النقل العمومي:</strong> سيارات الأجرة الكبيرة من طنجة أو تطوان باتجاه القرى المجاورة.</p>
   </div>
-
   <div class="tip-box">
-    <h3 id="tip-title">💡 نصائح إضافية للزوار</h3>
+    <h3 id="tip-title">💡 نصائح إضافية</h3>
     <ul>
-      <li id="tip1">🎒 <strong>التجهيز المسبق:</strong> احمل كافة احتياجاتك من طعام وشراب ومستلزمات بحرية — خاصة خارج مواسم الذروة</li>
-      <li id="tip2">🌿 <strong>الاحترام البيئي:</strong> كوجهة عذراء، احرص على الحفاظ على نظافة المكان وترك الطبيعة كما وجدتها</li>
-      <li id="tip3">📅 <strong>أفضل وقت للزيارة:</strong> فصل الصيف وبداية الخريف — الجو مثالي للأنشطة البحرية والجبلية</li>
+      <li id="tip1">🎒 <strong>التجهيز المسبق:</strong> احمل طعاماً ومشروبات — الخدمات محدودة</li>
+      <li id="tip2">🌿 <strong>الاحترام البيئي:</strong> حافظ على نظافة المكان وترك الطبيعة كما وجدتها</li>
+      <li id="tip3">📅 <strong>أفضل وقت:</strong> الصيف وبداية الخريف للأنشطة البحرية والجبلية</li>
     </ul>
   </div>
-
   <div class="note-box" id="p-note">
-    ⚠️ <strong>ملاحظة مهمة:</strong> واد المرسى وجهة طبيعية هادئة — الخدمات فيها محدودة. يُنصح بالتخطيط المسبق وحمل ما تحتاجه معك للاستمتاع الكامل بتجربتك.
+    ⚠️ <strong>ملاحظة:</strong> واد المرسى وجهة طبيعية هادئة — الخدمات محدودة. يُنصح بالتخطيط المسبق.
   </div>
-
+  <div class="related-section">
+    <div class="related-title" id="related-title">🗺️ اكتشف أيضاً</div>
+    <div class="related-grid">
+      <a href="https://tourism.ksarsghir.com/belyounech.html" class="related-link" id="r1">🌺 قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" class="related-link" id="r2">🌊 شاطئ الدالية</a>
+      <a href="https://tourism.ksarsghir.com/plage.html" class="related-link" id="r3">🏖️ شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/sidikankouch.html" class="related-link" id="r4">⛺ سيدي قنقوش</a>
+    </div>
+  </div>
   <div class="tags-container">
     <div class="tags-title" id="tags-title">🏷️ كلمات دلالية:</div>
     <div class="tags-list" id="tags-list">
@@ -153,149 +286,176 @@ footer { background:#060c14; padding:20px; text-align:center; border-top:1px sol
       <a href="#" class="tag-item">شمال المغرب</a>
       <a href="#" class="tag-item">جبل موسى</a>
       <a href="#" class="tag-item">القصر الصغير</a>
-      <a href="#" class="tag-item">الفحص أنجرة</a>
       <a href="#" class="tag-item">oued el marsa</a>
-      <a href="#" class="tag-item">ksar sghir tourisme</a>
     </div>
   </div>
-
   <div class="cta-box">
     <h3 id="cta-title">هل تريد مشاهدة جمال واد المرسى بعدستنا؟</h3>
     <p id="cta-desc">انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية للمنطقة.</p>
     <a href="https://gallery.ksarsghir.com" class="btn" id="cta-btn">🖼️ تصفح معرض الصور</a>
   </div>
-
 </div>
-
 <footer>
-  <div class="footer-links">
-    <a href="https://tourism.ksarsghir.com">الدليل السياحي</a>
-    <a href="https://www.ksarsghir.com">الرئيسية</a>
-    <a href="https://gallery.ksarsghir.com">المعرض</a>
-    <a href="https://advertise.ksarsghir.com">إعلن معنا</a>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4 id="fc1">🗺️ المواقع السياحية</h4>
+      <a href="https://tourism.ksarsghir.com/plage.html" id="fl1">شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" id="fl2">قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/port.html" id="fl3">ميناء الصيد</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" id="fl4">شاطئ الدالية</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc2">🔗 المواقع</h4>
+      <a href="https://www.ksarsghir.com" id="fl5">الرئيسية</a>
+      <a href="https://gallery.ksarsghir.com" id="fl6">معرض الصور</a>
+      <a href="https://blog.ksarsghir.com" id="fl7">المدونة</a>
+      <a href="https://meteo.ksarsghir.com" id="fl8">الطقس والبحر</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc3">📄 معلومات</h4>
+      <a href="https://www.ksarsghir.com/about.html" id="fl9">من أنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="fl10">إعلن معنا</a>
+      <a href="https://www.ksarsghir.com/privacy.html" id="fl11">سياسة الخصوصية</a>
+      <a href="https://wa.me/212708053745" id="fl12">تواصل معنا</a>
+    </div>
   </div>
-  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+  <div class="footer-bottom">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
 </footer>
-
 <script>
 var L = {
-  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي',
-    'p-badge':'طبيعة • NATURE • قرية ساحلية',
-    'p-title':'واد المرسى: حيث يعانق الجبل زرقة المتوسط',
-    'sec1-title':'نظرة عامة',
-    'sec1-text':'تُعدّ قرية واد المرسى (التابعة لجماعة تغرامت، إقليم الفحص أنجرة) واحدة من أجمل الجواهر الطبيعية المخفية في شمال المغرب. ملاذ للباحثين عن الهدوء وسط مناظر طبيعية عذراء، حيث يمتزج الشموخ الجبلي لجبل موسى بصفاء مياه البحر الأبيض المتوسط.',
-    'sec2-title':'✨ لماذا تعتبر واد المرسى وجهة مميزة؟',
-    'f1b':'طبيعة خلابة', 'f1t':'إطلالات بانورامية مذهلة مع رؤية الساحل الإسباني عبر مضيق جبل طارق',
-    'f2b':'الهدوء والاسترخاء', 'f2t':'بعيداً عن صخب المدن — بيئة مثالية للاستجمام',
-    'f3b':'رمال نقية ومياه صافية', 'f3t':'شاطئ نظيف يجذب محبي السباحة والغطس',
-    'f4b':'تنوع بيولوجي', 'f4t':'وجهة مفضلة لعشاق الطبيعة والمناظر الجبلية',
-    'sec3-title':'🎯 أنشطة مقترحة',
-    'activities-list':'<li><span>🏊</span><div><strong>السباحة والغطس</strong> — مياه صافية رائعة للسباحة واستكشاف الأحياء البحرية</div></li><li><span>🥾</span><div><strong>المشي والاستكشاف (Hiking)</strong> — مسارات جبلية قريبة من جبل موسى</div></li><li><span>📸</span><div><strong>التصوير الفوتوغرافي</strong> — زوايا سينمائية استثنائية بين الجبل والبحر</div></li><li><span>⛵</span><div><strong>جولة القوارب</strong> — اكتشف الساحل من قوارب الصيادين التقليدية</div></li>',
-    'box-title':'📍 الموقع الجغرافي',
-    'b1':'🗺️ تابعة لجماعة تغرامت، إقليم الفحص أنجرة',
-    'b2':'📏 حوالي 55 كم شرق طنجة',
-    'b3':'📏 حوالي 50 كم شمال تطوان',
-    'b4':'🔗 قريبة من بليونش والدالية — ضمن مسار "مثلث الشمال"',
-    'sec4-title':'🚗 كيفية الوصول',
-    'sec4-p1':'<strong>🚗 السيارة الخاصة:</strong> الأسهل — الطريق الساحلية مع مناظر خلابة عبر القصر الصغير.',
-    'sec4-p2':'<strong>🚕 النقل العمومي:</strong> سيارات الأجرة الكبيرة من طنجة أو تطوان باتجاه القرى المجاورة.',
-    'tip-title':'💡 نصائح إضافية',
-    'tip1':'🎒 <strong>التجهيز المسبق:</strong> احمل طعاماً ومشروبات — الخدمات محدودة',
-    'tip2':'🌿 <strong>الاحترام البيئي:</strong> حافظ على نظافة المكان وترك الطبيعة كما وجدتها',
-    'tip3':'📅 <strong>أفضل وقت:</strong> الصيف وبداية الخريف للأنشطة البحرية والجبلية',
-    'p-note':'⚠️ <strong>ملاحظة:</strong> واد المرسى وجهة طبيعية هادئة — الخدمات محدودة. يُنصح بالتخطيط المسبق.',
-    'tags-title':'🏷️ كلمات دلالية:',
-    'tags-list':'<a href="#" class="tag-item">واد المرسى</a><a href="#" class="tag-item">شمال المغرب</a><a href="#" class="tag-item">جبل موسى</a><a href="#" class="tag-item">القصر الصغير</a><a href="#" class="tag-item">oued el marsa</a>',
-    'cta-title':'هل تريد مشاهدة جمال واد المرسى بعدستنا؟',
-    'cta-desc':'انتقل إلى المعرض الرقمي للاستمتاع بأجمل اللقطات الاحترافية للمنطقة.',
-    'cta-btn':'🖼️ تصفح معرض الصور'
+  ar: { dir:"rtl", lname:"السياحة", lback:"← الدليل السياحي",
+    n1:"🏠 الرئيسية", n2:"🗺️ السياحة", n3:"📸 المعرض", n4:"✍️ المدونة",
+    n5:"🛒 المتجر", n6:"📢 إعلن معنا", n7:"🌤️ الطقس", n8:"🕌 الصلاة",
+    "p-badge":"طبيعة • NATURE • قرية ساحلية",
+    "p-title":"واد المرسى: حيث يعانق الجبل زرقة المتوسط",
+    "sec1-title":"نظرة عامة", "sec1-text":"تُعدّ قرية واد المرسى واحدة من أجمل الجواهر الطبيعية المخفية في شمال المغرب. ملاذ للباحثين عن الهدوء حيث يمتزج جبل موسى بصفاء مياه البحر الأبيض المتوسط.",
+    "sec2-title":"✨ لماذا تعتبر واد المرسى وجهة مميزة؟",
+    f1b:"طبيعة خلابة", f1t:"إطلالات بانورامية مذهلة مع رؤية الساحل الإسباني عبر المضيق",
+    f2b:"الهدوء والاسترخاء", f2t:"بعيداً عن صخب المدن — بيئة مثالية للاستجمام",
+    f3b:"رمال نقية ومياه صافية", f3t:"شاطئ نظيف يجذب محبي السباحة والغطس",
+    f4b:"تنوع بيولوجي", f4t:"وجهة مفضلة لعشاق الطبيعة والمناظر الجبلية",
+    "sec3-title":"🎯 أنشطة مقترحة",
+    "activities-list":"<li><span>🏊</span><div><strong>السباحة والغطس</strong> — مياه صافية رائعة</div></li><li><span>🥾</span><div><strong>المشي (Hiking)</strong> — مسارات جبلية قرب جبل موسى</div></li><li><span>📸</span><div><strong>التصوير</strong> — زوايا سينمائية بين الجبل والبحر</div></li><li><span>⛵</span><div><strong>جولة القوارب</strong> — اكتشف الساحل بقوارب تقليدية</div></li>",
+    "box-title":"📍 الموقع الجغرافي",
+    b1:"🗺️ جماعة تغرامت، إقليم الفحص أنجرة", b2:"📏 حوالي 55 كم شرق طنجة",
+    b3:"📏 حوالي 50 كم شمال تطوان", b4:"🔗 قريبة من بليونش والدالية — مثلث الشمال",
+    "sec4-title":"🚗 كيفية الوصول",
+    "sec4-p1":"<strong>🚗 السيارة الخاصة:</strong> الأسهل — عبر الطريق الساحلية والقصر الصغير.",
+    "sec4-p2":"<strong>🚕 النقل العمومي:</strong> سيارات الأجرة من طنجة أو تطوان.",
+    "tip-title":"💡 نصائح إضافية",
+    tip1:"🎒 <strong>التجهيز:</strong> احمل طعاماً ومشروبات — الخدمات محدودة",
+    tip2:"🌿 <strong>الاحترام البيئي:</strong> حافظ على نظافة المكان",
+    tip3:"📅 <strong>أفضل وقت:</strong> الصيف وبداية الخريف",
+    "p-note":"⚠️ <strong>ملاحظة:</strong> واد المرسى وجهة طبيعية هادئة — الخدمات محدودة. خطط مسبقاً.",
+    "related-title":"🗺️ اكتشف أيضاً",
+    r1:"🌺 قرية بليونش", r2:"🌊 شاطئ الدالية", r3:"🏖️ شاطئ القصر الصغير", r4:"⛺ سيدي قنقوش",
+    "tags-title":"🏷️ كلمات دلالية:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">واد المرسى</a><a href=\"#\" class=\"tag-item\">شمال المغرب</a><a href=\"#\" class=\"tag-item\">جبل موسى</a><a href=\"#\" class=\"tag-item\">القصر الصغير</a><a href=\"#\" class=\"tag-item\">oued el marsa</a>",
+    "cta-title":"هل تريد مشاهدة جمال واد المرسى؟", "cta-desc":"انتقل إلى المعرض لأجمل اللقطات الاحترافية.", "cta-btn":"🖼️ تصفح معرض الصور",
+    fc1:"🗺️ المواقع السياحية", fc2:"🔗 المواقع", fc3:"📄 معلومات",
+    fl1:"شاطئ القصر الصغير", fl2:"قرية بليونش", fl3:"ميناء الصيد", fl4:"شاطئ الدالية",
+    fl5:"الرئيسية", fl6:"معرض الصور", fl7:"المدونة", fl8:"الطقس والبحر",
+    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا"
   },
-  fr: { dir:'ltr', lname:'Tourisme', lback:'← Guide Touristique',
-    'p-badge':'NATURE • VILLAGE CÔTIER • طبيعة',
-    'p-title':'Oued El Marsa: Là où la montagne embrasse le bleu de la Méditerranée',
-    'sec1-title':'Aperçu',
-    'sec1-text':"Le village de Oued El Marsa (commune de Taghramt, province Fahs-Anjra) est l'un des plus beaux joyaux naturels cachés du nord du Maroc. Un refuge pour ceux qui cherchent la tranquillité au milieu d'une nature vierge, où la majesté du mont Moussa se mêle à la clarté des eaux de la Méditerranée.",
-    'sec2-title':'✨ Pourquoi Oued El Marsa est une destination unique?',
-    'f1b':'Nature époustouflante', 'f1t':'Panoramas à couper le souffle — montagnes plongeant dans la mer avec vue sur la côte espagnole',
-    'f2b':'Calme et détente', 'f2t':'Loin de l\'agitation des villes — environnement idéal pour se ressourcer',
-    'f3b':'Sable pur et eaux cristallines', 'f3t':'Plage propre parfaite pour la natation et la plongée',
-    'f4b':'Biodiversité', 'f4t':'Zone riche en diversité naturelle — favorite des amoureux de la nature',
-    'sec3-title':'🎯 Activités proposées',
-    'activities-list':'<li><span>🏊</span><div><strong>Natation et plongée</strong> — Eaux cristallines idéales pour explorer la vie marine</div></li><li><span>🥾</span><div><strong>Randonnée (Hiking)</strong> — Sentiers de montagne près du mont Moussa</div></li><li><span>📸</span><div><strong>Photographie</strong> — Angles cinématographiques exceptionnels entre montagne et mer</div></li><li><span>⛵</span><div><strong>Tour en bateau</strong> — Découvrez la côte depuis les bateaux de pêche traditionnels</div></li>',
-    'box-title':'📍 Localisation géographique',
-    'b1':'🗺️ Commune de Taghramt, Province Fahs-Anjra',
-    'b2':'📏 Environ 55 km à l\'est de Tanger',
-    'b3':'📏 Environ 50 km au nord de Tétouan',
-    'b4':'🔗 Proche de Belyounech et Dalia — dans le "triangle du Nord"',
-    'sec4-title':'🚗 Comment y accéder',
-    'sec4-p1':'<strong>🚗 Voiture privée:</strong> La plus facile — la route côtière offre de magnifiques paysages via Ksar Sghir.',
-    'sec4-p2':'<strong>🚕 Transport public:</strong> Grands taxis depuis Tanger ou Tétouan vers les villages voisins.',
-    'tip-title':'💡 Conseils supplémentaires',
-    'tip1':'🎒 <strong>Préparez-vous:</strong> Apportez nourriture et boissons — services limités sur place',
-    'tip2':'🌿 <strong>Respect de l\'environnement:</strong> Gardez le lieu propre et laissez la nature intacte',
-    'tip3':'📅 <strong>Meilleure période:</strong> Été et début automne pour les activités nautiques et de randonnée',
-    'p-note':'⚠️ <strong>Note importante:</strong> Oued El Marsa est une destination naturelle tranquille — services limités. Planifiez à l\'avance.',
-    'tags-title':'🏷️ Mots-clés:',
-    'tags-list':'<a href="#" class="tag-item">Oued El Marsa</a><a href="#" class="tag-item">Nord Maroc</a><a href="#" class="tag-item">Mont Moussa</a><a href="#" class="tag-item">Ksar Sghir</a><a href="#" class="tag-item">tourisme Fahs Anjra</a>',
-    'cta-title':'Voulez-vous voir la beauté de Oued El Marsa?',
-    'cta-desc':'Visitez la galerie numérique pour les plus belles photos professionnelles de la région.',
-    'cta-btn':'🖼️ Voir la Galerie'
+  fr: { dir:"ltr", lname:"Tourisme", lback:"← Guide Touristique",
+    n1:"🏠 Accueil", n2:"🗺️ Tourisme", n3:"📸 Galerie", n4:"✍️ Blog",
+    n5:"🛒 Boutique", n6:"📢 Publicité", n7:"🌤️ Météo", n8:"🕌 Prière",
+    "p-badge":"NATURE • VILLAGE CÔTIER • طبيعة",
+    "p-title":"Oued El Marsa: Là où la montagne embrasse le bleu de la Méditerranée",
+    "sec1-title":"Aperçu", "sec1-text":"Oued El Marsa est l'un des plus beaux joyaux naturels cachés du nord du Maroc. Un refuge pour ceux qui cherchent la tranquillité, où le mont Moussa se mêle aux eaux cristallines de la Méditerranée.",
+    "sec2-title":"✨ Pourquoi Oued El Marsa est unique?",
+    f1b:"Nature époustouflante", f1t:"Panoramas à couper le souffle avec vue sur la côte espagnole",
+    f2b:"Calme et détente", f2t:"Loin de l'agitation — environnement idéal pour se ressourcer",
+    f3b:"Sable pur et eaux cristallines", f3t:"Plage propre parfaite pour la natation",
+    f4b:"Biodiversité", f4t:"Destination favorite des amoureux de la nature",
+    "sec3-title":"🎯 Activités proposées",
+    "activities-list":"<li><span>🏊</span><div><strong>Natation et plongée</strong> — Eaux cristallines idéales</div></li><li><span>🥾</span><div><strong>Randonnée</strong> — Sentiers près du mont Moussa</div></li><li><span>📸</span><div><strong>Photographie</strong> — Angles cinématographiques exceptionnels</div></li><li><span>⛵</span><div><strong>Tour en bateau</strong> — Découvrez la côte depuis des bateaux traditionnels</div></li>",
+    "box-title":"📍 Localisation géographique",
+    b1:"🗺️ Commune de Taghramt, Province Fahs-Anjra", b2:"📏 Environ 55 km à l'est de Tanger",
+    b3:"📏 Environ 50 km au nord de Tétouan", b4:"🔗 Proche de Belyounech et Dalia — triangle du Nord",
+    "sec4-title":"🚗 Comment y accéder",
+    "sec4-p1":"<strong>🚗 Voiture privée:</strong> La plus facile via la route côtière et Ksar Sghir.",
+    "sec4-p2":"<strong>🚕 Transport public:</strong> Grands taxis depuis Tanger ou Tétouan.",
+    "tip-title":"💡 Conseils supplémentaires",
+    tip1:"🎒 <strong>Préparez-vous:</strong> Apportez nourriture et boissons — services limités",
+    tip2:"🌿 <strong>Respect environnemental:</strong> Gardez le lieu propre",
+    tip3:"📅 <strong>Meilleure période:</strong> Été et début automne",
+    "p-note":"⚠️ <strong>Note:</strong> Destination tranquille — services limités. Planifiez à l'avance.",
+    "related-title":"🗺️ Découvrez aussi",
+    r1:"🌺 Belyounech", r2:"🌊 Plage Dalia", r3:"🏖️ Plage Ksar Sghir", r4:"⛺ Sidi Kankouch",
+    "tags-title":"🏷️ Mots-clés:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">Oued El Marsa</a><a href=\"#\" class=\"tag-item\">Nord Maroc</a><a href=\"#\" class=\"tag-item\">Mont Moussa</a><a href=\"#\" class=\"tag-item\">Ksar Sghir</a>",
+    "cta-title":"Voir la beauté de Oued El Marsa?", "cta-desc":"Visitez la galerie pour les plus belles photos.", "cta-btn":"🖼️ Voir la Galerie",
+    fc1:"🗺️ Sites touristiques", fc2:"🔗 Sites web", fc3:"📄 Informations",
+    fl1:"Plage Ksar Sghir", fl2:"Belyounech", fl3:"Port de pêche", fl4:"Plage Dalia",
+    fl5:"Accueil", fl6:"Galerie photos", fl7:"Blog", fl8:"Météo & Mer",
+    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact"
   },
-  en: { dir:'ltr', lname:'Tourism', lback:'← Tourist Guide',
-    'p-badge':'NATURE • COASTAL VILLAGE • طبيعة',
-    'p-title':'Oued El Marsa: Where the Mountain Embraces the Mediterranean Blue',
-    'sec1-title':'Overview',
-    'sec1-text':'Oued El Marsa village (Taghramt commune, Fahs-Anjra province) is one of the most beautiful hidden natural gems in northern Morocco. A refuge for those seeking tranquility amid pristine nature, where the majesty of Mount Moussa blends with the crystal-clear waters of the Mediterranean.',
-    'sec2-title':'✨ Why is Oued El Marsa a unique destination?',
-    'f1b':'Breathtaking nature', 'f1t':'Stunning panoramic views — mountains diving into the sea with a clear view of the Spanish coast',
-    'f2b':'Peace and relaxation', 'f2t':'Far from city noise — ideal environment for rest and recharging',
-    'f3b':'Pure sand and clear waters', 'f3t':'Clean beach perfect for swimming and diving',
-    'f4b':'Biodiversity', 'f4t':'Area rich in natural diversity — favorite destination for nature lovers',
-    'sec3-title':'🎯 Suggested Activities',
-    'activities-list':'<li><span>🏊</span><div><strong>Swimming and Diving</strong> — Crystal clear waters ideal for exploring marine life</div></li><li><span>🥾</span><div><strong>Hiking</strong> — Mountain trails near Mount Moussa</div></li><li><span>📸</span><div><strong>Photography</strong> — Exceptional cinematic angles between mountain and sea</div></li><li><span>⛵</span><div><strong>Boat Tour</strong> — Explore the coast from traditional fishing boats</div></li>',
-    'box-title':'📍 Geographic Location',
-    'b1':'🗺️ Taghramt commune, Fahs-Anjra Province',
-    'b2':'📏 About 55 km east of Tangier',
-    'b3':'📏 About 50 km north of Tetouan',
-    'b4':'🔗 Close to Belyounech and Dalia — part of the "Northern Triangle" route',
-    'sec4-title':'🚗 How to Get There',
-    'sec4-p1':'<strong>🚗 Private car:</strong> Easiest option — coastal road with beautiful scenery via Ksar Sghir.',
-    'sec4-p2':'<strong>🚕 Public transport:</strong> Grand taxis from Tangier or Tetouan toward neighboring villages.',
-    'tip-title':'💡 Additional Tips',
-    'tip1':'🎒 <strong>Prepare ahead:</strong> Bring food and drinks — services are limited on site',
-    'tip2':'🌿 <strong>Environmental respect:</strong> Keep the place clean and leave nature as you found it',
-    'tip3':'📅 <strong>Best time:</strong> Summer and early autumn for water and mountain activities',
-    'p-note':'⚠️ <strong>Important note:</strong> Oued El Marsa is a quiet natural destination — limited services. Plan ahead.',
-    'tags-title':'🏷️ Tags:',
-    'tags-list':'<a href="#" class="tag-item">Oued El Marsa</a><a href="#" class="tag-item">Northern Morocco</a><a href="#" class="tag-item">Mount Moussa</a><a href="#" class="tag-item">Ksar Sghir</a><a href="#" class="tag-item">Fahs Anjra tourism</a>',
-    'cta-title':'Want to see the beauty of Oued El Marsa through our lens?',
-    'cta-desc':'Visit the digital gallery for the finest professional photos of the region.',
-    'cta-btn':'🖼️ Browse Photo Gallery'
+  en: { dir:"ltr", lname:"Tourism", lback:"← Tourist Guide",
+    n1:"🏠 Home", n2:"🗺️ Tourism", n3:"📸 Gallery", n4:"✍️ Blog",
+    n5:"🛒 Store", n6:"📢 Advertise", n7:"🌤️ Weather", n8:"🕌 Prayer",
+    "p-badge":"NATURE • COASTAL VILLAGE • طبيعة",
+    "p-title":"Oued El Marsa: Where the Mountain Embraces the Mediterranean Blue",
+    "sec1-title":"Overview", "sec1-text":"Oued El Marsa is one of the most beautiful hidden natural gems in northern Morocco. A refuge for those seeking tranquility where Mount Moussa blends with the crystal-clear Mediterranean waters.",
+    "sec2-title":"✨ Why is Oued El Marsa unique?",
+    f1b:"Breathtaking nature", f1t:"Stunning panoramas with views of the Spanish coast",
+    f2b:"Peace and relaxation", f2t:"Far from city noise — ideal for rest",
+    f3b:"Pure sand and clear waters", f3t:"Clean beach perfect for swimming",
+    f4b:"Biodiversity", f4t:"Favorite destination for nature lovers",
+    "sec3-title":"🎯 Suggested Activities",
+    "activities-list":"<li><span>🏊</span><div><strong>Swimming and Diving</strong> — Crystal clear waters</div></li><li><span>🥾</span><div><strong>Hiking</strong> — Mountain trails near Mount Moussa</div></li><li><span>📸</span><div><strong>Photography</strong> — Exceptional cinematic angles</div></li><li><span>⛵</span><div><strong>Boat Tour</strong> — Explore the coast from traditional boats</div></li>",
+    "box-title":"📍 Geographic Location",
+    b1:"🗺️ Taghramt commune, Fahs-Anjra Province", b2:"📏 About 55 km east of Tangier",
+    b3:"📏 About 50 km north of Tetouan", b4:"🔗 Near Belyounech and Dalia — Northern Triangle route",
+    "sec4-title":"🚗 How to Get There",
+    "sec4-p1":"<strong>🚗 Private car:</strong> Easiest option via the coastal road and Ksar Sghir.",
+    "sec4-p2":"<strong>🚕 Public transport:</strong> Grand taxis from Tangier or Tetouan.",
+    "tip-title":"💡 Additional Tips",
+    tip1:"🎒 <strong>Prepare ahead:</strong> Bring food and drinks — services are limited",
+    tip2:"🌿 <strong>Environmental respect:</strong> Keep the place clean",
+    tip3:"📅 <strong>Best time:</strong> Summer and early autumn",
+    "p-note":"⚠️ <strong>Note:</strong> Quiet natural destination — limited services. Plan ahead.",
+    "related-title":"🗺️ Discover also",
+    r1:"🌺 Belyounech", r2:"🌊 Dalia Beach", r3:"🏖️ Ksar Sghir Beach", r4:"⛺ Sidi Kankouch",
+    "tags-title":"🏷️ Tags:",
+    "tags-list":"<a href=\"#\" class=\"tag-item\">Oued El Marsa</a><a href=\"#\" class=\"tag-item\">Northern Morocco</a><a href=\"#\" class=\"tag-item\">Mount Moussa</a><a href=\"#\" class=\"tag-item\">Ksar Sghir</a>",
+    "cta-title":"Want to see Oued El Marsa through our lens?", "cta-desc":"Visit the gallery for the finest professional photos.", "cta-btn":"🖼️ Browse Photo Gallery",
+    fc1:"🗺️ Tourist Sites", fc2:"🔗 Sites", fc3:"📄 Information",
+    fl1:"Ksar Sghir Beach", fl2:"Belyounech", fl3:"Fishing Port", fl4:"Dalia Beach",
+    fl5:"Home", fl6:"Photo Gallery", fl7:"Blog", fl8:"Weather & Sea",
+    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact"
   }
 };
 
 function setL(lang) {
   var t = L[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
+  document.documentElement.setAttribute("dir", t.dir);
+  document.body.setAttribute("dir", t.dir);
   Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
+    if (id === "dir") return;
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
-  document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  document.querySelectorAll(".lb").forEach(function(b) {
+    b.classList.remove("on");
+    var oc = b.getAttribute("onclick")||"";
+    if (oc.indexOf(lang) > -1) b.classList.add("on");
   });
-  try { localStorage.setItem('tl', lang); } catch(e) {}
+  try { localStorage.setItem("tl", lang); } catch(e) {}
+}
+
+function toggleTheme() {
+  var isLight = document.body.classList.toggle("light");
+  document.getElementById("theme-btn").textContent = isLight ? "🌙" : "☀️";
+  try { localStorage.setItem("thr", isLight ? "light" : "dark"); } catch(e) {}
 }
 
 (function() {
-  var s = 'ar';
-  try { s = localStorage.getItem('tl') || 'ar'; } catch(e) {}
+  var s = "ar", t = "dark";
+  try { s = localStorage.getItem("tl")||"ar"; t = localStorage.getItem("thr")||"dark"; } catch(e) {}
+  if (t === "light") { document.body.classList.add("light"); document.getElementById("theme-btn").textContent = "🌙"; }
   setL(s);
 })();
 </script>
-
 </body>
 </html>
