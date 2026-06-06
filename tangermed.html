@@ -157,7 +157,16 @@ footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var
 
       <div class="highlight" id="hl1">💡 نصيحة: توجه إلى <a href="https://tourism.ksarsghir.com/dalia.html" style="color:#00b4d8">شاطئ الدالية</a> لمشاهدة السفن العملاقة عن قرب — أفضل نقطة مشاهدة في المنطقة!</div>
 
-      <div class="article-tags" id="art-tags">
+      <div style="margin-top:20px;padding-top:15px;border-top:1px solid var(--border);">
+    <div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:12px;" id="related-title2">🗺️ اكتشف أيضاً في المنطقة</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="https://tourism.ksarsghir.com/plage.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--text2);text-decoration:none;padding:8px 14px;border-radius:10px;font-size:13px;transition:all 0.2s;" id="il1">🏖️ شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--text2);text-decoration:none;padding:8px 14px;border-radius:10px;font-size:13px;" id="il2">🌊 شاطئ الدالية</a>
+      <a href="https://tourism.ksarsghir.com/port.html" style="background:var(--bg2);border:1px solid var(--border);color:var(--text2);text-decoration:none;padding:8px 14px;border-radius:10px;font-size:13px;" id="il3">⚓ ميناء الصيد التقليدي</a>
+    </div>
+  </div>
+
+  <div class="article-tags" id="art-tags">
         <span>ميناء طنجة المتوسط</span>
         <span>tanger med port</span>
         <span>أكبر ميناء أفريقيا</span>
@@ -248,7 +257,8 @@ var L = {
     fc1:"🗺️ المواقع السياحية", fc2:"🔗 المواقع", fc3:"📄 معلومات",
     fl1:"شاطئ القصر الصغير", fl2:"قرية بليونش", fl3:"ميناء الصيد", fl4:"شاطئ الدالية",
     fl5:"الرئيسية", fl6:"معرض الصور", fl7:"المدونة", fl8:"الطقس والبحر",
-    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا"
+    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا",
+    "related-title2":"🗺️ اكتشف أيضاً في المنطقة", "il1":"🏖️ شاطئ القصر الصغير", "il2":"🌊 شاطئ الدالية", "il3":"⚓ ميناء الصيد التقليدي", "art-tags":"<span>ميناء طنجة المتوسط</span><span>tanger med port</span><span>أكبر ميناء أفريقيا</span><span>القصر الصغير</span><span>ksar sghir</span>"
   },
   fr: { dir:"ltr", lname:"Tourisme", lback:"← Guide Touristique",
     n1:"🏠 Accueil", n2:"🗺️ Tourisme", n3:"📸 Galerie", n4:"✍️ Blog",
@@ -269,7 +279,8 @@ var L = {
     fc1:"🗺️ Sites touristiques", fc2:"🔗 Sites web", fc3:"📄 Informations",
     fl1:"Plage Ksar Sghir", fl2:"Belyounech", fl3:"Port de pêche", fl4:"Plage Dalia",
     fl5:"Accueil", fl6:"Galerie photos", fl7:"Blog", fl8:"Météo & Mer",
-    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact"
+    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact",
+    "related-title2":"🗺️ Découvrez aussi", "il1":"🏖️ Plage Ksar Sghir", "il2":"🌊 Plage Dalia", "il3":"⚓ Port de pêche", "art-tags":"<span>Port Tanger Med</span><span>plus grand port Afrique</span><span>Maroc logistique</span><span>Ksar Sghir</span><span>détroit Gibraltar</span>"
   },
   en: { dir:"ltr", lname:"Tourism", lback:"← Tourist Guide",
     n1:"🏠 Home", n2:"🗺️ Tourism", n3:"📸 Gallery", n4:"✍️ Blog",
@@ -290,7 +301,8 @@ var L = {
     fc1:"🗺️ Tourist Sites", fc2:"🔗 Sites", fc3:"📄 Information",
     fl1:"Ksar Sghir Beach", fl2:"Belyounech", fl3:"Fishing Port", fl4:"Dalia Beach",
     fl5:"Home", fl6:"Photo Gallery", fl7:"Blog", fl8:"Weather & Sea",
-    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact"
+    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact",
+    "related-title2":"🗺️ Discover also", "il1":"🏖️ Ksar Sghir Beach", "il2":"🌊 Dalia Beach", "il3":"⚓ Fishing Port", "art-tags":"<span>Tanger Med Port</span><span>Africa largest port</span><span>Morocco logistics</span><span>Ksar Sghir</span><span>Strait of Gibraltar</span>"
   }
 };
 
@@ -305,7 +317,7 @@ function setL(lang) {
   });
   document.querySelectorAll(".lb").forEach(function(b) {
     b.classList.remove("on");
-    if (b.getAttribute("onclick")==="setL('"+lang+"')") b.classList.add("on");
+    var oc = b.getAttribute("onclick")||""; if (oc.indexOf(lang) > -1) b.classList.add("on");
   });
   try { localStorage.setItem("tl", lang); } catch(e) {}
 }
