@@ -1,83 +1,100 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>تاريخ وسياحة القصر الصغير — حصن العبور لعرش الأندلس | Histoire Ksar Sghir</title>
-<meta name="description" content="دليل سياحي وتاريخي شامل لبلدة القصر الصغير. اكتشف المدينة الأثرية المحصنة، الأسوار البرتغالية، الشواطئ العائلية، وأفضل النصائح لزيارة ممتعة.">
-<meta name="keywords" content="تاريخ القصر الصغير, ksar sghir, الآثار المرينية, قصر المجاز, شاطئ القصر الصغير, القلاع البرتغالية في المغرب, طنجة المتوسط">
-<meta name="author" content="Bilal El Hichou">
-<link href='https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap' rel='stylesheet'/>
+<meta name="description" content="دليل سياحي وتاريخي شامل لبلدة القصر الصغير — المدينة الأثرية المحصنة، الأسوار البرتغالية، الآثار المرينية وأفضل النصائح للزيارة."/>
+<meta name="keywords" content="تاريخ القصر الصغير, ksar sghir histoire, الآثار المرينية, قصر المجاز, القلاع البرتغالية المغرب, ksar sghir history"/>
+<meta name="author" content="Bilal El Hichou"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="تاريخ القصر الصغير — حصن العبور لعرش الأندلس"/>
+<meta property="og:description" content="دليل تاريخي وسياحي شامل لبلدة القصر الصغير العريقة"/>
+<meta property="og:url" content="https://tourism.ksarsghir.com/ksarsghir.html"/>
+<link rel="canonical" href="https://tourism.ksarsghir.com/ksarsghir.html"/>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
+:root { --bg:#0a0f1a; --bg2:#16213e; --bg3:#1a2a40; --text:#e0e0e0; --text2:#aaa; --text3:#666; --border:rgba(194,155,98,0.15); --accent:#c29b62; }
+body.light { --bg:#f8f4ee; --bg2:#fff; --bg3:#f0ead8; --text:#1a1a2e; --text2:#555; --text3:#999; --border:rgba(194,155,98,0.25); }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Tajawal',sans-serif; background:#0a0f1a; color:#fff; }
-header { background:linear-gradient(135deg,#1a1a2e,#16213e); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid #c29b62; position:sticky; top:0; z-index:100; }
+body { font-family:"Tajawal",sans-serif; background:var(--bg); color:var(--text); transition:background 0.3s,color 0.3s; }
+header { background:var(--bg2); height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:2px solid var(--accent); position:sticky; top:0; z-index:200; }
 .logo { text-decoration:none; }
-.logo-ar { font-size:18px; font-weight:900; color:#c29b62; display:block; }
-.logo-en { font-size:9px; color:#888; letter-spacing:3px; display:block; }
+.logo-ar { font-size:18px; font-weight:900; color:var(--accent); display:block; }
+.logo-en { font-size:9px; color:var(--text3); letter-spacing:3px; display:block; }
 .hright { display:flex; align-items:center; gap:8px; }
-.back { color:#c29b62; text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid rgba(194,155,98,0.3); border-radius:20px; }
-.lang-sw { display:flex; gap:4px; }
-.lb { background:transparent; border:1px solid rgba(194,155,98,0.3); color:#aaa; font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:'Tajawal',sans-serif; }
-.lb.on { background:#c29b62; color:#fff; border-color:#c29b62; }
-.article-hero { height:350px; background:linear-gradient(135deg,#1f3c6d,#16213e); display:flex; align-items:center; justify-content:center; font-size:100px; position:relative; }
-.hero-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.8),transparent); display:flex; flex-direction:column; justify-content:flex-end; padding:30px 20px; }
-.article-cat { display:inline-block; background:#c29b62; color:#fff; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:10px; width:fit-content; }
+.lang-sw { display:flex; gap:3px; }
+.lb { background:transparent; border:1px solid var(--border); color:var(--text2); font-size:11px; font-weight:700; padding:4px 9px; border-radius:10px; cursor:pointer; font-family:"Tajawal",sans-serif; transition:all 0.2s; }
+.lb.on { background:var(--accent); color:#fff; }
+.theme-btn { background:transparent; border:1px solid var(--border); color:var(--text2); width:32px; height:32px; border-radius:50%; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; }
+.back { color:var(--accent); text-decoration:none; font-size:12px; font-weight:600; padding:5px 12px; border:1px solid var(--border); border-radius:20px; }
+nav { background:var(--bg2); border-bottom:1px solid var(--border); padding:0 15px; display:flex; align-items:center; gap:2px; overflow-x:auto; scrollbar-width:none; position:sticky; top:60px; z-index:199; }
+nav::-webkit-scrollbar { display:none; }
+.nav-link { color:var(--text2); text-decoration:none; font-size:12px; font-weight:600; padding:10px 12px; white-space:nowrap; border-bottom:2px solid transparent; transition:all 0.2s; }
+.nav-link:hover, .nav-link.active { color:var(--accent); border-bottom-color:var(--accent); }
+.article-hero { height:320px; background:linear-gradient(135deg,#1f3c6d,#16213e); display:flex; align-items:center; justify-content:center; font-size:90px; position:relative; }
+.hero-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.85),transparent); display:flex; flex-direction:column; justify-content:flex-end; padding:30px 20px; }
+.article-cat { display:inline-block; background:var(--accent); color:#fff; font-size:11px; font-weight:700; padding:4px 14px; border-radius:20px; margin-bottom:10px; width:fit-content; }
 .article-h1 { font-size:clamp(22px,5vw,36px); font-weight:900; color:#fff; line-height:1.3; }
-.article-wrap { display:grid; grid-template-columns:1fr 280px; gap:30px; max-width:1100px; margin:0 auto; padding:30px 20px; }
-.article-content { background:#16213e; border:1px solid rgba(194,155,98,0.1); border-radius:14px; padding:30px; }
-.article-meta { display:flex; gap:15px; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; }
-.article-meta span { font-size:12px; color:#aaa; }
-.article-body { font-size:14px; color:#ccc; line-height:1.9; }
-.article-body h2 { font-size:20px; font-weight:700; color:#fff; margin:25px 0 12px; }
-.article-body h3 { font-size:16px; font-weight:700; color:#c29b62; margin:20px 0 10px; }
+.article-wrap { display:grid; grid-template-columns:1fr 270px; gap:25px; max-width:1100px; margin:0 auto; padding:25px 20px; }
+.article-content { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:28px; }
+.article-meta { display:flex; gap:15px; margin-bottom:20px; padding-bottom:15px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+.article-meta span { font-size:12px; color:var(--text2); }
+.article-body { font-size:14.5px; color:var(--text2); line-height:1.9; }
+.article-body h2 { font-size:20px; font-weight:700; color:var(--text); margin:25px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.article-body h3 { font-size:16px; font-weight:700; color:var(--accent); margin:18px 0 8px; }
 .article-body p { margin-bottom:15px; }
 .article-body ul { margin:10px 0 15px 20px; }
-.article-body ul li { margin-bottom:8px; color:#ccc; }
-.article-body .highlight { background:rgba(194,155,98,0.08); border-right:3px solid #c29b62; padding:15px 18px; border-radius:8px; margin:15px 0; color:#ffe5b4; font-size:13px; }
-body[dir="ltr"] .article-body .highlight { border-right:none; border-left:3px solid #c29b62; }
+.article-body ul li { margin-bottom:8px; }
+.highlight { background:rgba(194,155,98,0.08); border-right:3px solid var(--accent); padding:15px 18px; border-radius:8px; margin:15px 0; color:#ffe5b4; font-size:13px; }
+html[dir="ltr"] .highlight { border-left:3px solid var(--accent); border-right:none; }
 .features-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:15px 0; }
-.feature-box { background:rgba(194,155,98,0.06); border:1px solid rgba(194,155,98,0.15); border-radius:10px; padding:15px; }
+.feature-box { background:rgba(194,155,98,0.06); border:1px solid var(--border); border-radius:10px; padding:15px; }
 .feature-icon { font-size:28px; margin-bottom:8px; }
-.feature-title { font-size:13px; font-weight:700; color:#fff; margin-bottom:5px; }
-.feature-text { font-size:11px; color:#aaa; line-height:1.5; }
+.feature-title { font-size:13px; font-weight:700; color:var(--text); margin-bottom:5px; }
+.feature-text { font-size:11px; color:var(--text2); line-height:1.5; }
 .tips-list { list-style:none; margin:10px 0; }
-.tips-list li { padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.05); color:#ccc; font-size:13px; display:flex; gap:8px; }
+.tips-list li { padding:8px 0; border-bottom:1px solid var(--border); color:var(--text2); font-size:13px; display:flex; gap:8px; }
 .tips-list li:last-child { border-bottom:none; }
-.article-tags { margin-top:20px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.08); }
-.article-tags span { background:rgba(194,155,98,0.1); border:1px solid rgba(194,155,98,0.2); color:#c29b62; font-size:10px; padding:4px 12px; border-radius:10px; margin-left:6px; display:inline-block; margin-bottom:6px; }
+.article-tags { margin-top:20px; padding-top:15px; border-top:1px solid var(--border); }
+.article-tags span { background:rgba(194,155,98,0.1); border:1px solid var(--border); color:var(--accent); font-size:10px; padding:4px 12px; border-radius:10px; margin:0 4px 6px 0; display:inline-block; }
+.related-section-inline { margin:25px 0; padding:20px; background:var(--bg2); border:1px solid var(--border); border-radius:12px; }
+.related-section-inline h3 { font-size:14px; font-weight:700; color:var(--accent); margin-bottom:12px; }
+.related-grid-inline { display:flex; gap:8px; flex-wrap:wrap; }
+.related-link { background:var(--bg3); border:1px solid var(--border); color:var(--text2); text-decoration:none; padding:7px 12px; border-radius:8px; font-size:12px; transition:all 0.2s; }
+.related-link:hover { border-color:var(--accent); color:var(--accent); }
 .sidebar { display:flex; flex-direction:column; gap:18px; }
-.sw { background:#16213e; border:1px solid rgba(194,155,98,0.1); border-radius:14px; padding:18px; }
-.sw-title { font-size:14px; font-weight:700; color:#c29b62; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid rgba(194,155,98,0.15); }
-.related-card { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.05); text-decoration:none; }
+.sw { background:var(--bg2); border:1px solid var(--border); border-radius:14px; padding:18px; }
+.sw-title { font-size:14px; font-weight:700; color:var(--accent); margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.related-card { display:flex; gap:10px; padding:8px 0; border-bottom:1px solid var(--border); text-decoration:none; transition:all 0.2s; }
 .related-card:last-child { border-bottom:none; }
+.related-card:hover .r-title { color:var(--accent); }
 .related-img { width:55px; height:45px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; }
-.related-title { font-size:12px; color:#ccc; line-height:1.4; }
-.related-title:hover { color:#c29b62; }
+.r-title { font-size:12px; color:var(--text2); line-height:1.4; }
 .ad-sw { background:linear-gradient(135deg,#1f3c6d,#c29b62); border-radius:14px; padding:20px; text-align:center; }
 .ad-sw h4 { font-size:14px; font-weight:700; color:#fff; margin-bottom:8px; }
 .ad-sw p { font-size:11px; color:rgba(255,255,255,0.8); margin-bottom:12px; }
 .ad-sw a { background:#fff; color:#1f3c6d; font-size:12px; font-weight:700; padding:7px 16px; border-radius:20px; text-decoration:none; display:inline-block; }
-footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1px solid #16213e; margin-top:20px; }
-.footer-links { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-bottom:10px; }
-.footer-links a { color:#555; text-decoration:none; font-size:12px; }
-.footer-links a:hover { color:#c29b62; }
-.footer-copy { font-size:11px; color:#555; }
-.footer-copy span { color:#c29b62; }
+footer { background:var(--bg2); padding:25px 20px 15px; border-top:1px solid var(--border); margin-top:20px; }
+.footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:1100px; margin:0 auto 15px; }
+.footer-col h4 { font-size:13px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+.footer-col a { display:block; color:var(--text3); text-decoration:none; font-size:12px; margin-bottom:6px; transition:color 0.2s; }
+.footer-col a:hover { color:var(--accent); }
+.footer-bottom { text-align:center; padding-top:15px; border-top:1px solid var(--border); font-size:11px; color:var(--text3); }
+.footer-bottom span { color:var(--accent); }
 @media(max-width:768px) {
   .article-wrap { grid-template-columns:1fr; }
   .sidebar { display:none; }
-  .article-hero { height:250px; font-size:60px; }
+  .article-hero { height:240px; font-size:60px; }
   .features-grid { grid-template-columns:1fr; }
-  .lang-sw { display:flex; }
-  .lb { font-size:10px; padding:3px 7px; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
 }
 </style>
 </head>
 <body>
-
 <header>
-  <a href="https://tourism.ksarsghir.com/" class="logo">
+  <a href="https://tourism.ksarsghir.com" class="logo">
     <span class="logo-ar" id="lname">السياحة</span>
     <span class="logo-en">KSAR SGHIR TOURISM</span>
   </a>
@@ -87,9 +104,21 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       <button class="lb" onclick="setL('fr')">FR</button>
       <button class="lb" onclick="setL('en')">EN</button>
     </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">🌙</button>
     <a href="https://tourism.ksarsghir.com" class="back" id="lback">← الدليل السياحي</a>
   </div>
 </header>
+
+<nav>
+  <a href="https://www.ksarsghir.com" class="nav-link" id="n1">🏠 الرئيسية</a>
+  <a href="https://tourism.ksarsghir.com" class="nav-link active" id="n2">🗺️ السياحة</a>
+  <a href="https://gallery.ksarsghir.com" class="nav-link" id="n3">📸 المعرض</a>
+  <a href="https://blog.ksarsghir.com" class="nav-link" id="n4">✍️ المدونة</a>
+  <a href="https://store.ksarsghir.com" class="nav-link" id="n5">🛒 المتجر</a>
+  <a href="https://www.ksarsghir.com/advertise.html" class="nav-link" id="n6">📢 إعلن معنا</a>
+  <a href="https://meteo.ksarsghir.com" class="nav-link" id="n7">🌤️ الطقس</a>
+  <a href="https://salat.ksarsghir.com" class="nav-link" id="n8">🕌 الصلاة</a>
+</nav>
 
 <div class="article-hero">
   <span>🏛️</span>
@@ -106,192 +135,191 @@ footer { background:#060c14; padding:18px 20px; text-align:center; border-top:1p
       <span id="meta-date">📅 مايو 2026</span>
       <span id="meta-read">⏱️ 5 دقائق قراءة</span>
     </div>
-    <div class="article-body" id="art-body">
-      <!-- يتم حقن المحتوى هنا ديناميكياً بواسطة جافاسكربت -->
-    </div>
+    <div class="article-body" id="art-body"></div>
   </div>
 
   <aside class="sidebar">
     <div class="sw">
-      <div class="sw-title" id="related-title">📖 مقالات ذات صلة</div>
-      <a href="./dalia.html" class="related-card">
+      <div class="sw-title" id="sw-related">🗺️ مواقع قريبة</div>
+      <a href="https://tourism.ksarsghir.com/dalia.html" class="related-card">
         <div class="related-img" style="background:linear-gradient(135deg,#006064,#00acc1)">🏖️</div>
-        <div class="related-title" id="r1">شاطئ الدالية بطنجة</div>
+        <div class="r-title" id="r1">شاطئ الدالية</div>
       </a>
-      <a href="./tangermed.html" class="related-card">
+      <a href="https://tourism.ksarsghir.com/tangermed.html" class="related-card">
         <div class="related-img" style="background:linear-gradient(135deg,#023e8a,#0096c7)">🚢</div>
-        <div class="related-title" id="r2">ميناء طنجة المتوسط</div>
+        <div class="r-title" id="r2">ميناء طنجة المتوسط</div>
       </a>
-      <a href="./belyounech.html" class="related-card">
-        <div class="related-img" style="background:linear-gradient(135deg,#1b5e20,#4caf50)">🌺</div>
-        <div class="related-title" id="r3">قرية بليونش البكر</div>
+      <a href="https://tourism.ksarsghir.com/plage.html" class="related-card">
+        <div class="related-img" style="background:linear-gradient(135deg,#1a3a5c,#0096c7)">🌊</div>
+        <div class="r-title" id="r3">شاطئ القصر الصغير</div>
+      </a>
+      <a href="https://tourism.ksarsghir.com/port.html" class="related-card">
+        <div class="related-img" style="background:linear-gradient(135deg,#4a148c,#880e4f)">⚓</div>
+        <div class="r-title" id="r4">ميناء الصيد التقليدي</div>
       </a>
     </div>
     <div class="ad-sw">
       <h4 id="ad-title">📢 إعلن معنا</h4>
       <p id="ad-text">وصول لآلاف الزوار المهتمين بالمنطقة</p>
-      <a href="https://advertise.ksarsghir.com" id="ad-btn">تواصل معنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="ad-btn">تواصل معنا</a>
     </div>
   </aside>
 </div>
 
 <footer>
-  <div class="footer-links">
-    <a href="https://blog.ksarsghir.com" id="f1">المدونة</a>
-    <a href="https://www.ksarsghir.com" id="f2">الرئيسية</a>
-    <a href="https://gallery.ksarsghir.com" id="f3">المعرض</a>
-    <a href="https://store.ksarsghir.com" id="f4">المتجر</a>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4 id="fc1">🗺️ المواقع السياحية</h4>
+      <a href="https://tourism.ksarsghir.com/plage.html" id="fl1">شاطئ القصر الصغير</a>
+      <a href="https://tourism.ksarsghir.com/belyounech.html" id="fl2">قرية بليونش</a>
+      <a href="https://tourism.ksarsghir.com/port.html" id="fl3">ميناء الصيد</a>
+      <a href="https://tourism.ksarsghir.com/dalia.html" id="fl4">شاطئ الدالية</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc2">🔗 المواقع</h4>
+      <a href="https://www.ksarsghir.com" id="fl5">الرئيسية</a>
+      <a href="https://gallery.ksarsghir.com" id="fl6">معرض الصور</a>
+      <a href="https://blog.ksarsghir.com" id="fl7">المدونة</a>
+      <a href="https://meteo.ksarsghir.com" id="fl8">الطقس والبحر</a>
+    </div>
+    <div class="footer-col">
+      <h4 id="fc3">📄 معلومات</h4>
+      <a href="https://www.ksarsghir.com/about.html" id="fl9">من أنا</a>
+      <a href="https://www.ksarsghir.com/advertise.html" id="fl10">إعلن معنا</a>
+      <a href="https://www.ksarsghir.com/privacy.html" id="fl11">سياسة الخصوصية</a>
+      <a href="https://wa.me/212708053745" id="fl12">تواصل معنا</a>
+    </div>
   </div>
-  <div class="footer-copy">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
+  <div class="footer-bottom">© 2026 <span>Ksar Sghir Tourism</span> • Bilal El Hichou</div>
 </footer>
 
 <script>
+var BODY = {
+  ar: `<p>إذا كانت مدينة طنجة تبهر الزوار بحداثتها، فإن على بعد كيلومترات قليلة منها ترقد بلدة <strong>القصر الصغير</strong> كشاهد حي على فترات مجيدة من تاريخ المغرب الإسلامي والعالمي. هي وجهة سياحية استثنائية تمتزج فيها روعة الشواطئ بعبق التاريخ.</p>
+    <h2>⏳ رحلة عبر الزمن: من حصن المرابطين إلى الأسر البرتغالي</h2>
+    <div class="features-grid">
+      <div class="feature-box"><div class="feature-icon">🛡️</div><div class="feature-title">قصر المجاز الإسلامي</div><div class="feature-text">في العصر المرابطي والموحدي، برزت البلدة كنقطة العبور الأساسية للجيوش نحو الأندلس.</div></div>
+      <div class="feature-box"><div class="feature-icon">🏰</div><div class="feature-title">الحصن المريني الدائري</div><div class="feature-text">بنى بنو مرين قلعة دائرية فريدة — من التصاميم الأثرية النادرة جداً في شمال إفريقيا.</div></div>
+      <div class="feature-box"><div class="feature-icon">⚓</div><div class="feature-title">الاحتلال البرتغالي</div><div class="feature-text">سقطت القلعة عام 1458 بيد البرتغاليين قبل استعادتها في عهد السعديين.</div></div>
+      <div class="feature-box"><div class="feature-icon">🌊</div><div class="feature-title">اليوم — سياحة وتاريخ</div><div class="feature-text">وجهة تجمع عشاق الآثار والشواطئ العائلية الدافئة والنظيفة.</div></div>
+    </div>
+    <h2>🗺️ أبرز المعالم التاريخية</h2>
+    <h3>1. الموقع الأثري (المدينة المحصنة)</h3>
+    <p>موقع مفتوح للتجول بين أسوار القلعة المرينية الدائرية، وبقايا الحمام المغربي، وبقايا الكنيسة البرتغالية التي بُنيت فوق مسجد المدينة.</p>
+    <h3>2. الأسوار والأبراج البرتغالية</h3>
+    <p>على جنبات الشاطئ، تتراءى الأسوار السميكة ذات فتحات المدافع — هندسة عسكرية أوروبية من القرن الخامس عشر في مواجهة أمواج المضيق.</p>
+    <div class="highlight">📌 الدخول مجاني — الموقع بمحاذاة وسط البلدة ويصل إليه مشياً على الأقدام.</div>
+    <h2>💡 نصائح لزيارة مثالية</h2>
+    <ul class="tips-list">
+      <li><span>📖</span><div><strong>الخلفية التاريخية:</strong> اقرأ عن "قصر المجاز" قبل الزيارة لفهم الحفريات.</div></li>
+      <li><span>🌅</span><div><strong>أفضل وقت:</strong> الربيع وبداية الصيف للمشي بين الأطلال.</div></li>
+      <li><span>🍽️</span><div><strong>الأكل المحلي:</strong> سمك طازج وطواجن مغربية في المقاهي المطلة على البحر.</div></li>
+    </ul>
+    <div class="article-tags"><span>تاريخ القصر الصغير</span><span>الآثار المرينية</span><span>قصر المجاز</span><span>شاطئ القصر الصغير</span><span>ksar sghir history</span></div>`,
+  fr: `<p>Si Tanger impressionne par sa modernité, à quelques kilomètres se trouve la ville historique de <strong>Ksar Sghir</strong>, témoin vivant des périodes glorieuses du Maroc.</p>
+    <h2>⏳ Un voyage dans le temps</h2>
+    <div class="features-grid">
+      <div class="feature-box"><div class="feature-icon">🛡️</div><div class="feature-title">Qasr Al-Majaz</div><div class="feature-text">Point d'embarquement majeur des armées vers l'Andalousie à l'époque Almoravide.</div></div>
+      <div class="feature-box"><div class="feature-icon">🏰</div><div class="feature-title">Citadelle Mérinide circulaire</div><div class="feature-text">Fortification circulaire unique, l'une des plus rares d'Afrique du Nord.</div></div>
+      <div class="feature-box"><div class="feature-icon">⚓</div><div class="feature-title">Occupation portugaise</div><div class="feature-text">Prise en 1458, transformée en garnison avant d'être récupérée par les Saadiens.</div></div>
+    </div>
+    <h2>🗺️ Monuments historiques à visiter</h2>
+    <h3>1. Site archéologique à ciel ouvert</h3>
+    <p>Promenade parmi les ruines de la citadelle mérinide, des hammams islamiques et des vestiges de l'église portugaise.</p>
+    <div class="highlight">📌 Entrée gratuite — situé au centre de la ville, accessible à pied.</div>
+    <div class="article-tags"><span>Histoire Ksar Sghir</span><span>Archéologie Mérinide</span><span>Qasr Al-Majaz</span><span>ksar sghir history</span></div>`,
+  en: `<p>While Tangier dazzles with modernity, just a few kilometers away lies <strong>Ksar Sghir</strong>, a living witness to Morocco's glorious history.</p>
+    <h2>⏳ A Journey Through Time</h2>
+    <div class="features-grid">
+      <div class="feature-box"><div class="feature-icon">🛡️</div><div class="feature-title">Qasr Al-Majaz</div><div class="feature-text">Strategic crossing port for armies sailing towards Andalusia during the Almoravid era.</div></div>
+      <div class="feature-box"><div class="feature-icon">🏰</div><div class="feature-title">Circular Marinid Citadel</div><div class="feature-text">Unique circular fortress — one of the rarest archeological designs in North Africa.</div></div>
+      <div class="feature-box"><div class="feature-icon">⚓</div><div class="feature-title">Portuguese Occupation</div><div class="feature-text">Captured in 1458, turned into a military garrison before being reclaimed by the Saadians.</div></div>
+    </div>
+    <h2>🗺️ Top Historical Landmarks</h2>
+    <h3>1. Open Archaeological Site</h3>
+    <p>Walk among the circular Marinid fortress walls, Islamic bath remains and Portuguese church foundations.</p>
+    <div class="highlight">📌 Free admission — located in town center, accessible on foot.</div>
+    <div class="article-tags"><span>Ksar Sghir History</span><span>Marinid Archaeology</span><span>Qasr Al-Majaz</span><span>ksar sghir</span></div>`
+};
+
 var L = {
-  ar: { dir:'rtl', lname:'السياحة', lback:'← الدليل السياحي',
-    'art-cat':'تاريخ وسياحة',
-    'art-title':'تاريخ القصر الصغير: حكاية البلدة الأثرية التي حرست مضيق جبل طارق لقرون',
-    'meta-author':'✍️ بلال الهيشو', 'meta-date':'📅 مايو 2026', 'meta-read':'⏱️ 5 دقائق قراءة',
-    'related-title':'📖 مقالات ذات صلة',
-    r1:'شاطئ الدالية بطنجة', r2:'ميناء طنجة المتوسط', r3:'قرية بليونش البكر',
-    'ad-title':'📢 إعلن معنا', 'ad-text':'وصول لآلاف الزوار المهتمين بالمنطقة', 'ad-btn':'تواصل معنا',
-    f1:'المدونة', f2:'الرئيسية', f3:'المعرض', f4:'المتجر',
-    'art-body': `
-      <p>إذا كانت مدينة طنجة تبهر الزوار بحداثتها، فإن على بعد كيلومترات قليلة منها ترقد بلدة <strong>القصر الصغير</strong> كشاهد حي على فترات مجيدة من تاريخ المغرب الإسلامي والعالمي. هي وجهة سياحية استثنائية تمتزج فيها روعة الشواطئ بعبق التاريخ.</p>
-      
-      <h2>⏳ رحلة عبر الزمن: من حصن المرابطين إلى الأسر البرتغالي</h2>
-      <p>تأسست بلدة القصر الصغير لتلعب دوراً استراتيجياً حاسماً في مراقبة حركة الملاحة بين القارتين الإفريقية والأوروبية ومن أبرز محطاتها:</p>
-      
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-title">قصر المجاز الإسلامي</div>
-          <div class="feature-text">في العصر المرابطي والموحدي، برزت البلدة كنقطة العبور الأساسية للجيوش والمتطوعين نحو الأندلس وحماية المضيق.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">🏰</div>
-          <div class="feature-title">الحصن المريني الدائري</div>
-          <div class="feature-text">بنى بنو مرين قلعة فريدة من نوعها بشكل دائري، وهي من التصاميم الأثرية النادرة جداً والمميزة في شمال إفريقيا.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">⚓</div>
-          <div class="feature-title">الاحتلال البرتغالي</div>
-          <div class="feature-text">سقطت القلعة عام 1458 بيد البرتغاليين وحولوها لثكنة عسكرية محصنة ومركز تجاري قبل استعادتها في عهد السعديين.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">🌊</div>
-          <div class="feature-title">الاسترخاء المعاصر</div>
-          <div class="feature-text">اليوم تتحول هذه البلدة تدريجياً لمركز يجمع عشاق الآثار والباحثين عن شواطئ عائلية دافئة ونظيفة.</div>
-        </div>
-      </div>
-
-      <h2>🗺️ أبرز المعالم التاريخية التي يمكنك زيارتها اليوم</h2>
-      <h3>1. الموقع الأثري للقصر الصغير (المدينة المحصنة)</h3>
-      <p>موقع أثري مفتوح يتيح لك التجول بين أسوار القلعة المرينية الدائرية، والوقوف على بقايا الحمام المغربي التقليدي، وبقايا الكنيسة البرتغالية التي بُنيت فوق مسجد المدينة بعد احتلالها.</p>
-      
-      <h3>2. الأسوار والأبراج البرتغالية على الشاطئ</h3>
-      <p>على جنبات الشاطئ، تتراءى لك الأسوار السميكة المجهزة بفتحات المدافع القديمة، والتي تكشف عن الهندسة العسكرية الأوروبية في القرن الخامس عشر في مواجهة أمواج مضيق جبل طارق.</p>
-
-      <div class="highlight">📌 معلومات تهم السائح: يقع الموقع الأثري بمحاذات وسط البلدة، ويمكن الوصول إليه بسهولة مشياً على الأقدام، والدخول متاح للعموم لاستكشاف أسوار القلعة مجاناً.</div>
-
-      <h2>💡 نصائح لزيارة سياحية تاريخية مثالية</h2>
-      <ul class="tips-list">
-        <li><span>📖</span> <div><strong>الخلفية التاريخية:</strong> يُفضل القراءة عن تاريخ "قصر المجاز" قبل الزيارة لفهم دلالات الحفريات الأثرية المفتوحة.</div></li>
-        <li><span>🌅</span> <div><strong>أفضل وقت للزيارة:</strong> فصل الربيع وبداية الصيف، حيث الأجواء معتدلة ومثالية للمشي بين الأطلال واستكشاف الأسوار.</div></li>
-        <li><span>🍽️</span> <div><strong>الوجبات المحلية:</strong> تشتهر المقاهي المطلة على البحر بتقديم وجبات السمك الطازج والمصيد محلياً مع الطواجن المغربية على الفحم.</div></li>
-      </ul>
-
-      <div class="article-tags">
-        <span>تاريخ القصر الصغير</span><span>الآثار المرينية</span><span>قصر المجاز</span><span>شاطئ القصر الصغير</span><span>السياحة في شمال المغرب</span><span>ksar sghir history</span>
-      </div>`
+  ar: { dir:"rtl", lname:"السياحة", lback:"← الدليل السياحي",
+    n1:"🏠 الرئيسية", n2:"🗺️ السياحة", n3:"📸 المعرض", n4:"✍️ المدونة",
+    n5:"🛒 المتجر", n6:"📢 إعلن معنا", n7:"🌤️ الطقس", n8:"🕌 الصلاة",
+    "art-cat":"تاريخ وسياحة",
+    "art-title":"تاريخ القصر الصغير: حكاية البلدة الأثرية التي حرست مضيق جبل طارق لقرون",
+    "meta-author":"✍️ بلال الهيشو", "meta-date":"📅 مايو 2026", "meta-read":"⏱️ 5 دقائق قراءة",
+    "sw-related":"🗺️ مواقع قريبة",
+    r1:"شاطئ الدالية", r2:"ميناء طنجة المتوسط", r3:"شاطئ القصر الصغير", r4:"ميناء الصيد التقليدي",
+    "ad-title":"📢 إعلن معنا", "ad-text":"وصول لآلاف الزوار المهتمين بالمنطقة", "ad-btn":"تواصل معنا",
+    fc1:"🗺️ المواقع السياحية", fc2:"🔗 المواقع", fc3:"📄 معلومات",
+    fl1:"شاطئ القصر الصغير", fl2:"قرية بليونش", fl3:"ميناء الصيد", fl4:"شاطئ الدالية",
+    fl5:"الرئيسية", fl6:"معرض الصور", fl7:"المدونة", fl8:"الطقس والبحر",
+    fl9:"من أنا", fl10:"إعلن معنا", fl11:"سياسة الخصوصية", fl12:"تواصل معنا"
   },
-  fr: { dir:'ltr', lname:'tourism Ksar Sghir', lback:'← Blog',
-    'art-cat':'Histoire & Tourisme',
-    'art-title':'Histoire de Ksar Sghir : La forteresse qui a gardé le détroit de Gibraltar pendant des siècles',
-    'meta-author':'✍️ Bilal El Hichou', 'meta-date':'📅 Mai 2026', 'meta-read':'⏱️ 5 min de lecture',
-    'related-title':'📖 Articles connexes',
-    r1:'Plage Dalia Tanger', r2:'Port Tanger Med', r3:'Village Belyounech',
-    'ad-title':'📢 Annoncez avec nous', 'ad-text':'Accès à des milliers de visiteurs', 'ad-btn':'Contactez-nous',
-    f1:'Blog', f2:'Accueil', f3:'Galerie', f4:'Boutique',
-    'art-body': `
-      <p>Si la ville de Tanger impressionne par sa modernité, à quelques kilomètres de là se trouve la petite ville de <strong>Ksar Sghir</strong>, témoin vivant des périodes glorieuses de l'histoire du Maroc.</p>
-      
-      <h2>⏳ Un voyage dans le temps : Des Almoravides aux Portugais</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-title">Qasr Al-Majaz</div>
-          <div class="feature-text">À l'époque Almoravide, la ville était le point d'embarquement majeur des armées musulmanes vers l'Andalousie.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">🏰</div>
-          <div class="feature-title">Le bastion Mérinide</div>
-          <div class="feature-text">Les Mérinides ont construit une citadelle circulaire unique, l'une des structures militaires les plus rares d'Afrique du Nord.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">⚓</div>
-          <div class="feature-title">L'occupation portugaise</div>
-          <div class="feature-text">Prise en 1458 par les Portugais, elle fut transformée en garnison militaire fortifiée pendant près d'un siècle.</div>
-        </div>
-      </div>
-
-      <h2>🗺️ Les principaux monuments à visiter aujourd'hui</h2>
-      <h3>1. Le site archéologique de Ksar Sghir</h3>
-      <p>Un musée à ciel ouvert qui vous permet de vous promener parmi les ruines de la citadelle mérinide, des anciens hammams et des vestiges de l'église portugaise.</p>
-      
-      <div class="highlight">📌 Infos touristiques : Le site archéologique est situé à proximité du centre de la ville, l'accès est libre et gratuit pour le public.</div>`
+  fr: { dir:"ltr", lname:"Tourisme", lback:"← Guide Touristique",
+    n1:"🏠 Accueil", n2:"🗺️ Tourisme", n3:"📸 Galerie", n4:"✍️ Blog",
+    n5:"🛒 Boutique", n6:"📢 Publicité", n7:"🌤️ Météo", n8:"🕌 Prière",
+    "art-cat":"Histoire & Tourisme",
+    "art-title":"Histoire de Ksar Sghir: La forteresse qui a gardé le détroit de Gibraltar pendant des siècles",
+    "meta-author":"✍️ Bilal El Hichou", "meta-date":"📅 Mai 2026", "meta-read":"⏱️ 5 min de lecture",
+    "sw-related":"🗺️ Sites proches",
+    r1:"Plage Dalia", r2:"Port Tanger Med", r3:"Plage Ksar Sghir", r4:"Port de pêche",
+    "ad-title":"📢 Annoncez avec nous", "ad-text":"Accès à des milliers de visiteurs", "ad-btn":"Contactez-nous",
+    fc1:"🗺️ Sites touristiques", fc2:"🔗 Sites web", fc3:"📄 Informations",
+    fl1:"Plage Ksar Sghir", fl2:"Belyounech", fl3:"Port de pêche", fl4:"Plage Dalia",
+    fl5:"Accueil", fl6:"Galerie photos", fl7:"Blog", fl8:"Météo & Mer",
+    fl9:"À propos", fl10:"Publicité", fl11:"Confidentialité", fl12:"Contact"
   },
-  en: { dir:'ltr', lname:'Ksar Sghir tourism', lback:'← Blog',
-    'art-cat':'History & Tourism',
-    'art-title':'History of Ksar Sghir: The Fortress That Guarded the Strait of Gibraltar for Centuries',
-    'meta-author':'✍️ Bilal El Hichou', 'meta-date':'📅 May 2026', 'meta-read':'⏱️ 5 min read',
-    'related-title':'📖 Related articles',
-    r1:'Dalia Beach Tangier', r2:'Tanger Med Port', r3:'Belyounech Village',
-    'ad-title':'📢 Advertise with us', 'ad-text':'Reach thousands of visitors', 'ad-btn':'Contact us',
-    f1:'Blog', f2:'Home', f3:'Gallery', f4:'Store',
-    'art-body': `
-      <p>While Tangier dazzles with its modernity, just a few kilometers away lies the historic town of <strong>Ksar Sghir</strong>, standing as a live witness to Morocco's golden eras.</p>
-      
-      <h2>⏳ A Journey Through Time: From Almoravids to Portuguese</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <div class="feature-icon">🛡️</div>
-          <div class="feature-title">Qasr Al-Majaz</div>
-          <div class="feature-text">During the Almoravid era, it served as the strategic crossing port for historical armies sailing towards Andalusia.</div>
-        </div>
-        <div class="feature-box">
-          <div class="feature-icon">🏰</div>
-          <div class="feature-title">Circular Marinid Citadel</div>
-          <div class="feature-text">Built by the Marinids with a unique circular fortress blueprint, a very rare archeological design in North Africa.</div>
-        </div>
-      </div>
-
-      <h2>🗺️ Top Historical Landmarks to Explore</h2>
-      <h3>1. Ksar Sghir Open Archeological Site</h3>
-      <p>Walk among the ancient walls of the fortress, discover the remains of traditional Islamic baths, and Portuguese church foundations.</p>
-      
-      <div class="highlight">📌 Tourist Info: The archeological park is fully open to the public with free admission.</div>`
+  en: { dir:"ltr", lname:"Tourism", lback:"← Tourist Guide",
+    n1:"🏠 Home", n2:"🗺️ Tourism", n3:"📸 Gallery", n4:"✍️ Blog",
+    n5:"🛒 Store", n6:"📢 Advertise", n7:"🌤️ Weather", n8:"🕌 Prayer",
+    "art-cat":"History & Tourism",
+    "art-title":"History of Ksar Sghir: The Fortress That Guarded the Strait of Gibraltar for Centuries",
+    "meta-author":"✍️ Bilal El Hichou", "meta-date":"📅 May 2026", "meta-read":"⏱️ 5 min read",
+    "sw-related":"🗺️ Nearby sites",
+    r1:"Dalia Beach", r2:"Tanger Med Port", r3:"Ksar Sghir Beach", r4:"Fishing Port",
+    "ad-title":"📢 Advertise with us", "ad-text":"Reach thousands of visitors", "ad-btn":"Contact us",
+    fc1:"🗺️ Tourist Sites", fc2:"🔗 Sites", fc3:"📄 Information",
+    fl1:"Ksar Sghir Beach", fl2:"Belyounech", fl3:"Fishing Port", fl4:"Dalia Beach",
+    fl5:"Home", fl6:"Photo Gallery", fl7:"Blog", fl8:"Weather & Sea",
+    fl9:"About", fl10:"Advertise", fl11:"Privacy Policy", fl12:"Contact"
   }
 };
 
+var curLang = "ar";
+
 function setL(lang) {
+  curLang = lang;
   var t = L[lang];
-  document.documentElement.setAttribute('dir', t.dir);
-  document.body.setAttribute('dir', t.dir);
+  document.documentElement.setAttribute("dir", t.dir);
+  document.body.setAttribute("dir", t.dir);
   Object.keys(t).forEach(function(id) {
-    if (id === 'dir') return;
+    if (id === "dir") return;
     var el = document.getElementById(id);
     if (el) el.innerHTML = t[id];
   });
-  document.querySelectorAll('.lb').forEach(function(b) {
-    b.classList.remove('on');
-    if (b.getAttribute('onclick') === "setL('" + lang + "')") b.classList.add('on');
+  // Set article body
+  var body = document.getElementById("art-body");
+  if (body) body.innerHTML = BODY[lang] || BODY.ar;
+  document.querySelectorAll(".lb").forEach(function(b) {
+    b.classList.remove("on");
+    var oc = b.getAttribute("onclick")||"";
+    if (oc.indexOf(lang) > -1) b.classList.add("on");
   });
-  try { localStorage.setItem('bl', lang); } catch(e) {}
+  try { localStorage.setItem("tl", lang); } catch(e) {}
+}
+
+function toggleTheme() {
+  var isLight = document.body.classList.toggle("light");
+  document.getElementById("theme-btn").textContent = isLight ? "🌙" : "☀️";
+  try { localStorage.setItem("thr", isLight ? "light" : "dark"); } catch(e) {}
 }
 
 (function() {
-  var s = 'ar';
-  try { s = localStorage.getItem('bl') || 'ar'; } catch(e) {}
+  var s = "ar", t = "dark";
+  try { s = localStorage.getItem("tl")||"ar"; t = localStorage.getItem("thr")||"dark"; } catch(e) {}
+  if (t === "light") { document.body.classList.add("light"); document.getElementById("theme-btn").textContent = "🌙"; }
   setL(s);
 })();
 </script>
