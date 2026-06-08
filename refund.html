@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة الإرجاع — TaminAuto داخلي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080d;--s1:#0e1018;--s2:#13161f;--s3:#191d28;--gold:#e8b84b;--gd:#b8881e;--green:#34d399;--red:#f87171;--blue:#60a5fa;--amber:#fbbf24;--purple:#a78bfa;--text:#eaeef4;--muted:rgba(234,238,244,.55);--dim:rgba(234,238,244,.28);--line:rgba(232,184,75,.12);--line2:rgba(234,238,244,.08);}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:20px 16px}
+.w{max-width:600px;margin:0 auto}
+
+/* TOP */
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.top-logo{font-family:'Unbounded',sans-serif;font-size:.88rem;font-weight:900;color:var(--gold)}
+.top-sub{font-size:.72rem;color:var(--muted);margin-top:3px}
+.top-right{display:flex;align-items:center;gap:8px}
+.lang-btn{background:var(--s3);border:1px solid var(--line2);color:var(--muted);padding:5px 11px;border-radius:8px;cursor:pointer;font-size:.78rem;font-weight:700;transition:.18s;font-family:inherit}
+.lang-btn.active{background:rgba(232,184,75,.15);border-color:rgba(232,184,75,.3);color:var(--gold)}
+.rec-badge{font-size:.72rem;color:var(--gold);font-family:monospace;font-weight:700;background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.2);padding:4px 10px;border-radius:999px}
+
+/* TABS */
+.tabs{display:flex;gap:4px;margin-bottom:16px;background:var(--s1);border-radius:12px;padding:4px}
+.tab{flex:1;padding:9px;border:none;background:transparent;color:var(--muted);font-family:inherit;font-size:.82rem;font-weight:700;border-radius:9px;cursor:pointer;transition:.18s;text-align:center}
+.tab.active{background:var(--s2);color:var(--gold);border:1px solid var(--line2)}
+.tab-content{display:none}.tab-content.active{display:block}
+
+/* DISPLAY */
+.pay-display{background:linear-gradient(135deg,rgba(52,211,153,.08),rgba(52,211,153,.03));border:1.5px solid rgba(52,211,153,.2);border-radius:16px;padding:16px;margin-bottom:14px;display:flex;gap:10px}
+.pd-item{flex:1;text-align:center;padding:12px 8px;background:rgba(0,0,0,.25);border-radius:12px;border:1px solid var(--line2)}
+.pd-lbl{font-size:.68rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.pd-val{font-family:'Unbounded',sans-serif;font-size:1.15rem;font-weight:900;line-height:1}
+.pd-dh{font-size:.65rem;color:var(--muted);margin-top:3px}
+.green{color:var(--green)}.amber{color:var(--amber)}.red-c{color:var(--red)}.dim-c{color:var(--dim)}
+
+/* CARDS */
+.crd{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid var(--line2);border-radius:16px;overflow:hidden;margin-bottom:12px;position:relative}
+.crd::before{content:"";position:absolute;top:0;left:0;right:0;height:2.5px}
+.crd.gold::before{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.crd.blue::before{background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+.crd.green::before{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.crd.purple::before{background:linear-gradient(90deg,transparent,var(--purple),transparent)}
+.crd.amber::before{background:linear-gradient(90deg,transparent,var(--amber),transparent)}
+.ch{padding:12px 18px 10px;border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:10px}
+.chi{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:.9rem;flex-shrink:0}
+.chi.go{background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.2)}
+.chi.b{background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2)}
+.chi.g{background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)}
+.chi.p{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2)}
+.chi.a{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.2)}
+.ch-t{font-size:.86rem;font-weight:800}
+.ch-s{font-size:.7rem;color:var(--muted);margin-top:1px}
+.cb{padding:14px 18px}
+
+/* FIELDS */
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.r3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px}
+.fld label{display:block;font-size:.73rem;font-weight:700;color:var(--muted);margin-bottom:4px}
+.fld select,.fld input{width:100%;padding:9px 12px;background:var(--s3);border:1.5px solid var(--line2);border-radius:9px;font-family:inherit;font-size:.9rem;color:var(--text);outline:none;transition:.2s}
+.fld select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23e8b84b' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 10px center;cursor:pointer}
+.fld select:focus,.fld input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,184,75,.1)}
+.fld input[type=number]{text-align:center;font-weight:800;font-size:1rem}
+
+/* Prix box */
+.prix-box{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.18);border-radius:10px;padding:10px 14px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.prix-box.unk{background:rgba(96,165,250,.07);border-color:rgba(96,165,250,.18)}
+.pb-l{font-size:.77rem;color:var(--muted)}
+.pb-v{font-family:'Unbounded',sans-serif;font-size:1.05rem;font-weight:900;color:var(--green)}
+.pb-v.unk{color:var(--blue)}
+
+/* Toggles */
+.tog{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.79rem;color:var(--muted);padding:7px 0;border-bottom:1px solid var(--line2)}
+.tog:last-of-type{border:none;padding-bottom:0}
+.tog input{accent-color:var(--gold);width:14px;height:14px;cursor:pointer;flex-shrink:0}
+.tog:hover{color:var(--text)}
+
+/* BM buttons */
+.bm-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.bm-btn{padding:8px;border:1.5px solid var(--line2);border-radius:9px;background:var(--s3);font-family:inherit;font-size:.78rem;font-weight:700;color:var(--muted);cursor:pointer;transition:.2s;text-align:center;line-height:1.4}
+.bm-btn.ab{border-color:var(--green);background:rgba(52,211,153,.1);color:var(--green)}
+.bm-btn.am{border-color:var(--red);background:rgba(248,113,113,.1);color:var(--red)}
+
+/* Prev box */
+.prev-box{background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.15);border-radius:10px;padding:11px 14px;margin-top:8px}
+.prev-title{font-size:.72rem;font-weight:800;color:var(--amber);margin-bottom:8px}
+.prev-bal{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:8px;border-top:1px solid rgba(251,191,36,.15);font-size:.8rem}
+.pbv{font-weight:800}
+.pbv.c{color:var(--green)}.pbv.d{color:var(--red)}
+
+/* Calc btn */
+.calc-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),var(--gd));border:none;border-radius:12px;font-family:inherit;font-size:1rem;font-weight:900;color:#07080d;cursor:pointer;transition:.2s;margin-top:8px}
+.calc-btn:hover{opacity:.9;transform:translateY(-1px)}
+
+/* Summary */
+.summ{background:var(--s3);border-radius:11px;padding:12px 14px;margin-top:10px}
+.sr{display:flex;justify-content:space-between;font-size:.81rem;margin-bottom:5px}
+.sr span{color:var(--muted)}.sr b{color:var(--text)}
+.sr-div{border-top:1px dashed var(--line2);margin:7px 0}
+
+/* Result */
+.res-total{border:1.5px solid rgba(52,211,153,.25);border-radius:13px;padding:15px;margin-top:10px;text-align:center;background:rgba(52,211,153,.05)}
+.res-total.neg{border-color:rgba(248,113,113,.25);background:rgba(248,113,113,.05)}
+.res-total.zero{border-color:rgba(234,238,244,.1);background:rgba(234,238,244,.02)}
+.rt-l{font-size:.78rem;color:var(--muted);margin-bottom:5px}
+.rt-v{font-family:'Unbounded',sans-serif;font-size:1.75rem;font-weight:900;color:var(--green)}
+.rt-v.neg{color:var(--red)}
+.rt-dh{font-size:.8rem;color:var(--muted);margin-inline-start:4px;font-family:'Tajawal',sans-serif}
+.rt-msg{font-size:.76rem;color:var(--muted);margin-top:5px}
+.print-btn{width:100%;padding:10px;background:transparent;border:1.5px solid var(--line2);border-radius:11px;font-family:inherit;font-size:.82rem;font-weight:700;color:var(--muted);cursor:pointer;margin-top:8px;transition:.2s}
+.print-btn:hover{border-color:rgba(232,184,75,.3);color:var(--gold)}
+
+/* CONFIG */
+.sec-lbl{font-size:.7rem;font-weight:800;color:var(--muted);margin:10px 0 6px;text-transform:uppercase;letter-spacing:.05em}
+.pr-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line2);gap:10px}
+.pr-row:last-child{border:none}
+.prl{font-size:.79rem;color:var(--muted);flex:1}
+.prv{width:88px;padding:6px 8px;background:var(--s3);border:1.5px solid var(--line2);border-radius:8px;font-family:inherit;font-size:.85rem;color:var(--text);text-align:center;font-weight:700;outline:none}
+.prv:focus{border-color:var(--gold)}
+.save-btn{width:100%;padding:9px;background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.25);border-radius:9px;font-family:inherit;font-size:.82rem;font-weight:700;color:var(--gold);cursor:pointer;margin-top:10px}
+.save-btn:hover{background:rgba(232,184,75,.18)}
+
+/* HISTORY */
+.hist-controls{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.hc-btn{padding:7px 13px;border:1px solid var(--line2);border-radius:8px;background:var(--s3);color:var(--muted);font-family:inherit;font-size:.78rem;font-weight:700;cursor:pointer;transition:.18s}
+.hc-btn:hover{border-color:rgba(232,184,75,.3);color:var(--gold)}
+.hc-btn.danger{border-color:rgba(248,113,113,.2);color:var(--red)}
+.hist-empty{text-align:center;padding:30px;color:var(--dim);font-size:.82rem}
+.hist-table{width:100%;border-collapse:collapse}
+.hist-table th{background:rgba(232,184,75,.08);color:var(--muted);padding:8px 10px;font-size:.72rem;font-weight:800;text-align:right;border-bottom:1px solid var(--line2)}
+.hist-table td{padding:8px 10px;font-size:.79rem;border-bottom:1px solid var(--line2);vertical-align:middle}
+.hist-table tr:hover td{background:rgba(255,255,255,.02)}
+.hist-table tr:last-child td{border:none}
+.badge-ref{font-family:monospace;font-size:.7rem;background:rgba(232,184,75,.1);color:var(--gold);padding:2px 7px;border-radius:999px}
+.badge-pos{color:var(--green);font-weight:800}
+.badge-neg{color:var(--red);font-weight:800}
+.badge-zero{color:var(--muted)}
+.hist-del{background:none;border:none;color:var(--red);cursor:pointer;font-size:.85rem;opacity:.5;padding:2px 6px}
+.hist-del:hover{opacity:1}
+.hist-total{background:rgba(232,184,75,.05);border:1px solid rgba(232,184,75,.15);border-radius:10px;padding:11px 14px;margin-top:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.ht-item{text-align:center}
+.ht-v{font-family:'Unbounded',sans-serif;font-size:.95rem;font-weight:900;color:var(--gold)}
+.ht-l{font-size:.68rem;color:var(--muted);margin-top:3px}
+
+/* RECEIPT */
+.receipt{display:none;position:fixed;inset:0;background:#fff;color:#000;z-index:999;padding:30px 24px;overflow-y:auto;font-family:'Tajawal',sans-serif}
+.receipt.show{display:block}
+.rec-close{position:fixed;top:12px;left:12px;background:var(--red);color:#fff;border:none;border-radius:8px;padding:6px 14px;cursor:pointer;font-weight:700;font-size:.82rem;z-index:1000}
+.rec-wrap{max-width:380px;margin:0 auto;padding-top:10px}
+.rec-head{text-align:center;margin-bottom:14px}
+.rec-logo-txt{font-size:1.1rem;font-weight:900;color:#07080d}
+.rec-num-txt{font-size:.7rem;color:#888;font-family:monospace;margin-top:2px}
+.rec-type-txt{font-size:.8rem;font-weight:700;margin-top:3px}
+.rec-div{border-top:1px dashed #ccc;margin:10px 0}
+.rec-r{display:flex;justify-content:space-between;font-size:.83rem;margin-bottom:5px}
+.rec-r .lbl{color:#666}.rec-r .val{font-weight:700}
+.rec-total-box{background:#f5f5f5;border:1px solid #ddd;border-radius:8px;padding:12px;margin:10px 0;text-align:center}
+.rec-total-lbl{font-size:.73rem;color:#666;margin-bottom:4px}
+.rec-total-val{font-size:1.4rem;font-weight:900;color:#07080d}
+.rec-total-val.pos{color:#16a34a}
+.rec-total-val.neg2{color:#dc2626}
+.rec-signs{display:flex;gap:14px;margin-top:20px}
+.rec-sign{flex:1;text-align:center}
+.rec-sign-line{border-top:1px solid #000;padding-top:4px;font-size:.68rem;color:#666;margin-top:30px}
+.rec-note{font-size:.66rem;color:#aaa;text-align:center;margin-top:12px;line-height:1.6}
+@media print{
+  body{background:#fff!important;padding:0}
+  .receipt.show{position:static;padding:0}
+  .rec-close{display:none!important}
+}
+
+/* LOGIN SCREEN */
+#login-screen{position:fixed;inset:0;background:var(--bg);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px}
+.login-box{background:linear-gradient(160deg,var(--s2),var(--s1));border:1px solid rgba(232,184,75,.25);border-radius:22px;padding:32px 28px;width:100%;max-width:380px;text-align:center}
+.login-logo{font-family:'Unbounded',sans-serif;font-size:1.2rem;font-weight:900;color:var(--gold);margin-bottom:4px}
+.login-sub{font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.user-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.user-btn{padding:14px 10px;background:var(--s3);border:1.5px solid var(--line2);border-radius:12px;cursor:pointer;transition:.2s;font-family:inherit}
+.user-btn:hover{border-color:rgba(232,184,75,.4);background:rgba(232,184,75,.07)}
+.user-avatar{font-size:1.6rem;margin-bottom:6px}
+.user-name{font-size:.85rem;font-weight:800;color:var(--text)}
+.user-stats{font-size:.7rem;color:var(--muted);margin-top:2px}
+.no-users{color:var(--dim);font-size:.82rem;padding:20px;text-align:center}
+/* User badge in top */
+.user-badge{display:flex;align-items:center;gap:6px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);border-radius:999px;padding:4px 10px;font-size:.76rem;color:var(--green);font-weight:700;cursor:pointer}
+.user-badge:hover{background:rgba(52,211,153,.18)}
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-card{background:var(--s3);border:1px solid var(--line2);border-radius:12px;padding:14px;text-align:center}
+.stat-name{font-size:.82rem;font-weight:800;margin-bottom:8px;color:var(--text)}
+.stat-row{display:flex;justify-content:space-between;font-size:.76rem;margin-bottom:4px}
+.stat-row span{color:var(--muted)}
+.stat-row b{color:var(--text)}
+.stat-total{font-family:'Unbounded',sans-serif;font-size:1rem;font-weight:900;color:var(--gold);margin-top:6px}
+/* Admin users tab */
+.admin-lock{text-align:center;padding:20px}
+.admin-lock input{width:100%;padding:10px;background:var(--s3);border:1.5px solid var(--line2);border-radius:10px;font-family:inherit;font-size:.9rem;color:var(--text);text-align:center;letter-spacing:2px;outline:none;margin-bottom:10px}
+.admin-lock input:focus{border-color:var(--gold)}
+.admin-lock-btn{width:100%;padding:10px;background:linear-gradient(135deg,var(--gold),var(--gd));border:none;border-radius:10px;font-family:inherit;font-weight:800;color:#07080d;cursor:pointer}
+.user-list-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line2)}
+.user-list-item:last-child{border:none}
+.uli-left{display:flex;align-items:center;gap:10px}
+.uli-avatar{font-size:1.3rem}
+.uli-name{font-size:.88rem;font-weight:700}
+.uli-del{background:none;border:none;color:var(--red);cursor:pointer;font-size:.9rem;opacity:.6;padding:4px 8px}
+.uli-del:hover{opacity:1}
+.add-user-row{display:flex;gap:8px;margin-top:12px}
+.add-user-inp{flex:1;padding:9px 12px;background:var(--s3);border:1.5px solid var(--line2);border-radius:9px;font-family:inherit;font-size:.9rem;color:var(--text);outline:none}
+.add-user-inp:focus{border-color:var(--gold)}
+.add-user-btn{padding:9px 16px;background:rgba(232,184,75,.15);border:1px solid rgba(232,184,75,.3);border-radius:9px;color:var(--gold);font-family:inherit;font-weight:700;cursor:pointer}
+.avatars-pick{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.av-opt{font-size:1.3rem;cursor:pointer;padding:4px;border-radius:6px;border:1.5px solid transparent;transition:.15s}
+.av-opt.sel{border-color:var(--gold);background:rgba(232,184,75,.1)}
+.av-opt:hover{border-color:rgba(232,184,75,.3)}
+
+</style>
+</head>
+<body>
+<!-- LOGIN SCREEN -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">🔐 TaminAuto</div>
+    <div class="login-sub">اختر اسمك للبدء / Choisissez votre nom</div>
+    <div class="user-grid" id="user-grid">
+      <div class="no-users">لا يوجد مستخدمون بعد<br>Admin يضيف الأسماء من تبويب Users</div>
+    </div>
+    <div style="font-size:.72rem;color:var(--dim);margin-top:8px">Admin? → ادخل للتطبيق ثم اذهب لتبويب Users</div>
+  </div>
+</div>
+
+<div class="w">
+
+  <!-- TOP -->
+  <div class="top">
+    <div>
+      <div class="top-logo">🔐 TaminAuto — داخلي</div>
+      <div class="top-sub" id="today-date"></div>
+    </div>
+    <div class="top-right">
+      <button class="lang-btn active" id="btn-ar" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
+      <div class="user-badge" id="current-user-badge" onclick="switchUser()" title="تغيير المستخدم">
+        <span id="current-user-avatar">👤</span>
+        <span id="current-user-name">—</span>
+      </div>
+      <div class="rec-badge" id="rec-badge">—</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('calc')">🧮 الحساب</button>
+    <button class="tab" onclick="showTab('hist')">📋 السجل</button>
+    <button class="tab" onclick="showTab('stats')">📊 إحصائيات</button>
+    <button class="tab" onclick="showTab('users')">👥 Users</button>
+    <button class="tab" onclick="showTab('cfg')">⚙️ الأسعار</button>
+  </div>
+
+  <!-- ===== TAB: CALCUL ===== -->
+  <div class="tab-content active" id="tab-calc">
+
+    <!-- Display خارجي -->
+    <div class="pay-display">
+      <div class="pd-item"><div class="pd-lbl">المدفوع / Payé</div><div class="pd-val dim-c" id="disp-paid">—</div><div class="pd-dh">DH</div></div>
+      <div class="pd-item"><div class="pd-lbl">الرسمي / Officiel</div><div class="pd-val dim-c" id="disp-off">—</div><div class="pd-dh">DH</div></div>
+      <div class="pd-item"><div class="pd-lbl">الفرق / Écart</div><div class="pd-val dim-c" id="disp-diff">—</div><div class="pd-dh" id="disp-diff-lbl">DH</div></div>
+    </div>
+
+    <!-- نوع التأمين -->
+    <div class="crd gold">
+      <div class="ch"><div class="chi go">🛡️</div><div><div class="ch-t">التأمين / Assurance</div></div></div>
+      <div class="cb">
+        <div class="fld" style="margin-bottom:10px">
+          <label>النوع / Type</label>
+          <select id="ins-type" onchange="onTypeChange()">
+            <option value="voiture">🚗 سيارة خاصة — Voiture</option>
+            <option value="moto">🏍️ دراجة نارية — Moto</option>
+            <option value="commercial">🚐 تجاري — Commercial</option>
+            <option value="camion">🚛 شاحنة — Camion</option>
+          </select>
+        </div>
+        <!-- سيارة -->
+        <div id="f-voiture">
+          <div class="r3">
+            <div class="fld"><label>CV</label><select id="cv" onchange="fillPrice()"><option value="4">4</option><option value="5">5</option><option value="6" selected>6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select></div>
+            <div class="fld"><label>Carburant</label><select id="fuel" onchange="fillPrice()"><option value="e">Essence بنزين</option><option value="d" selected>Diesel ديزل</option></select></div>
+            <div class="fld"><label>Durée</label><select id="dur" onchange="fillPrice()"><option value="3">3 mois</option><option value="6" selected>6 mois</option><option value="12">1 an</option></select></div>
+          </div>
+        </div>
+        <!-- دراجة -->
+        <div id="f-moto" style="display:none">
+          <div class="r2">
+            <div class="fld"><label>Catégorie</label><select id="moto-cat" onchange="fillPrice()"><option value="49">49 CC</option><option value="125">125 CC+</option></select></div>
+            <div class="fld"><label>Durée</label><select id="moto-dur" onchange="fillPrice()"><option value="3">3 mois</option><option value="6" selected>6 mois</option><option value="12">1 an</option></select></div>
+          </div>
+        </div>
+        <!-- تجاري -->
+        <div id="f-commercial" style="display:none">
+          <div class="r2">
+            <div class="fld"><label>CV</label><select id="comm-cv" onchange="fillPrice()"><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option></select></div>
+            <div class="fld"><label>Durée</label><select id="comm-dur" onchange="fillPrice()"><option value="3">3 mois</option><option value="6" selected>6 mois</option><option value="12">1 an</option></select></div>
+          </div>
+        </div>
+        <!-- شاحنة -->
+        <div id="f-camion" style="display:none">
+          <div class="r2">
+            <div class="fld"><label>Tonnage</label><select id="cam-ton" onchange="fillPrice()"><option value="t35">-3.5 Tonnes</option><option value="t12">12 Tonnes</option><option value="t14">14 Tonnes</option></select></div>
+            <div class="fld"><label>Durée</label><select id="cam-dur" onchange="fillPrice()"><option value="3">3 mois</option><option value="6" selected>6 mois</option><option value="12">1 an</option></select></div>
+          </div>
+        </div>
+
+        <!-- السعر الرسمي -->
+        <div class="prix-box" id="prix-box">
+          <span class="pb-l">Prix officiel (RC + timbre)</span>
+          <span class="pb-v" id="prix-val">—</span>
+        </div>
+
+        <!-- إدخال يدوي -->
+        <label class="tog"><input type="checkbox" id="man-tog" onchange="togManual()">✏️ Prix non trouvé — Saisie manuelle</label>
+        <div class="fld" id="man-field" style="display:none;margin:8px 0 0">
+          <label>Prix officiel manuel (DH)</label>
+          <input type="number" id="man-price" placeholder="..." step="0.01" oninput="updManual()">
+        </div>
+
+        <!-- Bonus/Malus -->
+        <div style="margin-top:10px">
+          <div style="font-size:.72rem;font-weight:800;color:var(--muted);margin-bottom:6px">Bonus / Malus</div>
+          <div class="bm-grid">
+            <button class="bm-btn" id="bm-none" onclick="setBM('none')">➖ Sans bonus/malus</button>
+            <button class="bm-btn" id="bm-bonus" onclick="setBM('bonus')">✅ Bonus −10%<br><small style="font-weight:400">2 ans sans accident</small></button>
+          </div>
+          <div class="bm-grid" style="margin-top:0">
+            <button class="bm-btn" id="bm-m20" onclick="setBM('m20')">⚠️ Malus +20%<br><small style="font-weight:400">Accident matériel</small></button>
+            <button class="bm-btn" id="bm-m30" onclick="setBM('m30')">🔴 Malus +30%<br><small style="font-weight:400">Accident corporel</small></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الزبون والدفع -->
+    <div class="crd blue">
+      <div class="ch"><div class="chi b">💵</div><div><div class="ch-t">Client & Paiement</div></div></div>
+      <div class="cb">
+        <div class="r2">
+          <div class="fld"><label>Client / الزبون</label><input type="text" id="client" placeholder="Nom..."></div>
+          <div class="fld"><label>Immatriculation / اللوحة</label><input type="text" id="plate" placeholder="12345-أ-1" style="font-family:monospace;text-align:center;letter-spacing:1px" oninput="this.value=this.value.toUpperCase()"></div>
+        </div>
+        <div class="fld" style="margin-bottom:10px">
+          <label>Montant payé / المبلغ المدفوع (DH)</label>
+          <input type="number" id="paid" placeholder="700" step="0.01" oninput="autoCalc()">
+        </div>
+
+        <!-- دفعة سابقة -->
+        <label class="tog"><input type="checkbox" id="prev-tog" onchange="togPrev()">🕐 Paiement précédent / دفعة سابقة</label>
+        <div class="prev-box" id="prev-box" style="display:none">
+          <div class="prev-title">🕐 Paiement précédent</div>
+          <div class="r2">
+            <div class="fld"><label>Prix officiel précédent</label><input type="number" id="prev-off" placeholder="600" step="0.01" oninput="calcPrev()"></div>
+            <div class="fld"><label>Montant payé précédemment</label><input type="number" id="prev-paid" placeholder="500" step="0.01" oninput="calcPrev()"></div>
+          </div>
+          <div class="prev-bal"><span style="color:var(--muted);font-size:.8rem">Solde précédent:</span><span class="pbv" id="prev-bal-val">—</span></div>
+        </div>
+
+        <button class="calc-btn" onclick="calculate()">↩️ Calculer / احسب</button>
+
+        <div id="result-sec" style="display:none">
+          <div class="summ">
+            <div class="sr"><span>💳 Payé / المدفوع</span><b id="sr-paid"></b></div>
+            <div class="sr"><span>🧾 Officiel / الرسمي</span><b id="sr-off" style="color:var(--green)"></b></div>
+            <div class="sr" id="sr-bm" style="display:none"><span id="sr-bm-lbl"></span><b id="sr-bm-v"></b></div>
+            <div class="sr" id="sr-pv" style="display:none"><span>🕐 Solde précédent</span><b id="sr-pv-v"></b></div>
+            <div class="sr-div"></div>
+            <div class="sr"><span>Total dû / الإجمالي المستحق</span><b id="sr-due"></b></div>
+          </div>
+          <div class="res-total" id="res-total">
+            <div class="rt-l" id="rt-l"></div>
+            <div><span class="rt-v" id="rt-v"></span><span class="rt-dh">DH</span></div>
+            <div class="rt-msg" id="rt-msg"></div>
+          </div>
+          <button class="print-btn" onclick="printReceipt()">🖨️ Imprimer le reçu / طباعة الوصل</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB: HISTORIQUE ===== -->
+  <div class="tab-content" id="tab-hist">
+    <div class="crd amber">
+      <div class="ch"><div class="chi a">📋</div><div><div class="ch-t">سجل العمليات / Historique</div><div class="ch-s" id="hist-count">0 عملية</div></div></div>
+      <div class="cb">
+        <div class="hist-controls">
+          <button class="hc-btn" onclick="exportData()">📤 تصدير / Exporter</button>
+          <button class="hc-btn" onclick="document.getElementById('import-file').click()">📥 استيراد / Importer</button>
+          <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(this)">
+          <button class="hc-btn danger" onclick="clearHistory()">🗑️ مسح الكل</button>
+        </div>
+        <div id="hist-body"></div>
+        <div class="hist-total" id="hist-total" style="display:none">
+          <div class="ht-item"><div class="ht-v" id="ht-count">0</div><div class="ht-l">عمليات / Opérations</div></div>
+          <div class="ht-item"><div class="ht-v green" id="ht-refund">0</div><div class="ht-l">إجمالي المرجعات / Total remboursé (DH)</div></div>
+          <div class="ht-item"><div class="ht-v red-c" id="ht-debt">0</div><div class="ht-l">إجمالي المديونية / Total dû (DH)</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- نقل بين الأجهزة -->
+    <div class="crd purple">
+      <div class="ch"><div class="chi p">💻</div><div><div class="ch-t">نقل بين الأجهزة / Multi-appareils</div></div></div>
+      <div class="cb" style="font-size:.82rem;color:var(--muted);line-height:1.7">
+        <div style="margin-bottom:8px">📤 <b style="color:var(--text)">تصدير:</b> اضغط "تصدير" → يُنزَّل ملف <code style="background:var(--s3);padding:1px 5px;border-radius:4px">taminauto-data.json</code></div>
+        <div style="margin-bottom:8px">📥 <b style="color:var(--text)">استيراد:</b> على الجهاز الثاني اضغط "استيراد" → اختر الملف</div>
+        <div>✅ <b style="color:var(--green)">النتيجة:</b> نفس البيانات على كل الأجهزة</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB: STATS ===== -->
+  <div class="tab-content" id="tab-stats">
+    <div class="crd green">
+      <div class="ch"><div class="chi g">📊</div><div><div class="ch-t">إحصائيات المستخدمين</div><div class="ch-s">كل الأرقام مرئية للجميع</div></div></div>
+      <div class="cb">
+        <div class="stats-grid" id="stats-grid">
+          <div style="grid-column:1/-1;text-align:center;color:var(--dim);font-size:.82rem;padding:20px">لا توجد بيانات بعد</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB: USERS (Admin) ===== -->
+  <div class="tab-content" id="tab-users">
+    <div class="crd purple">
+      <div class="ch"><div class="chi p">👥</div><div><div class="ch-t">إدارة المستخدمين — Admin</div><div class="ch-s">محمي بكلمة سر Admin</div></div></div>
+      <div class="cb">
+        <div id="admin-lock-area">
+          <div class="admin-lock">
+            <div style="font-size:.82rem;color:var(--muted);margin-bottom:12px">🔑 أدخل كلمة سر Admin للوصول</div>
+            <input type="password" id="admin-pwd" placeholder="كلمة السر..." onkeydown="if(event.key==='Enter')checkAdmin()">
+            <button class="admin-lock-btn" onclick="checkAdmin()">دخول</button>
+            <div style="font-size:.72rem;color:var(--dim);margin-top:8px">الافتراضي: TaminAuto2026</div>
+          </div>
+        </div>
+        <div id="admin-users-panel" style="display:none">
+          <div id="users-list"></div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--line2)">
+            <div style="font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:8px">إضافة مستخدم جديد:</div>
+            <div class="avatars-pick" id="avatar-picker">
+              <span class="av-opt sel" onclick="pickAv(this)">👨</span>
+              <span class="av-opt" onclick="pickAv(this)">👩</span>
+              <span class="av-opt" onclick="pickAv(this)">🧑</span>
+              <span class="av-opt" onclick="pickAv(this)">👨‍💼</span>
+              <span class="av-opt" onclick="pickAv(this)">👩‍💼</span>
+              <span class="av-opt" onclick="pickAv(this)">🧑‍💼</span>
+              <span class="av-opt" onclick="pickAv(this)">⭐</span>
+              <span class="av-opt" onclick="pickAv(this)">🔑</span>
+            </div>
+            <div class="add-user-row">
+              <input type="text" class="add-user-inp" id="new-user-name" placeholder="الاسم / Nom..." onkeydown="if(event.key==='Enter')addUser()">
+              <button class="add-user-btn" onclick="addUser()">➕ إضافة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TAB: CONFIG ===== -->
+  <div class="tab-content" id="tab-cfg">
+    <div class="crd gold">
+      <div class="ch"><div class="chi go">⚙️</div><div><div class="ch-t">إعدادات الأسعار / Configuration prix</div><div class="ch-s">تُحفظ في جهازك</div></div></div>
+      <div class="cb">
+        <div class="sec-lbl">🚗 Voiture — Essence (1 an)</div>
+        <div class="pr-row"><span class="prl">≤6 CV Essence</span><input type="number" class="prv" id="p-e1" value="2227.18" step="0.01"></div>
+        <div class="pr-row"><span class="prl">7-8 CV Essence</span><input type="number" class="prv" id="p-e2" value="2710.74" step="0.01"></div>
+        <div class="pr-row"><span class="prl">9-10 CV Essence</span><input type="number" class="prv" id="p-e3" value="2940.13" step="0.01"></div>
+        <div class="pr-row"><span class="prl">11+ CV Essence</span><input type="number" class="prv" id="p-e4" value="4224.38" step="0.01"></div>
+        <div class="sec-lbl">🚗 Voiture — Diesel (1 an)</div>
+        <div class="pr-row"><span class="prl">≤5 CV Diesel</span><input type="number" class="prv" id="p-d1" value="2710.74" step="0.01"></div>
+        <div class="pr-row"><span class="prl">6-7 CV Diesel</span><input type="number" class="prv" id="p-d2" value="2940.00" step="0.01"></div>
+        <div class="pr-row"><span class="prl">8+ CV Diesel</span><input type="number" class="prv" id="p-d3" value="4224.38" step="0.01"></div>
+        <div class="sec-lbl">🏍️ Moto (1 an)</div>
+        <div class="pr-row"><span class="prl">49 CC</span><input type="number" class="prv" id="p-m49" value="1473" step="1"></div>
+        <div class="pr-row"><span class="prl">125 CC+</span><input type="number" class="prv" id="p-m125" value="2683" step="1"></div>
+        <div class="sec-lbl">🚐 Commercial (1 an)</div>
+        <div class="pr-row"><span class="prl">6-14 CV Commercial</span><input type="number" class="prv" id="p-comm" value="5024" step="1"></div>
+        <div class="sec-lbl">🚛 Camion (1 an)</div>
+        <div class="pr-row"><span class="prl">-3.5 Tonnes</span><input type="number" class="prv" id="p-t35" value="3950" step="1"></div>
+        <div class="pr-row"><span class="prl">12 Tonnes</span><input type="number" class="prv" id="p-t12" value="7000" step="1"></div>
+        <div class="pr-row"><span class="prl">14 Tonnes</span><input type="number" class="prv" id="p-t14" value="8000" step="1"></div>
+        <div class="pr-row"><span class="prl">Timbre fiscal</span><input type="number" class="prv" id="p-timbre" value="17" step="1"></div>
+        <button class="save-btn" onclick="savePrices()">💾 Sauvegarder / حفظ الأسعار</button>
+        <div style="font-size:.74rem;color:var(--green);text-align:center;margin-top:6px;display:none" id="save-ok">✅ Sauvegardé</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECEIPT -->
+<div class="receipt" id="receipt">
+  <button class="rec-close" onclick="closeReceipt()">✕</button>
+  <div class="rec-wrap">
+    <div class="rec-head">
+      <div class="rec-logo-txt">TaminAuto.ma</div>
+      <div class="rec-num-txt" id="r-num"></div>
+      <div class="rec-type-txt" id="r-type-txt"></div>
+    </div>
+    <div class="rec-div"></div>
+    <div class="rec-r"><span class="lbl" id="r-lbl-date"></span><span class="val" id="r-date"></span></div>
+    <div class="rec-r"><span class="lbl" id="r-lbl-client"></span><span class="val" id="r-client"></span></div>
+    <div class="rec-r" id="r-plate-row" style="display:none"><span class="lbl" id="r-lbl-plate"></span><span class="val" id="r-plate" style="font-family:monospace"></span></div>
+    <div class="rec-r"><span class="lbl" id="r-lbl-ins"></span><span class="val" id="r-ins"></span></div>
+    <div class="rec-r" id="r-bm-row" style="display:none"><span class="lbl">Bonus/Malus:</span><span class="val" id="r-bm"></span></div>
+    <div class="rec-div"></div>
+    <div class="rec-r" id="r-prev-row" style="display:none"><span class="lbl" id="r-lbl-prev"></span><span class="val" id="r-prev"></span></div>
+    <div class="rec-r"><span class="lbl" id="r-lbl-paid"></span><span class="val" id="r-paid"></span></div>
+    <div class="rec-r"><span class="lbl" id="r-lbl-off"></span><span class="val" id="r-off"></span></div>
+    <div class="rec-div"></div>
+    <div class="rec-total-box">
+      <div class="rec-total-lbl" id="r-total-lbl"></div>
+      <div class="rec-total-val" id="r-total-val"></div>
+    </div>
+    <div class="rec-signs">
+      <div class="rec-sign"><div class="rec-sign-line" id="r-sign-agent"></div></div>
+      <div class="rec-sign"><div class="rec-sign-line" id="r-sign-client"></div></div>
+    </div>
+    <div class="rec-div"></div>
+    <div class="rec-note" id="r-note"></div>
+  </div>
+</div>
+
+<script>
+// ===== CONFIG =====
+var T=17, BM='none', LANG='ar';
+var HISTORY=[];
+
+// Textes bilingues
+var TX={
+  ar:{
+    date:'التاريخ:', client:'الزبون:', plate:'اللوحة:', ins:'التأمين:',
+    prev:'الرصيد السابق:', paid:'المبلغ المدفوع:', off:'السعر الرسمي:',
+    refund:'المبلغ المُرجَع للزبون', debt:'المبلغ المديون', equal:'الحساب مطابق',
+    rec_title:'وصل إرجاع', agent:'توقيع الوسيط', client_sign:'توقيع الزبون',
+    note:'وصل غير رسمي — للاستخدام الداخلي فقط\nTaminAuto.ma',
+    credit:'رصيد للزبون', debit:'مديون',
+  },
+  fr:{
+    date:'Date:', client:'Client:', plate:'Immatriculation:', ins:'Assurance:',
+    prev:'Solde précédent:', paid:'Montant payé:', off:'Prix officiel:',
+    refund:'Montant remboursé', debt:'Solde restant dû', equal:'Compte soldé',
+    rec_title:'Reçu de remboursement', agent:'Signature agent', client_sign:'Signature client',
+    note:'Reçu non officiel — Usage interne uniquement\nTaminAuto.ma',
+    credit:'Crédit client', debit:'Débit',
+  }
+};
+
+function t(k){return TX[LANG][k]||k;}
+
+function setLang(l){
+  LANG=l;
+  localStorage.setItem('ta_lang',l);
+  document.getElementById('btn-ar').className='lang-btn'+(l==='ar'?' active':'');
+  document.getElementById('btn-fr').className='lang-btn'+(l==='fr'?' active':'');
+}
+
+function showTab(id){
+  var tabs=['calc','hist','stats','users','cfg'];
+  document.querySelectorAll('.tab').forEach(function(b,i){b.className='tab'+(i===tabs.indexOf(id)?' active':'');});
+  document.querySelectorAll('.tab-content').forEach(function(c){c.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  if(id==='hist') renderHistory();
+  if(id==='stats') renderStats();
+  if(id==='users') renderUsersList();
+}
+
+// ===== PRIX =====
+function gp(k){return parseFloat(localStorage.getItem('ta_p_'+k)||document.getElementById('p-'+k)?.value)||0;}
+function T_(){return parseFloat(localStorage.getItem('ta_p_timbre')||'17');}
+
+function getBase(){
+  var type=document.getElementById('ins-type').value;
+  var dur,m;
+  if(type==='voiture'){
+    var cv=parseInt(document.getElementById('cv').value);
+    var f=document.getElementById('fuel').value;
+    dur=parseInt(document.getElementById('dur').value);
+    m=dur===3?0.27:dur===6?0.54:1.0;
+    var base=f==='e'?(cv<=6?gp('e1'):cv<=8?gp('e2'):cv<=10?gp('e3'):gp('e4')):(cv<=5?gp('d1'):cv<=7?gp('d2'):gp('d3'));
+    return {base:base,m:m};
+  }
+  if(type==='moto'){
+    var cat=document.getElementById('moto-cat').value;
+    dur=parseInt(document.getElementById('moto-dur').value);
+    m=dur===3?0.27:dur===6?0.54:1.0;
+    return {base:cat==='49'?gp('m49'):gp('m125'),m:m};
+  }
+  if(type==='commercial'){
+    dur=parseInt(document.getElementById('comm-dur').value);
+    m=dur===3?0.27:dur===6?0.54:1.0;
+    return {base:gp('comm'),m:m};
+  }
+  if(type==='camion'){
+    var ton=document.getElementById('cam-ton').value;
+    dur=parseInt(document.getElementById('cam-dur').value);
+    m=dur===3?0.27:dur===6?0.54:1.0;
+    var base2=ton==='t35'?gp('t35'):ton==='t12'?gp('t12'):gp('t14');
+    return {base:base2,m:m};
+  }
+  return {base:0,m:1};
+}
+
+function getOfficial(){
+  if(document.getElementById('man-tog').checked){
+    return parseFloat(document.getElementById('man-price').value)||0;
+  }
+  var r=getBase();
+  var periodBase=r.base*r.m;
+  var bmAmt=BM==='bonus'?-periodBase*0.10:BM==='m20'?periodBase*0.20:BM==='m30'?periodBase*0.30:0;
+  return Math.round((periodBase+bmAmt+T_())*100)/100;
+}
+
+function fillPrice(){
+  if(document.getElementById('man-tog').checked)return;
+  var p=getOfficial();
+  document.getElementById('prix-val').textContent=p>0?fmt(p)+' DH':'—';
+  document.getElementById('prix-val').className='pb-v';
+  document.getElementById('prix-box').className='prix-box';
+  autoCalc();
+}
+
+function setBM(v){
+  BM=v;
+  ['none','bonus','m20','m30'].forEach(function(k){
+    var b=document.getElementById('bm-'+k);
+    if(!b)return;
+    b.className='bm-btn';
+    if(k===v&&v!=='none') b.className+=(v==='bonus'?' ab':' am');
+  });
+  fillPrice();
+}
+
+function onTypeChange(){
+  ['voiture','moto','commercial','camion'].forEach(function(t){
+    document.getElementById('f-'+t).style.display=t===document.getElementById('ins-type').value?'block':'none';
+  });
+  fillPrice();
+}
+
+function togManual(){
+  var m=document.getElementById('man-tog').checked;
+  document.getElementById('man-field').style.display=m?'block':'none';
+  if(m){document.getElementById('prix-val').textContent='Manuel';document.getElementById('prix-val').className='pb-v unk';document.getElementById('prix-box').className='prix-box unk';document.getElementById('man-price').focus();}
+  else fillPrice();
+}
+
+function updManual(){
+  var v=parseFloat(document.getElementById('man-price').value)||0;
+  document.getElementById('prix-val').textContent=v>0?fmt(v)+' DH':'Manuel';
+  autoCalc();
+}
+
+function togPrev(){
+  var show=document.getElementById('prev-tog').checked;
+  document.getElementById('prev-box').style.display=show?'block':'none';
+  if(!show){document.getElementById('prev-off').value='';document.getElementById('prev-paid').value='';document.getElementById('prev-bal-val').textContent='—';}
+  autoCalc();
+}
+
+function calcPrev(){
+  var po=parseFloat(document.getElementById('prev-off').value)||0;
+  var pp=parseFloat(document.getElementById('prev-paid').value)||0;
+  if(!po||!pp){document.getElementById('prev-bal-val').textContent='—';return;}
+  var d=pp-po;
+  var el=document.getElementById('prev-bal-val');
+  el.textContent=(d>=0?'+':'')+fmtS(d)+' DH ('+(d>=0?t('credit'):t('debit'))+')';
+  el.className='pbv '+(d>=0?'c':'d');
+  autoCalc();
+}
+
+function getPrevBal(){
+  if(!document.getElementById('prev-tog').checked)return 0;
+  var po=parseFloat(document.getElementById('prev-off').value)||0;
+  var pp=parseFloat(document.getElementById('prev-paid').value)||0;
+  return(po&&pp)?pp-po:0;
+}
+
+function fmt(n){return Math.abs(n).toLocaleString('fr-MA',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtS(n){return(n<0?'-':'')+fmt(n);}
+
+function updDisplay(paid,off,diff){
+  var dp=document.getElementById('disp-paid');
+  var doff=document.getElementById('disp-off');
+  var dd=document.getElementById('disp-diff');
+  var ddl=document.getElementById('disp-diff-lbl');
+  dp.textContent=paid>0?fmt(paid):'—';dp.className='pd-val '+(paid>0?'green':'dim-c');
+  doff.textContent=off>0?fmt(off):'—';doff.className='pd-val '+(off>0?'amber':'dim-c');
+  if(diff!==null){
+    dd.textContent=fmt(diff);
+    dd.className='pd-val '+(diff>0?'green':diff<0?'red-c':'dim-c');
+    ddl.textContent=diff>0?'↩️ '+t('refund'):diff<0?'⚠️ '+t('debt'):'✅';
+  }
+}
+
+function autoCalc(){
+  var paid=parseFloat(document.getElementById('paid').value)||0;
+  var off=getOfficial();
+  updDisplay(paid,off,null);
+  if(paid>0&&off>0)calculate(true);
+}
+
+function calculate(silent){
+  var paid=parseFloat(document.getElementById('paid').value)||0;
+  var off=getOfficial();
+  if(!paid){if(!silent)alert('أدخل المبلغ المدفوع / Entrez le montant payé');return;}
+  if(!off){if(!silent)alert('أدخل السعر الرسمي / Entrez le prix officiel');return;}
+  var prevBal=getPrevBal();
+  var totalDue=off-prevBal;
+  var diff=paid-totalDue;
+
+  updDisplay(paid,off,diff);
+
+  // Summary
+  document.getElementById('sr-paid').textContent=fmt(paid)+' DH';
+  document.getElementById('sr-off').textContent=fmt(off)+' DH';
+  document.getElementById('sr-due').textContent=fmt(totalDue)+' DH';
+
+  var bmRow=document.getElementById('sr-bm');
+  if(BM!=='none'){
+    bmRow.style.display='flex';
+    document.getElementById('sr-bm-lbl').textContent=BM==='bonus'?'Bonus:':'Malus:';
+    document.getElementById('sr-bm-v').textContent=BM==='bonus'?'−10%':BM==='m20'?'+20%':'+30%';
+    document.getElementById('sr-bm-v').style.color=BM==='bonus'?'var(--green)':'var(--red)';
+  }else bmRow.style.display='none';
+
+  var pvRow=document.getElementById('sr-pv');
+  if(prevBal!==0){pvRow.style.display='flex';document.getElementById('sr-pv-v').textContent=(prevBal>0?'+':'')+fmtS(prevBal)+' DH';document.getElementById('sr-pv-v').style.color=prevBal>0?'var(--green)':'var(--red)';}
+  else pvRow.style.display='none';
+
+  var rt=document.getElementById('res-total'),rv=document.getElementById('rt-v'),rl=document.getElementById('rt-l'),rm=document.getElementById('rt-msg');
+  rv.textContent=fmt(diff);
+  if(diff>0){rt.className='res-total';rv.className='rt-v';rl.textContent='↩️ '+t('refund');rm.textContent=fmt(diff)+' DH';}
+  else if(diff<0){rt.className='res-total neg';rv.className='rt-v neg';rl.textContent='⚠️ '+t('debt');rm.textContent=fmt(Math.abs(diff))+' DH';}
+  else{rt.className='res-total zero';rv.className='rt-v';rv.textContent='0.00';rl.textContent='✅ '+t('equal');rm.textContent='';}
+  document.getElementById('result-sec').style.display='block';
+}
+
+// ===== RECEIPT =====
+function getInsDesc(){
+  var type=document.getElementById('ins-type').value;
+  var bm=BM==='bonus'?' [Bonus−10%]':BM==='m20'?' [Malus+20%]':BM==='m30'?' [Malus+30%]':'';
+  var dur_map={3:'3 mois',6:'6 mois',12:'1 an'};
+  if(type==='voiture'){return document.getElementById('cv').value+'CV '+document.getElementById('fuel').value.toUpperCase()+' '+dur_map[document.getElementById('dur').value]+bm;}
+  if(type==='moto'){return 'Moto '+(document.getElementById('moto-cat').value==='49'?'49CC':'125CC+')+' '+dur_map[document.getElementById('moto-dur').value]+bm;}
+  if(type==='commercial'){return 'Commercial '+document.getElementById('comm-cv').value+'CV '+dur_map[document.getElementById('comm-dur').value]+bm;}
+  if(type==='camion'){return 'Camion '+(document.getElementById('cam-ton').value==='t35'?'-3.5T':document.getElementById('cam-ton').value==='t12'?'12T':'14T')+' '+dur_map[document.getElementById('cam-dur').value]+bm;}
+}
+
+function nextRecNum(){
+  var n=parseInt(localStorage.getItem('ta_rec_n')||'999')+1;
+  localStorage.setItem('ta_rec_n',n);
+  return 'TA-'+new Date().getFullYear()+'-'+String(n).padStart(4,'0');
+}
+
+function printReceipt(){
+  var paid=parseFloat(document.getElementById('paid').value)||0;
+  var off=getOfficial();
+  var prevBal=getPrevBal();
+  var totalDue=off-prevBal;
+  var diff=paid-totalDue;
+  var recNum=nextRecNum();
+  var client=document.getElementById('client').value||'—';
+  var plate=document.getElementById('plate').value;
+  var now=new Date().toLocaleDateString(LANG==='ar'?'ar-MA':'fr-FR');
+  var insDesc=getInsDesc();
+
+  document.getElementById('rec-badge').textContent=recNum;
+  document.getElementById('r-num').textContent='N° '+recNum;
+  document.getElementById('r-type-txt').textContent=t('rec_title');
+  document.getElementById('r-lbl-date').textContent=t('date');
+  document.getElementById('r-date').textContent=now;
+  document.getElementById('r-lbl-client').textContent=t('client');
+  document.getElementById('r-client').textContent=client;
+  document.getElementById('r-lbl-ins').textContent=t('ins');
+  document.getElementById('r-ins').textContent=insDesc;
+  document.getElementById('r-lbl-paid').textContent=t('paid');
+  document.getElementById('r-paid').textContent=fmt(paid)+' DH';
+  document.getElementById('r-lbl-off').textContent=t('off');
+  document.getElementById('r-off').textContent=fmt(off)+' DH';
+
+  var plateRow=document.getElementById('r-plate-row');
+  if(plate){plateRow.style.display='flex';document.getElementById('r-lbl-plate').textContent=t('plate');document.getElementById('r-plate').textContent=plate;}
+  else plateRow.style.display='none';
+
+  var bmRow=document.getElementById('r-bm-row');
+  if(BM!=='none'){bmRow.style.display='flex';document.getElementById('r-bm').textContent=BM==='bonus'?'−10%':BM==='m20'?'+20%':'+30%';}
+  else bmRow.style.display='none';
+
+  var prevRow=document.getElementById('r-prev-row');
+  if(prevBal!==0){prevRow.style.display='flex';document.getElementById('r-lbl-prev').textContent=t('prev');document.getElementById('r-prev').textContent=(prevBal>0?'+':'')+fmtS(prevBal)+' DH';}
+  else prevRow.style.display='none';
+
+  var tv=document.getElementById('r-total-val');
+  tv.textContent=fmt(Math.abs(diff))+' DH';
+  if(diff>0){tv.className='rec-total-val pos';document.getElementById('r-total-lbl').textContent=t('refund');}
+  else if(diff<0){tv.className='rec-total-val neg2';document.getElementById('r-total-lbl').textContent=t('debt');}
+  else{tv.className='rec-total-val';document.getElementById('r-total-lbl').textContent=t('equal');tv.textContent='0.00 DH';}
+
+  document.getElementById('r-sign-agent').textContent=t('agent');
+  document.getElementById('r-sign-client').textContent=t('client_sign')+(client!=='—'?' — '+client:'');
+  document.getElementById('r-note').textContent=t('note');
+
+  // حفظ في السجل
+  saveToHistory({num:recNum,date:now,client:client,plate:plate,ins:insDesc,paid:paid,off:off,diff:diff});
+
+  document.getElementById('receipt').classList.add('show');
+  setTimeout(function(){window.print();},400);
+}
+
+function closeReceipt(){document.getElementById('receipt').classList.remove('show');}
+
+// ===== HISTORIQUE =====
+function loadHistory(){
+  try{HISTORY=JSON.parse(localStorage.getItem('ta_history')||'[]');}catch(e){HISTORY=[];}
+}
+
+function saveToHistory(item){
+  item.user=CURRENT_USER.name;
+  item.avatar=CURRENT_USER.avatar;
+  loadHistory();
+  HISTORY.unshift(item);
+  localStorage.setItem('ta_history',JSON.stringify(HISTORY));
+  document.getElementById('hist-count').textContent=HISTORY.length+' عملية';
+}
+
+function renderHistory(){
+  loadHistory();
+  var body=document.getElementById('hist-body');
+  var total=document.getElementById('hist-total');
+  document.getElementById('hist-count').textContent=HISTORY.length+' عملية';
+  if(HISTORY.length===0){body.innerHTML='<div class="hist-empty">لا توجد عمليات بعد<br>Aucune opération pour l\'instant</div>';total.style.display='none';return;}
+  var html='<div style="overflow-x:auto"><table class="hist-table"><thead><tr><th>N°</th><th>User</th><th>Client</th><th>Assurance</th><th>Payé</th><th>Écart</th><th></th></tr></thead><tbody>';
+  var totalRef=0,totalDebt=0;
+  HISTORY.forEach(function(h,i){
+    var cls=h.diff>0?'badge-pos':h.diff<0?'badge-neg':'badge-zero';
+    var sign=h.diff>0?'↩️':h.diff<0?'⚠️':'✅';
+    if(h.diff>0)totalRef+=h.diff;
+    if(h.diff<0)totalDebt+=Math.abs(h.diff);
+    html+='<tr><td><span class="badge-ref">'+h.num+'</span></td><td style="font-size:.8rem">'+(h.avatar||'👤')+' '+(h.user||'—')+'</td><td>'+h.client+'</td><td style="font-size:.72rem;color:var(--muted)">'+h.ins+'</td><td>'+fmt(h.paid)+'</td><td class="'+cls+'">'+sign+' '+fmt(Math.abs(h.diff))+'</td><td><button class="hist-del" onclick="delHistory('+i+')">🗑️</button></td></tr>';
+  });
+  html+='</tbody></table></div>';
+  body.innerHTML=html;
+  document.getElementById('ht-count').textContent=HISTORY.length;
+  document.getElementById('ht-refund').textContent=fmt(totalRef);
+  document.getElementById('ht-debt').textContent=fmt(totalDebt);
+  total.style.display='flex';
+}
+
+function delHistory(i){if(confirm('حذف هذه العملية؟')){HISTORY.splice(i,1);localStorage.setItem('ta_history',JSON.stringify(HISTORY));renderHistory();}}
+function clearHistory(){if(confirm('مسح كل السجل؟ / Effacer tout l\'historique?')){HISTORY=[];localStorage.setItem('ta_history','[]');renderHistory();}}
+
+function exportData(){
+  loadHistory();
+  var data={history:HISTORY,prices:{},version:'1.0',exported:new Date().toISOString()};
+  ['e1','e2','e3','e4','d1','d2','d3','m49','m125','comm','t35','t12','t14','timbre'].forEach(function(k){data.prices[k]=localStorage.getItem('ta_p_'+k);});
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='taminauto-data.json';a.click();
+}
+
+function importData(input){
+  var file=input.files[0];if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    try{
+      var data=JSON.parse(e.target.result);
+      if(data.history){HISTORY=data.history;localStorage.setItem('ta_history',JSON.stringify(HISTORY));}
+      if(data.prices){Object.keys(data.prices).forEach(function(k){if(data.prices[k])localStorage.setItem('ta_p_'+k,data.prices[k]);});}
+      loadPrices();fillPrice();renderHistory();
+      alert('✅ تم الاستيراد بنجاح / Importé avec succès\n'+HISTORY.length+' opérations');
+    }catch(err){alert('❌ خطأ في الملف / Fichier invalide');}
+  };
+  reader.readAsText(file);
+  input.value='';
+}
+
+// ===== CONFIG =====
+function loadPrices(){
+  ['e1','e2','e3','e4','d1','d2','d3','m49','m125','comm','t35','t12','t14','timbre'].forEach(function(k){
+    var s=localStorage.getItem('ta_p_'+k);
+    var el=document.getElementById('p-'+k);
+    if(s&&el)el.value=s;
+  });
+}
+
+function savePrices(){
+  ['e1','e2','e3','e4','d1','d2','d3','m49','m125','comm','t35','t12','t14','timbre'].forEach(function(k){
+    var el=document.getElementById('p-'+k);
+    if(el)localStorage.setItem('ta_p_'+k,el.value);
+  });
+  var ok=document.getElementById('save-ok');ok.style.display='block';
+  setTimeout(function(){ok.style.display='none';},2500);
+  fillPrice();
+}
+
+// ===== USERS =====
+var USERS=[], CURRENT_USER={name:'—',avatar:'👤'}, SELECTED_AV='👨';
+var ADMIN_HASH='b431c26d43b6225051076d4374ce15f4d96ea60725a6fb785a9f06ac3ee9469d';
+
+async function sha256(s){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+
+function loadUsers(){try{USERS=JSON.parse(localStorage.getItem('ta_users')||'[]');}catch(e){USERS=[];}}
+function saveUsers(){localStorage.setItem('ta_users',JSON.stringify(USERS));}
+
+function renderLoginScreen(){
+  loadUsers();
+  var grid=document.getElementById('user-grid');
+  if(USERS.length===0){grid.innerHTML='<div class="no-users" style="grid-column:1/-1">لا يوجد مستخدمون بعد<br><small>Admin يضيف الأسماء من تبويب Users</small></div>';return;}
+  grid.innerHTML=USERS.map(function(u){
+    loadHistory();
+    var count=HISTORY.filter(function(h){return h.user===u.name;}).length;
+    return '<button class="user-btn" onclick="selectUser(''+u.name+'',''+u.avatar+'')"><div class="user-avatar">'+u.avatar+'</div><div class="user-name">'+u.name+'</div><div class="user-stats">'+count+' عملية</div></button>';
+  }).join('');
+}
+
+function selectUser(name,avatar){
+  CURRENT_USER={name:name,avatar:avatar};
+  document.getElementById('current-user-name').textContent=name;
+  document.getElementById('current-user-avatar').textContent=avatar;
+  document.getElementById('login-screen').style.display='none';
+  localStorage.setItem('ta_last_user',JSON.stringify(CURRENT_USER));
+}
+
+function switchUser(){if(confirm('تغيير المستخدم؟')){document.getElementById('login-screen').style.display='flex';renderLoginScreen();}}
+
+function renderUsersList(){
+  loadUsers();
+  var list=document.getElementById('users-list');
+  if(USERS.length===0){list.innerHTML='<div style="color:var(--dim);text-align:center;padding:14px;font-size:.82rem">لا يوجد مستخدمون</div>';return;}
+  list.innerHTML=USERS.map(function(u,i){
+    return '<div class="user-list-item"><div class="uli-left"><span class="uli-avatar">'+u.avatar+'</span><span class="uli-name">'+u.name+'</span></div><button class="uli-del" onclick="delUser('+i+')">🗑️</button></div>';
+  }).join('');
+}
+
+function addUser(){
+  var name=document.getElementById('new-user-name').value.trim();
+  if(!name){alert('أدخل الاسم');return;}
+  if(USERS.find(function(u){return u.name===name;})){alert('الاسم موجود');return;}
+  USERS.push({name:name,avatar:SELECTED_AV});
+  saveUsers();
+  document.getElementById('new-user-name').value='';
+  renderUsersList();
+  renderLoginScreen();
+}
+
+function delUser(i){
+  if(confirm('حذف '+USERS[i].name+'؟')){
+    USERS.splice(i,1);saveUsers();renderUsersList();renderLoginScreen();
+  }
+}
+
+function pickAv(el){
+  document.querySelectorAll('.av-opt').forEach(function(a){a.className='av-opt';});
+  el.className='av-opt sel';SELECTED_AV=el.textContent;
+}
+
+async function checkAdmin(){
+  var pwd=document.getElementById('admin-pwd').value;
+  var hash=await sha256(pwd);
+  var saved=localStorage.getItem('ta_pwd')||ADMIN_HASH;
+  if(hash===saved){
+    document.getElementById('admin-lock-area').style.display='none';
+    document.getElementById('admin-users-panel').style.display='block';
+    renderUsersList();
+  } else {
+    alert('❌ كلمة السر غير صحيحة');
+    document.getElementById('admin-pwd').value='';
+  }
+}
+
+// ===== STATS =====
+function renderStats(){
+  loadHistory();loadUsers();
+  var grid=document.getElementById('stats-grid');
+  if(HISTORY.length===0){grid.innerHTML='<div style="grid-column:1/-1;text-align:center;color:var(--dim);font-size:.82rem;padding:20px">لا توجد بيانات بعد</div>';return;}
+  
+  // تجميع حسب المستخدم
+  var byUser={};
+  HISTORY.forEach(function(h){
+    var u=h.user||'غير محدد';
+    if(!byUser[u]) byUser[u]={name:u,avatar:h.avatar||'👤',count:0,paid:0,refund:0,debt:0};
+    byUser[u].count++;
+    byUser[u].paid+=h.paid||0;
+    if(h.diff>0) byUser[u].refund+=h.diff;
+    if(h.diff<0) byUser[u].debt+=Math.abs(h.diff);
+  });
+  
+  grid.innerHTML=Object.values(byUser).map(function(u){
+    return '<div class="stat-card">'
+      +'<div class="stat-name">'+u.avatar+' '+u.name+'</div>'
+      +'<div class="stat-row"><span>عمليات</span><b>'+u.count+'</b></div>'
+      +'<div class="stat-row"><span>إجمالي المدفوع</span><b>'+fmt(u.paid)+' DH</b></div>'
+      +'<div class="stat-row"><span style="color:var(--green)">↩️ مُرجَع</span><b style="color:var(--green)">'+fmt(u.refund)+' DH</b></div>'
+      +'<div class="stat-row"><span style="color:var(--red)">⚠️ مديونية</span><b style="color:var(--red)">'+fmt(u.debt)+' DH</b></div>'
+      +'</div>';
+  }).join('');
+}
+
+// ===== INIT =====
+loadPrices();loadHistory();loadUsers();fillPrice();setBM('none');onTypeChange();
+var l=localStorage.getItem('ta_lang')||'ar';setLang(l);
+var now=new Date();
+document.getElementById('today-date').textContent=now.toLocaleDateString('ar-MA',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+document.getElementById('rec-badge').textContent='TA-'+now.getFullYear()+'-'+String(parseInt(localStorage.getItem('ta_rec_n')||'999')+1).padStart(4,'0');
+document.getElementById('hist-count').textContent=(JSON.parse(localStorage.getItem('ta_history')||'[]')).length+' عملية';
+// شاشة الدخول
+renderLoginScreen();
+// تذكر آخر مستخدم
+var lastUser=localStorage.getItem('ta_last_user');
+if(lastUser){try{var lu=JSON.parse(lastUser);document.getElementById('current-user-name').textContent=lu.name;document.getElementById('current-user-avatar').textContent=lu.avatar;}catch(e){}}
+</script>
+</body>
+</html>
